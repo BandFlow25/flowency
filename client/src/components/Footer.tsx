@@ -11,7 +11,14 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">bndy</h3>
+            <div className="flex items-center mb-4">
+              <div className="bg-accent text-white p-1 rounded mr-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 4L4 12L9 20H15V12H9V4Z" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Flowency</h3>
+            </div>
             <p className="text-sm text-gray-300 mb-4">
               Helping enterprises maintain strategic alignment and delivery performance through AI transitions.
             </p>
@@ -31,20 +38,20 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Solutions</h4>
             <ul className="space-y-2">
-              <li><Link href="/solutions/intent-monitoring"><a className="text-gray-300 hover:text-white">Intent Monitoring</a></Link></li>
-              <li><Link href="/solutions/cognitive-debt"><a className="text-gray-300 hover:text-white">Cognitive Debt Management</a></Link></li>
-              <li><Link href="/solutions/ai-governance"><a className="text-gray-300 hover:text-white">AI Governance</a></Link></li>
-              <li><Link href="/solutions/value-stream"><a className="text-gray-300 hover:text-white">Value Stream Optimization</a></Link></li>
+              <li><Link href="/solutions/intent-monitoring"><span className="text-gray-300 hover:text-white cursor-pointer">Intent Monitoring</span></Link></li>
+              <li><Link href="/solutions/cognitive-debt"><span className="text-gray-300 hover:text-white cursor-pointer">Cognitive Debt Management</span></Link></li>
+              <li><Link href="/solutions/ai-governance"><span className="text-gray-300 hover:text-white cursor-pointer">AI Governance</span></Link></li>
+              <li><Link href="/solutions/value-stream"><span className="text-gray-300 hover:text-white cursor-pointer">Value Stream Optimization</span></Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              <li><Link href="/resources/blog"><a className="text-gray-300 hover:text-white">Blog</a></Link></li>
-              <li><Link href="/resources/case-studies"><a className="text-gray-300 hover:text-white">Case Studies</a></Link></li>
-              <li><Link href="/resources/whitepapers"><a className="text-gray-300 hover:text-white">Whitepapers</a></Link></li>
-              <li><Link href="/resources/webinars"><a className="text-gray-300 hover:text-white">Webinars</a></Link></li>
+              <li><Link href="/resources/blog"><span className="text-gray-300 hover:text-white cursor-pointer">Blog</span></Link></li>
+              <li><Link href="/resources/case-studies"><span className="text-gray-300 hover:text-white cursor-pointer">Case Studies</span></Link></li>
+              <li><Link href="/resources/whitepapers"><span className="text-gray-300 hover:text-white cursor-pointer">Whitepapers</span></Link></li>
+              <li><Link href="/resources/webinars"><span className="text-gray-300 hover:text-white cursor-pointer">Webinars</span></Link></li>
             </ul>
           </div>
           
@@ -52,23 +59,23 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <RectangleEllipsis className="h-5 w-5 mt-1 mr-2 text-electric" />
-                <span>contact@bndy.com</span>
+                <RectangleEllipsis className="h-5 w-5 mt-1 mr-2 text-accent" />
+                <span>hello@flowency.co.uk</span>
               </li>
               <li className="flex items-start">
-                <PhoneIcon className="h-5 w-5 mt-1 mr-2 text-electric" />
-                <span>+1 (555) 123-4567</span>
+                <PhoneIcon className="h-5 w-5 mt-1 mr-2 text-accent" />
+                <span>+44 (20) 1234-5678</span>
               </li>
               <li className="flex items-start">
-                <MapPinIcon className="h-5 w-5 mt-1 mr-2 text-electric" />
-                <span>123 AI Drive, San Francisco, CA</span>
+                <MapPinIcon className="h-5 w-5 mt-1 mr-2 text-accent" />
+                <span>45 Innovation Rd, London, UK</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Bndy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Flowency. All rights reserved.</p>
         </div>
       </div>
     </footer>

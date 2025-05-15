@@ -13,14 +13,20 @@
   --card-foreground: 20 14.3% 4.1%;
   --border: 20 5.9% 90%;
   --input: 20 5.9% 90%;
-  --primary: 212 45% 35%; /* slate-blue */
-  --primary-foreground: 211 100% 99%;
-  --secondary: 214 20% 50%; /* bndy-gray */
-  --secondary-foreground: 24 9.8% 10%;
-  --accent: 25 95% 57%; /* orange-500 */
-  --accent-foreground: 24 9.8% 10%;
-  --electric: 190 100% 42%; /* electric-blue/cyan */
-  --electric-foreground: 211 100% 99%;
+  
+  /* Flowency colors */
+  --primary: 212 75% 20%; /* dark blue from image */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 212 60% 30%; /* medium blue */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 16 100% 50%; /* bright orange */
+  --accent-foreground: 0 0% 100%;
+  --electric: 190 100% 50%; /* bright cyan */
+  --electric-foreground: 0 0% 100%;
+  --flow-blue-light: 200 80% 60%; /* light blue for flows */
+  --flow-blue-dark: 212 80% 40%; /* dark blue for flows */
+  
+  /* Alert colors */
   --destructive: 0 84.2% 60.2%; /* alert-red */
   --destructive-foreground: 60 9.1% 97.8%;
   --warning: 48 96% 67%; /* alert-yellow */
@@ -29,33 +35,40 @@
   --radius: 0.5rem;
 
   /* Chart colors for infographic */
-  --chart-1: 212 45% 35%;  /* slate-blue */
-  --chart-2: 214 20% 50%;  /* bndy-gray */
-  --chart-3: 25 95% 57%;   /* orange-500 */
-  --chart-4: 190 100% 42%; /* electric-blue/cyan */
-  --chart-5: 0 84.2% 60.2%; /* alert-red */
+  --chart-1: 212 75% 20%;  /* dark blue */
+  --chart-2: 212 60% 30%;  /* medium blue */
+  --chart-3: 16 100% 50%;   /* bright orange */
+  --chart-4: 190 100% 50%; /* bright cyan */
+  --chart-5: 200 80% 60%;  /* light blue */
+  --chart-6: 0 84.2% 60.2%; /* alert-red */
 }
 
 .dark {
-  --background: 240 10% 3.9%;
+  --background: 212 75% 10%;
   --foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
+  --muted: 212 40% 20%;
   --muted-foreground: 240 5% 64.9%;
-  --popover: 240 10% 3.9%;
+  --popover: 212 70% 10%;
   --popover-foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
+  --card: 212 60% 15%;
   --card-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --primary: 212 45% 35%; /* slate-blue */
-  --primary-foreground: 211 100% 99%;
-  --secondary: 214 20% 50%; /* bndy-gray */
-  --secondary-foreground: 0 0% 98%;
-  --accent: 25 95% 57%; /* orange-500 */
-  --accent-foreground: 0 0% 98%;
-  --electric: 190 100% 42%; /* electric-blue/cyan */
-  --electric-foreground: 211 100% 99%;
-  --destructive: 0 62.8% 30.6%;
+  --border: 212 40% 25%;
+  --input: 212 40% 20%;
+  
+  /* Flowency colors */
+  --primary: 212 75% 20%; /* dark blue from image */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 212 60% 30%; /* medium blue */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 16 100% 50%; /* bright orange */
+  --accent-foreground: 0 0% 100%;
+  --electric: 190 100% 50%; /* bright cyan */
+  --electric-foreground: 0 0% 100%;
+  --flow-blue-light: 200 80% 60%; /* light blue for flows */
+  --flow-blue-dark: 212 80% 40%; /* dark blue for flows */
+  
+  /* Alert colors */
+  --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
   --warning: 48 96% 67%;
   --warning-foreground: 240 5.9% 10%;
@@ -74,27 +87,35 @@
 }
 
 @layer components {
-  .bndy-slate-blue {
+  .flowency-dark-blue {
     @apply bg-primary text-primary-foreground;
   }
   
-  .bndy-gray {
+  .flowency-medium-blue {
     @apply bg-secondary text-secondary-foreground;
   }
   
-  .bndy-orange {
+  .flowency-orange {
     @apply bg-accent text-accent-foreground;
   }
   
-  .bndy-electric-blue {
+  .flowency-cyan {
     @apply bg-electric text-electric-foreground;
   }
+  
+  .flowency-light-blue {
+    @apply bg-[hsl(var(--flow-blue-light))] text-white;
+  }
+  
+  .flowency-blue-dark {
+    @apply bg-[hsl(var(--flow-blue-dark))] text-white;
+  }
 
-  .bndy-red {
+  .flowency-red {
     @apply bg-destructive text-destructive-foreground;
   }
   
-  .bndy-yellow {
+  .flowency-yellow {
     @apply bg-warning text-warning-foreground;
   }
 

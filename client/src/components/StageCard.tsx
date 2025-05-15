@@ -16,11 +16,13 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
   const getIconBgColor = (stageId: number): string => {
     switch (stageId) {
       case 1:
-      case 2:
         return "bg-primary";
+      case 2:
+        return "bg-[hsl(var(--flow-blue-dark))]";
       case 3:
+        return "bg-[hsl(var(--flow-blue-light))]";
       case 4:
-        return "bg-warning";
+        return "bg-accent";
       case 5:
         return "bg-destructive";
       default:
@@ -34,10 +36,11 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
       case 1:
         return "bg-electric bg-opacity-10";
       case 2:
-        return "bg-accent bg-opacity-10";
+        return "bg-[hsl(var(--flow-blue-dark))] bg-opacity-10";
       case 3:
-        return "bg-warning bg-opacity-10";
+        return "bg-[hsl(var(--flow-blue-light))] bg-opacity-10";
       case 4:
+        return "bg-accent bg-opacity-10";
       case 5:
         return "bg-destructive bg-opacity-10";
       default:
@@ -50,10 +53,11 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
       case 1:
         return "text-electric";
       case 2:
-        return "text-accent";
+        return "text-[hsl(var(--flow-blue-dark))]";
       case 3:
-        return "text-warning";
+        return "text-[hsl(var(--flow-blue-light))]";
       case 4:
+        return "text-accent";
       case 5:
         return "text-destructive";
       default:
@@ -91,7 +95,7 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
       
       <div className="mt-4 text-center">
         <button 
-          className="text-electric text-sm font-medium hover:underline focus:outline-none"
+          className="text-accent font-medium hover:underline hover:text-electric transition-colors focus:outline-none px-3 py-1 text-sm border border-accent rounded-md"
           aria-label={`View details about ${title}`}
         >
           View Details

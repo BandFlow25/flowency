@@ -23,7 +23,9 @@ const FeedbackLoop = ({ color, name, description, index }: FeedbackLoopProps) =>
             transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className={`w-3 h-3 rounded-full ${color} mr-2 feedback-loop-pulse`}></div>
+            <div className="relative">
+              <div className={`w-3 h-3 rounded-full ${color} mr-2 feedback-loop-pulse shadow-sm`}></div>
+            </div>
             <span className="text-sm md:text-base font-medium">{name}</span>
           </motion.div>
         </TooltipTrigger>
@@ -68,6 +70,7 @@ export default function IntentOpsLayer() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+
       {/* Mobile touch indicator */}
       {isMobile && (
         <div className="absolute top-2 right-2 z-20 text-xs text-white bg-accent bg-opacity-70 px-2 py-1 rounded-full">

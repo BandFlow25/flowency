@@ -1,0 +1,36 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="energyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <radialGradient id="energyGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#00ddff" stop-opacity="0.7" />
+      <stop offset="70%" stop-color="#0088ff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#004488" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main energy circle -->
+  <circle cx="100" cy="100" r="80" fill="url(#energyGradient)" opacity="0.7" filter="url(#energyGlow)" />
+  
+  <!-- Lightning arcs -->
+  <g filter="url(#energyGlow)" opacity="0.8">
+    <!-- Arc 1 -->
+    <path d="M100,20 Q130,60 160,100 Q130,140 100,180 Q70,140 40,100 Q70,60 100,20" 
+          fill="none" stroke="#00ddff" stroke-width="1" stroke-dasharray="1 3" />
+    
+    <!-- Arc 2 (rotated) -->
+    <path d="M180,100 Q140,130 100,160 Q60,130 20,100 Q60,70 100,40 Q140,70 180,100" 
+          fill="none" stroke="#00ddff" stroke-width="1" stroke-dasharray="1 3" />
+          
+    <!-- Random energy sparks -->
+    <path d="M120,50 L130,40 L125,45 L135,35" stroke="#ffffff" stroke-width="1" />
+    <path d="M150,100 L160,95 L155,105 L165,100" stroke="#ffffff" stroke-width="1" />
+    <path d="M120,150 L130,160 L125,155 L135,165" stroke="#ffffff" stroke-width="1" />
+    <path d="M50,100 L40,95 L45,105 L35,100" stroke="#ffffff" stroke-width="1" />
+    <path d="M80,50 L70,40 L75,45 L65,35" stroke="#ffffff" stroke-width="1" />
+    <path d="M80,150 L70,160 L75,155 L65,165" stroke="#ffffff" stroke-width="1" />
+  </g>
+</svg>

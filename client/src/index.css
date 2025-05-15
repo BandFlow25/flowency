@@ -199,4 +199,52 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
+  
+  /* Electric styles for energy visualization */
+  .electric-bolt {
+    filter: drop-shadow(0 0 5px rgba(0, 221, 255, 0.8));
+    animation: boltFlicker 2s infinite;
+  }
+  
+  @keyframes boltFlicker {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px rgba(0, 221, 255, 0.8)); }
+    50% { opacity: 0.8; filter: drop-shadow(0 0 10px rgba(0, 221, 255, 0.5)); }
+  }
+  
+  .energy-field {
+    filter: drop-shadow(0 0 3px rgba(0, 136, 255, 0.5));
+    animation: energyPulse 3s infinite ease-in-out;
+  }
+  
+  @keyframes energyPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+  
+  /* Orange highlight for important elements */
+  .orange-highlight {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .orange-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, hsl(16, 100%, 50%), hsl(16, 100%, 50%, 0.5));
+    z-index: -1;
+    border-radius: 2px;
+  }
+  
+  .orange-glow {
+    box-shadow: 0 0 10px 2px hsl(16, 100%, 50%, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .orange-glow:hover {
+    box-shadow: 0 0 15px 5px hsl(16, 100%, 50%, 0.4);
+  }
 }

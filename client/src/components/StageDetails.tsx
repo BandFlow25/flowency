@@ -100,10 +100,19 @@ export default function StageDetails({ stage, onClose }: StageDetailsProps) {
             <div className={`${getBackgroundColor(stage.id)} text-white p-2 rounded-full mr-3 shadow-md`}>
               {StageIcons[stage.icon]}
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary">{stage.title}</h3>
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-primary">
+                {stage.title.split(' ').map((word, idx) => 
+                  idx === 0 ? 
+                    <span key={idx} className="text-accent">{word} </span> : 
+                    <span key={idx}>{word} </span>
+                )}
+              </h3>
+              <div className="h-1 w-16 bg-electric rounded-full mt-1"></div>
+            </div>
           </div>
           <button 
-            className="text-secondary hover:text-primary focus:outline-none bg-gray-100 rounded-full p-1"
+            className="text-white hover:text-white focus:outline-none bg-accent hover:bg-[hsl(16,100%,45%)] rounded-full p-1.5 transition-colors duration-300"
             onClick={onClose}
             aria-label="Close details"
           >
@@ -204,7 +213,7 @@ export default function StageDetails({ stage, onClose }: StageDetailsProps) {
           transition={{ delay: 0.6 }}
         >
           <Button 
-            className={`${getBackgroundColor(stage.id)} hover:bg-accent text-white font-medium py-2 px-6 rounded-md transition-colors shadow-md`}
+            className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white font-medium py-2 px-6 rounded-md transition-colors shadow-md"
             asChild
           >
             <a href={stage.cta.url} className="flex items-center">

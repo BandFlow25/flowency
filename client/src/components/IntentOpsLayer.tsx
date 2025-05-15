@@ -105,14 +105,17 @@ export default function IntentOpsLayer() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center">
-            <div className="bg-accent text-white p-1 rounded mr-2 h-8 w-8 flex items-center justify-center shadow-md">
+            <div className="bg-accent text-white p-1 rounded mr-2 h-8 w-8 flex items-center justify-center shadow-[0_0_15px_rgba(255,119,0,0.3)]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 4L4 12L9 20H15V12H9V4Z" fill="currentColor" />
               </svg>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold">IntentOps Governance Layer</h3>
+            <h3 className="text-xl md:text-2xl font-bold">
+              <span className="text-electric">Intent</span>
+              <span className="text-accent">Ops</span> Governance Layer
+            </h3>
           </div>
-          <p className="text-sm md:text-base mt-2 text-gray-200 max-w-md">
+          <p className="text-sm md:text-base mt-2 text-gray-200 max-w-md border-l-4 border-accent pl-3">
             A continuous feedback system that maintains alignment between AI systems and strategic intent
           </p>
         </motion.div>
@@ -135,7 +138,10 @@ export default function IntentOpsLayer() {
           {loops.map((loop, index) => (
             <div 
               key={index} 
-              className="bg-white bg-opacity-10 p-2 rounded-lg"
+              className={`
+                bg-white bg-opacity-10 p-2 rounded-lg 
+                ${index === 0 || index === 2 ? 'border-l-2 border-electric' : 'border-l-2 border-accent'}
+              `}
             >
               <FeedbackLoop
                 color={loop.color}

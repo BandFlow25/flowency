@@ -110,10 +110,10 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
         <button 
           className={`
             flex items-center justify-center mx-auto
-            text-accent bg-white hover:bg-accent hover:text-white 
-            transition-colors focus:outline-none 
-            px-4 py-1.5 text-sm border border-accent rounded-md
-            shadow-sm
+            text-white bg-accent 
+            transition-all duration-300 ease-in-out focus:outline-none 
+            px-4 py-1.5 text-sm rounded-md
+            shadow-md hover:shadow-lg hover:bg-[hsl(16,100%,45%)]
           `}
           aria-label={`View details about ${title}`}
         >

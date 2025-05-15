@@ -30,7 +30,7 @@ export default function CognitiveDebtFlow({ onStageClick }: CognitiveDebtFlowPro
       </div>
       
       {/* Mobile view: Show flowing card pattern */}
-      <div className="md:hidden mb-6 p-4 rounded-lg bg-gradient-to-r from-primary to-[hsl(var(--flow-blue-dark))] text-white overflow-hidden relative">
+      <div className="md:hidden mb-6 p-4 rounded-lg bg-gradient-to-r from-primary to-[hsl(var(--flow-blue-dark))] text-white overflow-hidden relative border-b-4 border-accent">
         <div className="absolute top-0 left-0 right-0 bottom-0 opacity-20">
           <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0,50 C20,30 80,70 100,50" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" />
@@ -38,16 +38,18 @@ export default function CognitiveDebtFlow({ onStageClick }: CognitiveDebtFlowPro
           </svg>
         </div>
         <div className="relative z-10">
-          <h3 className="text-lg font-bold mb-2">Value Flow Direction</h3>
+          <h3 className="text-lg font-bold mb-2">
+            <span className="text-accent">Value Flow</span> Direction
+          </h3>
           <p className="text-sm mb-3">Swipe through stages to see how cognitive debt compounds</p>
           <div className="flex justify-between items-center">
             <div className="flex flex-col items-center">
-              <div className="h-4 w-4 rounded-full bg-electric"></div>
+              <div className="h-5 w-5 rounded-full bg-electric shadow-[0_0_10px_rgba(0,221,255,0.7)]"></div>
               <span className="text-xs mt-1">Start</span>
             </div>
-            <div className="flex-1 mx-2 h-1 bg-gradient-to-r from-electric via-[hsl(var(--flow-blue-light))] to-destructive"></div>
+            <div className="flex-1 mx-2 h-2 bg-gradient-to-r from-electric via-accent to-destructive rounded-full"></div>
             <div className="flex flex-col items-center">
-              <div className="h-4 w-4 rounded-full bg-destructive"></div>
+              <div className="h-5 w-5 rounded-full bg-destructive shadow-[0_0_10px_rgba(255,40,40,0.5)]"></div>
               <span className="text-xs mt-1">End</span>
             </div>
           </div>
@@ -77,16 +79,19 @@ export default function CognitiveDebtFlow({ onStageClick }: CognitiveDebtFlowPro
       {/* Mobile indicator for flow - bottom dots */}
       <div className="block md:hidden mt-6 mb-2">
         <div className="flex flex-col items-center">
-          <p className="text-sm text-secondary mb-3 text-center">Tap any stage above to explore details</p>
-          <div className="flex space-x-3">
+          <p className="text-sm mb-3 text-center">
+            <span className="text-accent font-medium">Tap</span> any stage above to explore 
+            <span className="text-electric ml-1 font-medium">details</span>
+          </p>
+          <div className="flex space-x-3 p-2 bg-gray-50 rounded-full shadow-inner">
             {stages.map((stage) => (
               <motion.div 
                 key={stage.id}
-                className={`h-3 w-3 rounded-full cursor-pointer ${
-                  stage.id === 1 ? "bg-electric" : 
+                className={`h-4 w-4 rounded-full cursor-pointer ${
+                  stage.id === 1 ? "bg-electric shadow-[0_0_8px_rgba(0,221,255,0.7)]" : 
                   stage.id === 2 ? "bg-[hsl(var(--flow-blue-dark))]" : 
                   stage.id === 3 ? "bg-[hsl(var(--flow-blue-light))]" : 
-                  stage.id === 4 ? "bg-accent" : 
+                  stage.id === 4 ? "bg-accent shadow-[0_0_8px_rgba(255,119,0,0.5)]" : 
                   "bg-destructive"
                 }`}
                 whileTap={{ scale: 1.5 }}

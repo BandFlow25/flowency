@@ -128,7 +128,7 @@
     content: '→';
     position: absolute;
     font-size: 24px;
-    color: hsl(var(--secondary));
+    color: hsl(var(--accent));
     top: 50%;
     right: -15px;
     transform: translateY(-50%);
@@ -138,10 +138,45 @@
   @media (max-width: 768px) {
     .flow-arrow::after {
       content: '↓';
+      font-size: 28px;
       top: auto;
       right: 50%;
-      bottom: -20px;
+      bottom: -24px;
       transform: translateX(50%);
+      color: hsl(var(--accent));
+      filter: drop-shadow(0 0 3px rgba(255, 100, 0, 0.4));
+    }
+  }
+  
+  /* Mobile specific styles */
+  @media (max-width: 768px) {
+    .mobile-card-connector {
+      position: relative;
+      height: 24px;
+      width: 2px;
+      background: linear-gradient(to bottom, hsl(var(--accent)), hsl(var(--electric)));
+      margin: 0 auto;
+    }
+    
+    .mobile-card-connector::before,
+    .mobile-card-connector::after {
+      content: '';
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background-color: hsl(var(--accent));
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .mobile-card-connector::before {
+      top: -3px;
+    }
+    
+    .mobile-card-connector::after {
+      bottom: -3px;
+      background-color: hsl(var(--electric));
     }
   }
   

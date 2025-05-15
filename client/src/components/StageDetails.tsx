@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Stage } from "@/data/stagesData";
 import React from "react";
+import useBreakpoint from "@/hooks/useBreakpoint";
 
 interface StageDetailsProps {
   stage: Stage;
@@ -13,6 +14,7 @@ interface StageDetailsProps {
 
 export default function StageDetails({ stage, onClose }: StageDetailsProps) {
   const detailsRef = useRef<HTMLDivElement>(null);
+  const isMobile = useBreakpoint("md");
   
   // Get stage-specific colors
   const getBorderColor = (stageId: number): string => {
@@ -76,19 +78,36 @@ export default function StageDetails({ stage, onClose }: StageDetailsProps) {
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.3 }}
       >
+        {/* Mobile stage navigation indicator at top */}
+        {isMobile && (
+          <div className="flex justify-center mb-4">
+            <div className="flex space-x-2">
+              {Array.from({ length: 5 }).map((_, idx) => (
+                <motion.div 
+                  key={idx} 
+                  className={`h-2 w-2 rounded-full cursor-pointer ${
+                    idx + 1 === stage.id ? getBackgroundColor(stage.id) : 'bg-gray-200'
+                  }`}
+                  whileTap={{ scale: 1.5 }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+        
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center">
-            <div className={`${getBackgroundColor(stage.id)} text-white p-2 rounded-full mr-3`}>
+            <div className={`${getBackgroundColor(stage.id)} text-white p-2 rounded-full mr-3 shadow-md`}>
               {StageIcons[stage.icon]}
             </div>
-            <h3 className="text-2xl font-bold text-primary">{stage.title}</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-primary">{stage.title}</h3>
           </div>
           <button 
-            className="text-secondary hover:text-primary focus:outline-none"
+            className="text-secondary hover:text-primary focus:outline-none bg-gray-100 rounded-full p-1"
             onClick={onClose}
             aria-label="Close details"
           >
-            <X className="h-6 w-6" />
+            <X className="h-5 w-5" />
           </button>
         </div>
         
@@ -100,14 +119,20 @@ export default function StageDetails({ stage, onClose }: StageDetailsProps) {
               </span>
               {stage.details.leftColumn.title}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {stage.details.leftColumn.items.map((item, index) => (
-                <li key={index} className="flex items-start">
+                <motion.li 
+                  key={index} 
+                  className="flex items-start bg-gray-50 p-2 rounded-md"
+                  initial={{ x: -5, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
                   <span className={`mt-1 mr-2 ${getColor(stage.id)}`}>
                     {React.cloneElement(stage.details.leftColumn.icon, { className: "h-5 w-5" })}
                   </span>
                   <span>{item}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -119,18 +144,29 @@ export default function StageDetails({ stage, onClose }: StageDetailsProps) {
               </span>
               {stage.details.rightColumn.title}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {stage.details.rightColumn.items.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <AlertCircle className="h-5 w-5 text-destructive mt-1 mr-2" />
+                <motion.li 
+                  key={index} 
+                  className="flex items-start bg-red-50 p-2 rounded-md"
+                  initial={{ x: 5, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <AlertCircle className="h-5 w-5 text-destructive mt-1 mr-2 flex-shrink-0" />
                   <span>{item}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
         </div>
         
-        <div className="mt-8">
+        <motion.div 
+          className="mt-8"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
           <div className="flex items-center mb-4">
             <div className="bg-accent text-white p-1 rounded mr-2 h-6 w-6 flex items-center justify-center">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,31 +175,71 @@ export default function StageDetails({ stage, onClose }: StageDetailsProps) {
             </div>
             <h4 className="text-lg font-semibold">Flowency IntentOps Solution</h4>
           </div>
-          <div className={`${getSolutionColor(stage.id)} p-4 rounded-lg`}>
+          <div className={`${getSolutionColor(stage.id)} p-4 rounded-lg border border-gray-100`}>
             <p className="mb-4">{stage.solution.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {stage.solution.features.map((feature, index) => (
-                <Card key={index} className={`p-3 rounded border ${getBorderColor(stage.id)}`}>
-                  <CardContent className="p-0">
-                    <h5 className={`font-medium ${getColor(stage.id)} mb-2`}>{feature.title}</h5>
-                    <p className="text-sm">{feature.description}</p>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4 + (index * 0.1) }}
+                >
+                  <Card className={`p-3 rounded border ${getBorderColor(stage.id)} hover:shadow-md transition-shadow`}>
+                    <CardContent className="p-0">
+                      <h5 className={`font-medium ${getColor(stage.id)} mb-2`}>{feature.title}</h5>
+                      <p className="text-sm">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
         
-        <div className="mt-6 text-center">
+        <motion.div 
+          className="mt-6 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
           <Button 
-            className={`${getBackgroundColor(stage.id)} hover:bg-accent text-white font-medium py-2 px-6 rounded-md transition-colors`}
+            className={`${getBackgroundColor(stage.id)} hover:bg-accent text-white font-medium py-2 px-6 rounded-md transition-colors shadow-md`}
             asChild
           >
-            <a href={stage.cta.url}>
-              {stage.cta.text}
+            <a href={stage.cta.url} className="flex items-center">
+              <span>{stage.cta.text}</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="ml-2"
+              >
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
             </a>
           </Button>
-        </div>
+        </motion.div>
+        
+        {/* Mobile quick close reminder at bottom */}
+        {isMobile && (
+          <div className="flex justify-center mt-8 pt-4 border-t border-gray-200">
+            <div 
+              className="flex items-center text-sm text-secondary cursor-pointer"
+              onClick={onClose}
+            >
+              <X className="h-4 w-4 mr-1" />
+              Tap to close and continue exploring
+            </div>
+          </div>
+        )}
       </motion.div>
     </AnimatePresence>
   );

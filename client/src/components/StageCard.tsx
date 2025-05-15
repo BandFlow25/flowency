@@ -70,19 +70,32 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: id * 0.1 }}
-      className={`stage-card bg-white rounded-lg shadow-md p-4 md:p-6 cursor-pointer relative ${!isLastStage ? 'flow-arrow' : ''}`}
+      className={`stage-card bg-white rounded-lg shadow-md p-4 md:p-6 cursor-pointer relative ${!isLastStage && !isMobile ? 'flow-arrow' : ''}`}
       onClick={onClick}
       whileHover={{ y: -5 }}
+      whileTap={isMobile ? { scale: 0.98 } : {}}
     >
-      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-electric text-electric-foreground text-xs font-bold py-1 px-2 rounded">
+      {/* Mobile indicator for scroll position at the top of card */}
+      {isMobile && (
+        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 flex space-x-1">
+          {Array.from({ length: 5 }).map((_, idx) => (
+            <div 
+              key={idx} 
+              className={`h-1.5 w-1.5 rounded-full ${idx + 1 === id ? 'bg-accent' : 'bg-gray-300'}`}
+            />
+          ))}
+        </div>
+      )}
+      
+      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-electric text-electric-foreground text-xs font-bold py-1 px-2 rounded shadow-sm">
         Stage {id}
       </div>
       
       <div className="text-center mb-4">
-        <div className={`inline-block ${getIconBgColor(id)} text-white p-3 rounded-full mb-3`}>
+        <div className={`inline-block ${getIconBgColor(id)} text-white p-3 rounded-full mb-3 shadow-md`}>
           {StageIcons[icon]}
         </div>
-        <h4 className="text-lg md:text-xl font-bold">{title}</h4>
+        <h4 className="text-lg md:text-xl font-bold text-primary">{title}</h4>
       </div>
       
       <p className="text-sm text-secondary mb-3">{description}</p>
@@ -95,12 +108,48 @@ export default function StageCard({ stage, isLastStage, onClick, isMobile }: Sta
       
       <div className="mt-4 text-center">
         <button 
-          className="text-accent font-medium hover:underline hover:text-electric transition-colors focus:outline-none px-3 py-1 text-sm border border-accent rounded-md"
+          className={`
+            flex items-center justify-center mx-auto
+            text-accent bg-white hover:bg-accent hover:text-white 
+            transition-colors focus:outline-none 
+            px-4 py-1.5 text-sm border border-accent rounded-md
+            shadow-sm
+          `}
           aria-label={`View details about ${title}`}
         >
-          View Details
+          <span>View Details</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="16" 
+            height="16" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            className="ml-1.5"
+          >
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
         </button>
       </div>
+      
+      {/* Mobile design enhancement - animated gradient border at bottom of card */}
+      {isMobile && (
+        <div className="absolute bottom-0 left-0 right-0 h-1 overflow-hidden rounded-b-lg">
+          <div 
+            className={`
+              h-full w-full animate-pulse
+              ${id === 1 ? "bg-electric" : 
+                id === 2 ? "bg-[hsl(var(--flow-blue-dark))]" : 
+                id === 3 ? "bg-[hsl(var(--flow-blue-light))]" : 
+                id === 4 ? "bg-accent" : 
+                "bg-destructive"}
+            `}
+          />
+        </div>
+      )}
     </motion.div>
   );
 }

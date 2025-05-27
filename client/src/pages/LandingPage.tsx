@@ -42,7 +42,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black">
               We help your Delivery Systems Flow
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">
@@ -138,49 +138,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Enhanced Description Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-                <span className="text-accent">Enhancing operational efficiency</span>, fostering strategic alignment and building internal capability.
-              </h3>
-              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-                Visualise and optimise FLOW at all altitudes in the delivery organisation. From strategy formulation, 
-                lean portfolio coordination to execution, we deliver insights and practical solutions designed to elevate 
-                your delivery performance and value outcomes, ensuring resilience and adaptability in an ever-evolving market landscape.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-electric">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
-                <span className="text-accent">Immediate impact</span> and <span className="text-electric">sticky change</span>
-              </h3>
-              <p className="text-lg text-gray-700 mb-6">
-                Flowency delivers rapid and sustainable improvements in delivery efficiency, leading to significant 
-                reductions in lead times and increases in value delivery and strategic alignment. Starting with where 
-                you are today, we help bring clarity, focus and stability, then optimise for flow. Our context-sensitive 
-                approach ensures that change is not imposed. By leveraging your data insights and our experience, we help 
-                you pursue evolutionary, continuous improvement, building internal capability and ensuring changes stick.
-              </p>
-              
-              {/* Key Strapline */}
-              <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-6 text-center">
-                <p className="text-2xl md:text-3xl font-bold">
-                  We won't tell you the way; <span className="text-accent">we help you find your way</span>.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Our Approach Section - Adaptive Delivery */}
       <section id="approach" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,11 +149,16 @@ export default function LandingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Our Approach: <span className="text-accent">Adaptive Delivery</span>
+              Our Approach
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine proven methodologies with cutting-edge insights to deliver transformational change through four core pillars.
-            </p>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-2xl font-bold text-accent mb-4">
+                Framework agnostic, method diverse, value focused.
+              </p>
+              <p className="text-xl text-gray-600">
+                Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your organisational context and maturity.
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -426,6 +388,49 @@ export default function LandingPage() {
             <div className="text-2xl font-bold text-gray-400">LUCKY SAINT</div>
             <div className="text-2xl font-bold text-gray-400">& MORE</div>
           </div>
+        </div>
+      </section>
+
+      {/* Enhanced Description Section - Moved to Bottom */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+                <span className="text-accent">Enhancing operational efficiency</span>, fostering strategic alignment and building internal capability.
+              </h3>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                Visualise and optimise FLOW at all altitudes in the delivery organisation. From strategy formulation, 
+                lean portfolio coordination to execution, we deliver insights and practical solutions designed to elevate 
+                your delivery performance and value outcomes, ensuring resilience and adaptability in an ever-evolving market landscape.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-electric">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                <span className="text-accent">Immediate impact</span> and <span className="text-electric">sticky change</span>
+              </h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Flowency delivers rapid and sustainable improvements in delivery efficiency, leading to significant 
+                reductions in lead times and increases in value delivery and strategic alignment. Starting with where 
+                you are today, we help bring clarity, focus and stability, then optimise for flow. Our context-sensitive 
+                approach ensures that change is not imposed. By leveraging your data insights and our experience, we help 
+                you pursue evolutionary, continuous improvement, building internal capability and ensuring changes stick.
+              </p>
+              
+              {/* Key Strapline */}
+              <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-6 text-center">
+                <p className="text-2xl md:text-3xl font-bold">
+                  We won't tell you the way; <span className="text-accent">we help you find your way</span>.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

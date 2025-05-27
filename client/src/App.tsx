@@ -3,13 +3,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { queryClient } from "./lib/queryClient";
 import { Route, Switch } from "wouter";
-import Home from "@/pages/Home";
+import LandingPage from "@/pages/LandingPage";
+import IntentOpsPage from "@/pages/IntentOpsPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" component={LandingPage} />
+      <Route path="/intentops" component={IntentOpsPage} />
       <Route component={NotFound} />
     </Switch>
   );

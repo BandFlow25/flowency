@@ -76,6 +76,8 @@ export default function LandingPage() {
             <div 
               className="w-80 h-48 perspective-1000 cursor-pointer"
               onClick={() => setIsCardFlipped(!isCardFlipped)}
+              onMouseEnter={() => setIsCardFlipped(true)}
+              onMouseLeave={() => setIsCardFlipped(false)}
             >
               <div className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${isCardFlipped ? 'rotate-y-180' : ''}`}>
                 {/* Front of Card */}
@@ -92,8 +94,9 @@ export default function LandingPage() {
                   
                   {/* Definition */}
                   <p className="text-gray-700 leading-relaxed text-sm text-center px-2">
-                    The quality or condition of being fluent in <strong>flow</strong> and achieving{" "}
-                    <span className="text-accent font-medium">optimal flow</span> in your delivery organisation.
+                    The quality or condition of being<br/>
+                    fluent in <strong>flow</strong>, achieving <span className="text-accent font-medium">optimal flow</span><br/>
+                    in your delivery organisation.
                   </p>
                   
                   {/* Click hint */}

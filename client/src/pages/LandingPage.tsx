@@ -685,44 +685,47 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <img 
-                src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-                alt="Flowency"
-                className="h-8 w-auto mb-4"
-              />
-              <p className="text-gray-400">
-                Become fluent in flow
-              </p>
+      {/* Contact Card Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <div className="bg-slate-700 rounded-lg p-8 max-w-md w-full text-center text-white shadow-xl relative">
+            {/* Top Section - Service Mapping */}
+            <div className="mb-6">
+              <div className="space-y-2 text-lg font-bold">
+                <div>Flowency → Capability</div>
+                <div>IntentOps → Alignment</div>
+                <div>Actuate → Activation</div>
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Delivery Optimisation</li>
-                <li>Flow Analysis</li>
-                <li><Link href="/intentops" className="hover:text-accent transition-colors">IntentOps</Link></li>
+            
+            {/* Middle Section - Services */}
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-4">Our Services</h3>
+              <ul className="space-y-2 text-left">
+                <li>• Delivery System Optimisation</li>
+                <li>• AI Strategy Alignment</li>
+                <li>• AI Native Delivery & Augmentation</li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms-of-use" className="hover:text-accent transition-colors">Terms of Use</a></li>
-                <li><a href="/cookie-policy" className="hover:text-accent transition-colors">Cookie Policy</a></li>
-              </ul>
+            
+            {/* Bottom Section - Contact */}
+            <div className="pt-4 border-t border-slate-600">
+              <h4 className="text-lg font-medium mb-2">Contact Us</h4>
+              <p className="text-slate-300">hello@flowency.co.uk</p>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <p className="text-gray-400">
-                hello@flowency.co.uk
-              </p>
+            
+            {/* Orange Arrow Accent */}
+            <div className="absolute bottom-4 right-4">
+              <div className="w-8 h-8 bg-accent rounded transform rotate-45"></div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        </div>
+      </section>
+
+      {/* Simple Footer */}
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-gray-400">
             <p>&copy; 2024 Flowency. All rights reserved.</p>
           </div>
         </div>

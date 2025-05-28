@@ -385,7 +385,7 @@ export default function LandingPage() {
               {/* Actuate in Action Badge */}
               <Link 
                 to="/actuate"
-                className="absolute top-4 right-4 w-16 h-16 transform rotate-12 cursor-pointer"
+                className="absolute top-4 right-4 w-24 h-24 transform rotate-12 cursor-pointer animate-pulse"
               >
                 <img 
                   src="/assets/images/ActuateinActionPill.png" 
@@ -447,7 +447,7 @@ export default function LandingPage() {
               {/* Actuate in Action Badge */}
               <Link 
                 to="/actuate"
-                className="absolute top-4 right-4 w-16 h-16 transform rotate-12 cursor-pointer"
+                className="absolute top-4 right-4 w-24 h-24 transform rotate-12 cursor-pointer animate-pulse"
               >
                 <img 
                   src="/assets/images/ActuateinActionPill.png" 

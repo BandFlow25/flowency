@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import CognitiveDebtFlow from "@/components/CognitiveDebtFlow";
 import IntentOpsLayer from "@/components/IntentOpsLayer";

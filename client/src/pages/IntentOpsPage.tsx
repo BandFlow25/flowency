@@ -36,7 +36,7 @@ export default function IntentOpsPage() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-accent transition-colors">Home</Link>
-              <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">IntentOps</Link>
+              <Link to="/intentops" className="text-amber-500 hover:text-amber-600 transition-colors font-bold">IntentOps</Link>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">Actuate</Link>
             </div>
             <a 
@@ -50,7 +50,7 @@ export default function IntentOpsPage() {
       </nav>
 
       {/* Hero Section - Safety & Governance Focused */}
-      <section id="home" className="pt-16 bg-gradient-to-br from-slate-800 via-primary to-slate-900">
+      <section id="home" className="pt-16 bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div 
             className="text-center"
@@ -59,9 +59,9 @@ export default function IntentOpsPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-              <span className="block md:inline text-electric">"AI adoption is consensus.</span>
+              <span className="block md:inline text-amber-400">"AI adoption is consensus.</span>
               <span className="hidden md:inline"> </span>
-              <span className="text-accent">Intent alignment is competitive advantage."</span>
+              <span className="text-yellow-300">Intent alignment is competitive advantage."</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
               IntentOps is not another AI tool or framework. It is a <strong className="text-white">strategic control layer</strong>, 
@@ -73,7 +73,7 @@ export default function IntentOpsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <button className="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors shadow-lg">
+              <button className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg">
                 EXPLORE INTENTOPS
               </button>
             </motion.div>

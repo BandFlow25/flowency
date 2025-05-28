@@ -31,7 +31,7 @@ export default function ActuatePage() {
       </nav>
 
       {/* Hero Section - Powerful Execution Engine */}
-      <section id="home" className="pt-16 bg-gradient-to-br from-gray-900 via-slate-800 to-electric">
+      <section id="home" className="pt-16 bg-gradient-to-br from-cyan-500 via-blue-600 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div 
             className="text-center"
@@ -39,14 +39,14 @@ export default function ActuatePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 border border-accent/30">
+            <div className="inline-block bg-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-yellow-400/30">
               🔩 Applied AI Delivery & Optimisation
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight">
               <span className="block md:inline">Actuate is your</span>
               <span className="hidden md:inline"> </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-400">AI-native execution engine</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">AI-native execution engine</span>
             </h1>
             
             <p className="text-xl md:text-2xl mb-12 max-w-5xl mx-auto text-gray-300 leading-relaxed">
@@ -61,7 +61,7 @@ export default function ActuatePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <button className="bg-accent hover:bg-orange-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+              <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
                 START ACTUATING →
               </button>
               <button className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300">
@@ -77,7 +77,7 @@ export default function ActuatePage() {
               className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">⚡</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">⚡</div>
                 <div className="text-white font-semibold">AI-Native Builds</div>
                 <div className="text-gray-400 text-sm">End-to-end execution</div>
               </div>

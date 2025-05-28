@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { useState } from "react";
 import PBIImage from "@assets/PBI.png";
 
 export default function LandingPage() {
-  const [isCardFlipped, setIsCardFlipped] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -74,49 +72,12 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <div 
-              className="w-80 h-48 perspective-1000 cursor-pointer"
-              onClick={() => setIsCardFlipped(!isCardFlipped)}
-              onMouseEnter={() => setIsCardFlipped(true)}
-              onMouseLeave={() => setIsCardFlipped(false)}
-            >
-              <div className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${isCardFlipped ? 'rotate-y-180' : ''}`}>
-                {/* Front of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl py-8 px-6 shadow-xl border border-gray-200 flex flex-col justify-center">
-                  {/* Title */}
-                  <h2 className="text-3xl font-medium text-primary text-center mb-3">
-                    Flowency
-                  </h2>
-                  
-                  {/* Pronunciation */}
-                  <p className="text-sm text-gray-500 text-center mb-4">
-                    / ˈfləʊənsi / • noun
-                  </p>
-                  
-                  {/* Definition */}
-                  <p className="text-gray-700 leading-relaxed text-sm text-center px-2">
-                    The quality or condition of being<br/>
-                    fluent in <strong>flow</strong>, achieving <span className="text-accent font-medium">optimal flow</span><br/>
-                    in your delivery organisation.
-                  </p>
-                </div>
-
-                {/* Back of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl py-6 px-6 shadow-xl text-white flex flex-col justify-center">
-                  <h3 className="text-lg font-bold mb-1 text-center">Our Services</h3>
-                  <ul className="text-sm space-y-1 mb-4">
-                    <li>• Delivery System Optimisation</li>
-                    <li>• AI Strategy & Augmentation</li>
-                    <li>• AI Native Delivery</li>
-                    <li>• IntentOps - Value Outcome Alignment</li>
-                  </ul>
-                  
-                  <div className="border-t border-white/20 pt-0 text-center">
-                    <p className="text-sm font-medium">Contact Us</p>
-                    <p className="text-sm text-white/90">hello@flowency.co.uk</p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative w-96 h-60 hover:scale-105 transition-transform duration-300">
+              <img 
+                src="/assets/images/Card_on_desk.jpg" 
+                alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
+                className="w-full h-full object-cover rounded-lg shadow-2xl"
+              />
             </div>
           </motion.div>
         </div>

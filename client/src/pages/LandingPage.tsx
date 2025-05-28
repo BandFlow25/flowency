@@ -288,16 +288,32 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
             >
-              {/* IntentOps Stamp */}
-              <div className="absolute -top-3 -right-3">
-                <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white px-5 py-4 rounded-xl text-sm font-black transform rotate-12 shadow-2xl border-3 border-white">
-                  <div className="flex flex-col items-center gap-1">
-                    <svg className="w-6 h-6 text-cyan-400 fill-current" viewBox="0 0 24 24">
-                      <path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78L13 3.24V10h3.5c.88 0 .33.75.31.78L11 21z"/>
+              {/* IntentOps Badge */}
+              <div className="absolute -top-6 -right-6">
+                <div className="w-24 h-24 bg-white rounded-full shadow-2xl border-4 border-orange-500 relative transform rotate-12">
+                  {/* Outer ring text - POWERED BY */}
+                  <div className="absolute inset-2 rounded-full border-2 border-orange-500 flex items-center justify-center">
+                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                      <defs>
+                        <path id="circle-path" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"/>
+                      </defs>
+                      <text className="text-xs font-bold fill-primary">
+                        <textPath href="#circle-path" startOffset="0%">
+                          POWERED BY
+                        </textPath>
+                      </text>
+                      <text className="text-xs font-bold fill-primary">
+                        <textPath href="#circle-path" startOffset="50%">
+                          IntentOps
+                        </textPath>
+                      </text>
                     </svg>
-                    <div className="text-center">
-                      <div className="text-xs font-bold leading-tight">POWERED BY</div>
-                      <div className="text-sm font-black tracking-wide">IntentOps</div>
+                    
+                    {/* Center lightning bolt */}
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center relative z-10">
+                      <svg className="w-5 h-5 text-cyan-400 fill-current" viewBox="0 0 24 24">
+                        <path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78L13 3.24V10h3.5c.88 0 .33.75.31.78L11 21z"/>
+                      </svg>
                     </div>
                   </div>
                 </div>

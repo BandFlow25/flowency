@@ -19,7 +19,7 @@ export default function LandingPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 4000); // Change slide every 4 seconds
+    }, 8000); // Change slide every 8 seconds
 
     return () => clearInterval(interval);
   }, [carouselImages.length]);
@@ -156,7 +156,7 @@ export default function LandingPage() {
                     <img 
                       src={image.src} 
                       alt={image.alt}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ))}
@@ -206,7 +206,7 @@ export default function LandingPage() {
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               ))}

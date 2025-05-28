@@ -406,10 +406,10 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
             >
-              {/* IntentOps Badge */}
+              {/* IntentOps Stamp */}
               <Link 
                 to="/intentops"
-                className="absolute -top-3 -right-3 w-24 h-24 shadow-2xl transform rotate-12 cursor-pointer"
+                className="absolute top-4 right-4 w-16 h-16 transform rotate-12 cursor-pointer"
               >
                 <img 
                   src="/assets/images/PoewredByIntentOpsBadge.png" 

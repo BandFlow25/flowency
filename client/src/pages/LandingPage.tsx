@@ -290,33 +290,11 @@ export default function LandingPage() {
             >
               {/* IntentOps Badge */}
               <div className="absolute -top-6 -right-6">
-                <div className="w-24 h-24 bg-white rounded-full shadow-2xl border-4 border-orange-500 relative transform rotate-12">
-                  {/* Outer ring text - POWERED BY */}
-                  <div className="absolute inset-2 rounded-full border-2 border-orange-500 flex items-center justify-center">
-                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                      <defs>
-                        <path id="circle-path" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"/>
-                      </defs>
-                      <text className="text-xs font-bold fill-primary">
-                        <textPath href="#circle-path" startOffset="0%">
-                          POWERED BY
-                        </textPath>
-                      </text>
-                      <text className="text-xs font-bold fill-primary">
-                        <textPath href="#circle-path" startOffset="50%">
-                          IntentOps
-                        </textPath>
-                      </text>
-                    </svg>
-                    
-                    {/* Center lightning bolt */}
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center relative z-10">
-                      <svg className="w-5 h-5 text-cyan-400 fill-current" viewBox="0 0 24 24">
-                        <path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78L13 3.24V10h3.5c.88 0 .33.75.31.78L11 21z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="@assets/PBI.png" 
+                  alt="Powered by IntentOps"
+                  className="w-20 h-20 transform rotate-12 shadow-2xl"
+                />
               </div>
               
               <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">

@@ -272,12 +272,14 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              <div className="w-12 h-12 bg-electric rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  <circle cx="12" cy="9" r="1" fill="currentColor" />
-                  <circle cx="8" cy="9" r="1" fill="currentColor" />
-                  <circle cx="16" cy="9" r="1" fill="currentColor" />
+              <div className="w-12 h-12 bg-gradient-to-br from-electric to-blue-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  <circle cx="9" cy="8" r="1.5" fill="white"/>
+                  <circle cx="15" cy="8" r="1.5" fill="white"/>
+                  <circle cx="12" cy="8" r="1.5" fill="white"/>
+                  <path d="M4 16h16v2H4z" fill="white" opacity="0.8"/>
+                  <path d="M6 14h12v1H6z" fill="white" opacity="0.6"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Work System Optimisation</h3>
@@ -295,8 +297,8 @@ export default function LandingPage() {
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
             >
               {/* IntentOps Stamp */}
-              <div className="absolute top-4 right-4">
-                <div className="bg-gradient-to-r from-electric to-accent text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12 shadow-md">
+              <div className="absolute top-3 right-3">
+                <div className="bg-gradient-to-r from-accent to-orange-600 text-white px-4 py-2 rounded-lg text-sm font-bold transform rotate-12 shadow-lg border-2 border-white">
                   Powered by IntentOps
                 </div>
               </div>

@@ -14,17 +14,17 @@
   --border: 20 5.9% 90%;
   --input: 20 5.9% 90%;
   
-  /* Flowency colors */
-  --primary: 212 75% 20%; /* dark blue from image */
+  /* Flowency colors - Updated to dark slate blue with subtle highlights */
+  --primary: 215 25% 27%; /* dark slate blue */
   --primary-foreground: 0 0% 100%;
-  --secondary: 212 60% 30%; /* medium blue */
+  --secondary: 215 20% 35%; /* medium slate blue */
   --secondary-foreground: 0 0% 100%;
-  --accent: 16 100% 50%; /* bright orange */
+  --accent: 24 95% 53%; /* subtle orange */
   --accent-foreground: 0 0% 100%;
-  --electric: 190 100% 50%; /* bright cyan */
+  --electric: 189 85% 55%; /* subtle cyan */
   --electric-foreground: 0 0% 100%;
-  --flow-blue-light: 200 80% 60%; /* light blue for flows */
-  --flow-blue-dark: 212 80% 40%; /* dark blue for flows */
+  --flow-blue-light: 200 60% 65%; /* light blue for flows */
+  --flow-blue-dark: 215 35% 35%; /* dark slate blue for flows */
   
   /* Alert colors */
   --destructive: 0 84.2% 60.2%; /* alert-red */
@@ -246,5 +246,25 @@
   
   .orange-glow:hover {
     box-shadow: 0 0 15px 5px hsl(16, 100%, 50%, 0.4);
+  }
+  
+  /* Floating card animation */
+  .floating-card {
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 0 1px rgba(255, 255, 255, 0.8);
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, hsl(var(--electric)), hsl(var(--accent))) border-box;
+    border: 2px solid transparent;
   }
 }

@@ -60,104 +60,160 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Flowency Definition Section with Animation */}
-      <section id="more" className="bg-gradient-to-r from-secondary to-primary text-white py-20">
+      {/* Flowency Definition Card - Floating Design */}
+      <section id="more" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="flex justify-center"
           >
-            <motion.h2 
-              className="text-5xl md:text-7xl font-bold mb-6"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-accent">Flow</span>
-              <span className="text-electric">ency</span>
-            </motion.h2>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mb-6"
-            >
-              <p className="text-2xl text-gray-300 mb-2">
-                /ˈfloʊənsi/ •{" "}
-                <motion.em
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  className="text-electric"
-                >
-                  noun
-                </motion.em>
+            <div className="floating-card bg-white rounded-2xl p-8 md:p-12 max-w-2xl text-center gradient-border">
+              {/* Logo/Icon */}
+              <div className="flex justify-center mb-6">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z" 
+                          fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+              
+              {/* Title */}
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+                Flowency
+              </h2>
+              
+              {/* Pronunciation */}
+              <p className="text-lg text-gray-600 mb-6">
+                /ˈfloʊənsi/ • <span className="text-accent font-medium">noun</span>
               </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-electric/20 to-accent/20 rounded-lg blur-xl"></div>
-              <p className="text-2xl md:text-3xl mb-8 text-white relative z-10 bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              
+              {/* Definition */}
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 The quality or condition of being{" "}
-                <motion.span 
-                  className="text-accent font-bold"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 1.0 }}
-                  viewport={{ once: true }}
-                >
-                  fluent in flow
-                </motion.span>{" "}
+                <span className="text-electric font-semibold">fluent in flow</span>{" "}
                 and achieving{" "}
-                <motion.span 
-                  className="text-electric font-bold"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 1.2 }}
-                  viewport={{ once: true }}
-                >
-                  optimal flow
-                </motion.span>{" "}
+                <span className="text-accent font-semibold">optimal flow</span>{" "}
                 in your delivery organisation.
               </p>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Our Approach Section - Adaptive Delivery */}
+      {/* Our Approach Section - Clean Design */}
       <section id="approach" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Our Approach
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-2xl font-bold text-accent mb-4">
+            {/* Header */}
+            <div className="mb-12">
+              <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+                Our Approach
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+                Adaptive Delivery
+                <br />
+                <span className="text-electric">Framework</span>
+              </h2>
+              <p className="text-xl text-gray-600 font-medium mb-6">
                 Framework agnostic, method diverse, value focused.
               </p>
-              <p className="text-xl text-gray-600">
+              <p className="text-lg text-gray-600 max-w-4xl leading-relaxed">
                 Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your organisational context and maturity.
               </p>
+            </div>
+
+            {/* Key Points Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-1">Framework agnostic solutions</h4>
+                  <p className="text-gray-600 text-sm">Adapt to your existing methodologies</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-1">Method diverse expertise</h4>
+                  <p className="text-gray-600 text-sm">Drawing from agile, lean, and beyond</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-1">Value-focused outcomes</h4>
+                  <p className="text-gray-600 text-sm">Measurable business impact</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-1">Contextually relevant approaches</h4>
+                  <p className="text-gray-600 text-sm">Tailored to your organizational maturity</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-1">Years of proven experience</h4>
+                  <p className="text-gray-600 text-sm">Battle-tested insights and solutions</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-1">Lasting transformational change</h4>
+                  <p className="text-gray-600 text-sm">Sustainable improvements that stick</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div>
+              <button className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-lg font-medium transition-colors shadow-lg flex items-center space-x-2">
+                <span>Discover Our Process</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
           </motion.div>
 

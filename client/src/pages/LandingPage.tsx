@@ -63,19 +63,35 @@ export default function LandingPage() {
       </section>
 
       {/* Flowency Definition Card - Business Card Size */}
-      <section id="more" className="px-4 sm:px-6 lg:px-8">
+      <section id="more" className="relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="flex justify-center"
+          className="relative"
         >
-          <img 
-            src="/assets/images/Card_on_desk.jpg" 
-            alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
-            className="w-full max-w-4xl hover:scale-105 transition-transform duration-300"
-          />
+          {/* Desktop: Image with dark gray side panels */}
+          <div className="hidden md:flex">
+            <div className="flex-1 bg-gray-800"></div>
+            <div className="w-full max-w-4xl">
+              <img 
+                src="/assets/images/Card_on_desk.jpg" 
+                alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
+                className="w-full"
+              />
+            </div>
+            <div className="flex-1 bg-gray-800"></div>
+          </div>
+
+          {/* Mobile: Full width with side padding */}
+          <div className="md:hidden px-4">
+            <img 
+              src="/assets/images/Card_on_desk.jpg" 
+              alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
+              className="w-full"
+            />
+          </div>
         </motion.div>
       </section>
 

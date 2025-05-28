@@ -21,8 +21,11 @@ export default function LandingPage() {
               <a href="#home" className="text-gray-900 hover:text-accent transition-colors">Home</a>
               <a href="#approach" className="text-gray-900 hover:text-accent transition-colors">Our Approach</a>
               <a href="#flow" className="text-gray-900 hover:text-accent transition-colors">Flow</a>
-              <Link href="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
+              <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
+              </Link>
+              <Link to="/aiops" className="text-gray-900 hover:text-accent transition-colors">
+                AIOps
               </Link>
             </div>
             <a 
@@ -45,7 +48,8 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-light mb-6 text-black">
-              We help your Delivery Systems Flow
+              <span className="block md:inline">We help your</span><br className="md:hidden" />
+              <span className="text-electric">Delivery Systems Flow</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">
               Flowency is a Delivery Improvement and Business Change consultancy specialising in 
@@ -71,17 +75,17 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Desktop: Image with gradient background panels */}
+          {/* Desktop: Image with lighter gray side panels */}
           <div className="hidden md:flex">
-            <div className="flex-1" style={{ background: 'linear-gradient(to right, #847f7b, #6b6461)' }}></div>
-            <div className="w-full max-w-xl">
+            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
+            <div className="w-full max-w-2xl">
               <img 
                 src="/assets/images/Card_on_desk.jpg" 
                 alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
                 className="w-full"
               />
             </div>
-            <div className="flex-1" style={{ background: 'linear-gradient(to left, #847f7b, #6b6461)' }}></div>
+            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
           </div>
 
           {/* Mobile: Full width with side padding */}
@@ -239,13 +243,13 @@ export default function LandingPage() {
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
               <div className="w-12 h-12 bg-gradient-to-br from-electric to-blue-500 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  <circle cx="9" cy="8" r="1.5" fill="white"/>
-                  <circle cx="15" cy="8" r="1.5" fill="white"/>
-                  <circle cx="12" cy="8" r="1.5" fill="white"/>
-                  <path d="M4 16h16v2H4z" fill="white" opacity="0.8"/>
-                  <path d="M6 14h12v1H6z" fill="white" opacity="0.6"/>
+                <svg className="w-7 h-7 text-white" fill="white" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14l-5-5 1.41-1.41L11 14.17l7.59-7.59L19 8l-8 8z" fill="white"/>
+                  <circle cx="7" cy="7" r="1" fill="white"/>
+                  <circle cx="12" cy="7" r="1" fill="white"/>
+                  <circle cx="17" cy="7" r="1" fill="white"/>
+                  <rect x="5" y="10" width="14" height="1" fill="white"/>
+                  <rect x="5" y="12" width="10" height="1" fill="white"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Work System Optimisation</h3>
@@ -265,7 +269,7 @@ export default function LandingPage() {
               {/* IntentOps Badge */}
               <Link 
                 to="/intentops"
-                className="absolute -top-0 -right-0 w-28 h-28 bg-white rounded-full p-1 shadow-lg transform rotate-12 hover:scale-110 transition-transform cursor-pointer"
+                className="absolute -top-0 -right-0 w-28 h-28 shadow-2xl transform rotate-12 cursor-pointer"
               >
                 <img 
                   src="/assets/images/PBI.svg" 

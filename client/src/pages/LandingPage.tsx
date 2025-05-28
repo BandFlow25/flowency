@@ -71,21 +71,21 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Desktop: Image with lighter gray side panels */}
+          {/* Desktop: Image with gradient background panels */}
           <div className="hidden md:flex">
-            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
-            <div className="w-full max-w-2xl">
+            <div className="flex-1" style={{ background: 'linear-gradient(to right, #847f7b, #6b6461)' }}></div>
+            <div className="w-full max-w-xl">
               <img 
                 src="/assets/images/Card_on_desk.jpg" 
                 alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
                 className="w-full"
               />
             </div>
-            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
+            <div className="flex-1" style={{ background: 'linear-gradient(to left, #847f7b, #6b6461)' }}></div>
           </div>
 
           {/* Mobile: Full width with side padding */}
-          <div className="md:hidden px-4">
+          <div className="md:hidden px-0">
             <img 
               src="/assets/images/Card_on_desk.jpg" 
               alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"

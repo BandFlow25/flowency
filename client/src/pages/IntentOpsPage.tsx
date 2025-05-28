@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
 import CognitiveDebtFlow from "@/components/CognitiveDebtFlow";
 import IntentOpsLayer from "@/components/IntentOpsLayer";
 import StageDetails from "@/components/StageDetails";
@@ -10,6 +10,7 @@ import { stages } from "@/data/stagesData";
 
 export default function IntentOpsPage() {
   const [selectedStage, setSelectedStage] = useState<number | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleStageClick = (stageId: number) => {
     setSelectedStage(stageId);
@@ -39,9 +40,27 @@ export default function IntentOpsPage() {
               <Link to="/intentops" className="text-amber-500 hover:text-amber-600 transition-colors font-bold">IntentOps</Link>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">Actuate</Link>
             </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center space-x-4">
+              <a 
+                href="#contact" 
+                className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-3 py-2 rounded-md transition-colors text-sm"
+              >
+                Contact
+              </a>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-900 hover:text-accent transition-colors"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
+            
+            {/* Desktop contact button */}
             <a 
               href="#contact" 
-              className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
+              className="hidden md:block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
             >
               Contact us
             </a>

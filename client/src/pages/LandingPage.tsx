@@ -292,7 +292,9 @@ export default function LandingPage() {
               <div className="absolute -top-3 -right-3">
                 <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white px-4 py-3 rounded-xl text-sm font-black transform rotate-12 shadow-2xl border-3 border-white">
                   <div className="flex items-center gap-1 justify-center">
-                    <span className="text-cyan-400">⚡</span>
+                    <svg className="w-3 h-3 text-cyan-400 fill-current" viewBox="0 0 24 24">
+                      <path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78L13 3.24V10h3.5c.88 0 .33.75.31.78L11 21z"/>
+                    </svg>
                     <span>POWERED BY</span>
                   </div>
                   <div className="text-center text-xs font-bold tracking-wide">

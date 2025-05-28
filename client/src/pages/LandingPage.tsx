@@ -80,11 +80,13 @@ export default function LandingPage() {
               <div className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${isCardFlipped ? 'rotate-y-180' : ''}`}>
                 {/* Front of Card */}
                 <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl p-8 shadow-xl border border-gray-200">
-                  {/* Flowency Logo - same airplane icon from header */}
+                  {/* Flowency Logo - exact same as header */}
                   <div className="flex justify-center mb-6">
-                    <svg className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20.56 3.44c.59-.59.59-1.54 0-2.12-.59-.59-1.54-.59-2.12 0L12 7.76 5.56 1.32c-.59-.59-1.54-.59-2.12 0-.59.59-.59 1.54 0 2.12L9.88 9.88 2 12l3 3 6-2 6 6 3-3-2-6 6.44-6.44z"/>
-                    </svg>
+                    <img 
+                      src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
+                      alt="Flowency"
+                      className="w-8 h-8"
+                    />
                   </div>
                   
                   {/* Title */}

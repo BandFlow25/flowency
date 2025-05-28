@@ -409,12 +409,12 @@ export default function LandingPage() {
               {/* IntentOps Badge */}
               <Link 
                 to="/intentops"
-                className="absolute -top-3 -right-3 w-24 h-24 shadow-2xl transform rotate-12 cursor-pointer rounded-full overflow-hidden"
+                className="absolute -top-3 -right-3 w-24 h-24 shadow-2xl transform rotate-12 cursor-pointer"
               >
                 <img 
-                  src="/assets/images/PBI.svg" 
+                  src="/assets/images/PoewredByIntentOpsBadge.png" 
                   alt="Powered by IntentOps"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </Link>
               

@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function ActuatePage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation - Consistent with Landing Page */}
@@ -20,14 +24,43 @@ export default function ActuatePage() {
               <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
               <Link to="/actuate" className="text-cyan-400 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
             </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center space-x-4">
+              <a 
+                href="#contact" 
+                className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-3 py-2 rounded-md transition-colors text-sm"
+              >
+                Contact
+              </a>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-900 hover:text-accent transition-colors"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
+            
+            {/* Desktop contact button */}
             <a 
               href="#contact" 
-              className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
+              className="hidden md:block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
             >
               Contact us
             </a>
           </div>
         </div>
+        
+        {/* Mobile menu dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <div className="px-4 py-2 space-y-1">
+              <Link to="/" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</Link>
+              <Link to="/intentops" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
+              <Link to="/actuate" className="block px-3 py-2 text-cyan-400 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section - Powerful Execution Engine */}

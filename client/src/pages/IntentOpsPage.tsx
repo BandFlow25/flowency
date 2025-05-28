@@ -66,6 +66,17 @@ export default function IntentOpsPage() {
             </a>
           </div>
         </div>
+        
+        {/* Mobile menu dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <div className="px-4 py-2 space-y-1">
+              <Link to="/" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</Link>
+              <Link to="/intentops" className="block px-3 py-2 text-amber-500 hover:text-amber-600 transition-colors font-bold">IntentOps</Link>
+              <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Actuate</Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section - Safety & Governance Focused */}

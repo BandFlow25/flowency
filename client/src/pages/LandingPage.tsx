@@ -101,16 +101,16 @@ export default function LandingPage() {
                 </div>
 
                 {/* Back of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl py-10 px-8 shadow-xl text-white flex flex-col justify-center">
-                  <h3 className="text-lg font-bold mb-4 text-center">Our Services</h3>
-                  <ul className="text-sm space-y-2 mb-6">
+                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl py-6 px-6 shadow-xl text-white flex flex-col justify-center">
+                  <h3 className="text-lg font-bold mb-3 text-center">Our Services</h3>
+                  <ul className="text-sm space-y-1 mb-4">
                     <li>• Delivery System Optimisation</li>
                     <li>• AI Strategy & Augmentation</li>
                     <li>• AI Native Delivery</li>
                     <li>• IntentOps - Value Outcome Alignment</li>
                   </ul>
                   
-                  <div className="border-t border-white/20 pt-4 text-center">
+                  <div className="border-t border-white/20 pt-3 text-center">
                     <p className="text-sm font-medium">Contact Us</p>
                     <p className="text-sm text-white/90">hello@flowency.co.uk</p>
                   </div>

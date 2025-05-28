@@ -102,7 +102,7 @@ export default function LandingPage() {
 
                 {/* Back of Card */}
                 <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl py-6 px-6 shadow-xl text-white flex flex-col justify-center">
-                  <h3 className="text-lg font-bold mb-3 text-center">Our Services</h3>
+                  <h3 className="text-lg font-bold mb-1 text-center">Our Services</h3>
                   <ul className="text-sm space-y-1 mb-4">
                     <li>• Delivery System Optimisation</li>
                     <li>• AI Strategy & Augmentation</li>
@@ -110,7 +110,7 @@ export default function LandingPage() {
                     <li>• IntentOps - Value Outcome Alignment</li>
                   </ul>
                   
-                  <div className="border-t border-white/20 pt-3 text-center">
+                  <div className="border-t border-white/20 pt-0 text-center">
                     <p className="text-sm font-medium">Contact Us</p>
                     <p className="text-sm text-white/90">hello@flowency.co.uk</p>
                   </div>
@@ -289,9 +289,15 @@ export default function LandingPage() {
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
             >
               {/* IntentOps Stamp */}
-              <div className="absolute top-3 right-3">
-                <div className="bg-gradient-to-r from-accent to-orange-600 text-white px-4 py-2 rounded-lg text-sm font-bold transform rotate-12 shadow-lg border-2 border-white">
-                  Powered by IntentOps
+              <div className="absolute -top-3 -right-3">
+                <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white px-4 py-3 rounded-xl text-sm font-black transform rotate-12 shadow-2xl border-3 border-white animate-pulse">
+                  <div className="flex items-center gap-1">
+                    <span className="text-yellow-200">⚡</span>
+                    <span>POWERED BY</span>
+                  </div>
+                  <div className="text-xs font-bold tracking-wide">
+                    INTENTOPS
+                  </div>
                 </div>
               </div>
               

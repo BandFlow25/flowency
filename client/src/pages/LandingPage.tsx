@@ -24,8 +24,8 @@ export default function LandingPage() {
               <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
               </Link>
-              <Link to="/aiops" className="text-gray-900 hover:text-accent transition-colors">
-                AIOps
+              <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
+                Actuate
               </Link>
             </div>
             <a 
@@ -47,8 +47,9 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-light mb-6 text-black">
-              <span className="block md:inline">We help your</span><br className="md:hidden" />
+            <h1 className="text-4xl md:text-6xl font-light mb-6 text-black leading-tight">
+              <span className="block md:inline">We help your</span>
+              <span className="hidden md:inline"> </span>
               <span className="text-electric">Delivery Systems Flow</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">

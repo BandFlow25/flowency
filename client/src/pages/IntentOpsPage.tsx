@@ -22,49 +22,63 @@ export default function IntentOpsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-40">
+      {/* Navigation - Consistent with Landing Page */}
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-4">
-              <Link 
-                href="/"
-                className="flex items-center text-gray-600 hover:text-accent transition-colors"
-              >
-                <ArrowLeft className="h-5 w-5 mr-2" />
-                Back to Flowency
-              </Link>
-              <div className="h-6 w-px bg-gray-300"></div>
+            <div className="flex items-center">
               <img 
                 src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
                 alt="Flowency"
                 className="h-8 w-auto"
               />
             </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-electric font-bold text-lg">Intent</span>
-              <span className="text-accent font-bold text-lg">Ops</span>
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className="text-gray-900 hover:text-accent transition-colors">Home</Link>
+              <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">IntentOps</Link>
+              <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">Actuate</Link>
             </div>
+            <a 
+              href="#contact" 
+              className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
+            >
+              Contact us
+            </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Banner */}
-      <header className="bg-gradient-to-br from-primary via-slate-800 to-slate-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-              <span className="text-electric">"AI adoption is consensus.</span><br/>
+      {/* Hero Section - Safety & Governance Focused */}
+      <section id="home" className="pt-16 bg-gradient-to-br from-slate-800 via-primary to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+              <span className="block md:inline text-electric">"AI adoption is consensus.</span>
+              <span className="hidden md:inline"> </span>
               <span className="text-accent">Intent alignment is competitive advantage."</span>
             </h1>
-            <p className="text-xl md:text-2xl leading-relaxed text-gray-200 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
               IntentOps is not another AI tool or framework. It is a <strong className="text-white">strategic control layer</strong>, 
               an adaptive system for aligning AI-driven activity with human intent, value delivery, 
               and organisational governance in complex enterprises.
             </p>
-          </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <button className="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors shadow-lg">
+                EXPLORE INTENTOPS
+              </button>
+            </motion.div>
+          </motion.div>
         </div>
-      </header>
+      </section>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

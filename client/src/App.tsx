@@ -5,7 +5,7 @@ import { queryClient } from "./lib/queryClient";
 import { Route, Switch } from "wouter";
 import LandingPage from "@/pages/LandingPage";
 import IntentOpsPage from "@/pages/IntentOpsPage";
-import AIOpsPage from "@/pages/AIOpsPage";
+import ActuatePage from "@/pages/ActuatePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -13,7 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={LandingPage} />
       <Route path="/intentops" component={IntentOpsPage} />
-      <Route path="/aiops" component={AIOpsPage} />
+      <Route path="/actuate" component={ActuatePage} />
       <Route component={NotFound} />
     </Switch>
   );

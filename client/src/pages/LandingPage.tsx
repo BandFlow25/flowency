@@ -290,11 +290,11 @@ export default function LandingPage() {
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
             >
               {/* IntentOps Badge */}
-              <div className="absolute -top-6 -right-6">
+              <div className="absolute -top-2 -right-2 w-16 h-16 bg-white rounded-full p-1 shadow-lg transform rotate-12">
                 <img 
-                  src={PBIImage} 
+                  src="/assets/images/PBI.svg" 
                   alt="Powered by IntentOps"
-                  className="w-20 h-20 transform rotate-12 shadow-2xl"
+                  className="w-full h-full object-contain"
                 />
               </div>
               

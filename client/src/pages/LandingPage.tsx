@@ -71,9 +71,9 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Desktop: Image with dark gray side panels */}
+          {/* Desktop: Image with lighter gray side panels */}
           <div className="hidden md:flex">
-            <div className="flex-1 bg-gray-800"></div>
+            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
             <div className="w-full max-w-2xl">
               <img 
                 src="/assets/images/Card_on_desk.jpg" 
@@ -81,7 +81,7 @@ export default function LandingPage() {
                 className="w-full"
               />
             </div>
-            <div className="flex-1 bg-gray-800"></div>
+            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
           </div>
 
           {/* Mobile: Full width with side padding */}

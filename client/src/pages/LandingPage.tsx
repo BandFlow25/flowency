@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useState } from "react";
+import PBIImage from "@assets/PBI.png";
 
 export default function LandingPage() {
   const [isCardFlipped, setIsCardFlipped] = useState(false);
@@ -291,7 +292,7 @@ export default function LandingPage() {
               {/* IntentOps Badge */}
               <div className="absolute -top-6 -right-6">
                 <img 
-                  src="@assets/PBI.png" 
+                  src={PBIImage} 
                   alt="Powered by IntentOps"
                   className="w-20 h-20 transform rotate-12 shadow-2xl"
                 />

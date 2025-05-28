@@ -74,7 +74,7 @@ export default function LandingPage() {
           {/* Desktop: Image with dark gray side panels */}
           <div className="hidden md:flex">
             <div className="flex-1 bg-gray-800"></div>
-            <div className="w-full max-w-4xl">
+            <div className="w-full max-w-2xl">
               <img 
                 src="/assets/images/Card_on_desk.jpg" 
                 alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"

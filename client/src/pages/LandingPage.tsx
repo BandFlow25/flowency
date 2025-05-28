@@ -291,12 +291,12 @@ export default function LandingPage() {
               {/* IntentOps Stamp */}
               <div className="absolute -top-3 -right-3">
                 <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white px-4 py-3 rounded-xl text-sm font-black transform rotate-12 shadow-2xl border-3 border-white">
-                  <div className="flex items-center gap-1">
-                    <span className="text-electric">⚡</span>
+                  <div className="flex items-center gap-1 justify-center">
+                    <span className="text-cyan-400">⚡</span>
                     <span>POWERED BY</span>
                   </div>
-                  <div className="text-xs font-bold tracking-wide">
-                    INTENTOPS
+                  <div className="text-center text-xs font-bold tracking-wide">
+                    IntentOps
                   </div>
                 </div>
               </div>

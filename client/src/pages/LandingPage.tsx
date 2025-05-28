@@ -698,25 +698,19 @@ export default function LandingPage() {
               </div>
             </div>
             
-            {/* Middle Section - Services */}
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-4">Our Services</h3>
-              <ul className="space-y-2 text-left">
-                <li>• Delivery System Optimisation</li>
-                <li>• AI Strategy Alignment</li>
-                <li>• AI Native Delivery & Augmentation</li>
-              </ul>
-            </div>
-            
             {/* Bottom Section - Contact */}
             <div className="pt-4 border-t border-slate-600">
               <h4 className="text-lg font-medium mb-2">Contact Us</h4>
               <p className="text-slate-300">hello@flowency.co.uk</p>
             </div>
             
-            {/* Orange Arrow Accent */}
+            {/* Flowency Logo */}
             <div className="absolute bottom-4 right-4">
-              <div className="w-8 h-8 bg-accent rounded transform rotate-45"></div>
+              <img 
+                src="/assets/images/Flowency Logo - Orange.svg" 
+                alt="Flowency Logo"
+                className="w-8 h-8"
+              />
             </div>
           </div>
         </div>

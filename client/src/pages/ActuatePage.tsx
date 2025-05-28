@@ -18,7 +18,7 @@ export default function ActuatePage() {
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-accent transition-colors">Home</Link>
               <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
-              <Link to="/actuate" className="text-electric hover:text-accent transition-colors font-medium">Actuate</Link>
+              <Link to="/actuate" className="text-cyan-400 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
             </div>
             <a 
               href="#contact" 
@@ -82,12 +82,12 @@ export default function ActuatePage() {
                 <div className="text-gray-400 text-sm">End-to-end execution</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">🔄</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">🔄</div>
                 <div className="text-white font-semibold">Process Automation</div>
                 <div className="text-gray-400 text-sm">Intelligent workflows</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">🎯</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">🎯</div>
                 <div className="text-white font-semibold">Measurable Outcomes</div>
                 <div className="text-gray-400 text-sm">Real business impact</div>
               </div>
@@ -211,12 +211,12 @@ export default function ActuatePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-electric text-white py-16">
+      <footer className="bg-blue-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Actuate Your AI Strategy?</h3>
             <p className="text-lg mb-8 opacity-90">Transform potential into production with AI-native execution.</p>
-            <button className="bg-accent hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-bold transition-colors">
               Get Started
             </button>
           </div>

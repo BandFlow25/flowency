@@ -1,11 +1,36 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import PBIImage from "@assets/PBI.png";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselImages = [
+    { src: "/assets/images/Card_on_desk.jpg", alt: "Flowency Card on Desk" },
+    { src: "/assets/images/IntentOps.png", alt: "IntentOps" },
+    { src: "/assets/images/Actuate.png", alt: "Actuate" },
+    { src: "/assets/images/ContactCard.png", alt: "Contact Card" }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -105,7 +130,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Flowency Definition Card - Business Card Size */}
+      {/* Image Carousel */}
       <section id="more" className="relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,26 +139,103 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Desktop: Image with lighter gray side panels */}
+          {/* Desktop: Carousel with lighter gray side panels */}
           <div className="hidden md:flex">
             <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
-            <div className="w-full max-w-2xl">
-              <img 
-                src="/assets/images/Card_on_desk.jpg" 
-                alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
-                className="w-full"
-              />
+            <div className="w-full max-w-2xl relative overflow-hidden">
+              {/* Carousel Images */}
+              <div className="relative">
+                {carouselImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`transition-opacity duration-500 ${
+                      index === currentSlide ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
+                    }`}
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full"
+                    />
+                  </div>
+                ))}
+                
+                {/* Navigation Controls */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+                
+                {/* Dots Indicator */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-colors ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
           </div>
 
-          {/* Mobile: Full width with side padding */}
-          <div className="md:hidden px-0">
-            <img 
-              src="/assets/images/Card_on_desk.jpg" 
-              alt="Flowency Business Card - The quality or condition of being fluent in flow, achieving optimal flow in your delivery organisation"
-              className="w-full"
-            />
+          {/* Mobile: Full width carousel */}
+          <div className="md:hidden px-0 relative overflow-hidden">
+            <div className="relative">
+              {carouselImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`transition-opacity duration-500 ${
+                    index === currentSlide ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
+                  }`}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full"
+                  />
+                </div>
+              ))}
+              
+              {/* Mobile Navigation Controls */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+              
+              {/* Mobile Dots Indicator */}
+              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>

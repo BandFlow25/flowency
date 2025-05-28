@@ -371,8 +371,9 @@ export default function LandingPage() {
               className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
             >
               <div className="w-16 h-16 bg-electric rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">Visualise</h3>

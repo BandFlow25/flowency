@@ -39,12 +39,12 @@ export default function AIOpsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-light mb-6 text-black">
-              <span className="text-electric">AI Operations</span> for Modern Delivery
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black leading-tight">
+              <span className="text-electric">AIOps</span> is the delivery engine for the AI-native enterprise
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">
-              Strategic AI integration and operations management to accelerate your delivery capability while maintaining 
-              quality and strategic alignment. <strong className="text-primary font-bold">Intelligent automation, measurable outcomes</strong>.
+              Designed to eliminate waste, accelerate work, and embed intelligence into the everyday. 
+              <strong className="text-primary font-bold">Your execution arm for bringing AI to life inside the enterprise</strong>.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -69,11 +69,17 @@ export default function AIOpsPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Comprehensive AIOps Framework
+              AI Operations & Optimisation
             </h2>
+            <div className="bg-electric/10 border-l-4 border-electric p-6 rounded-r-lg mb-8">
+              <blockquote className="text-xl text-gray-700 italic leading-relaxed">
+                "AI isn't just a strategic lever—it's an operational multiplier. But most organisations are still thinking in tasks and tools. 
+                AIOps unlocks real impact by embedding AI into how work actually gets done."
+              </blockquote>
+            </div>
             <p className="text-xl text-gray-600 mb-8">
-              Content coming soon! This page will feature our complete AI operations methodology, 
-              including strategic AI integration, automation frameworks, and performance optimization strategies.
+              AIOps is your execution arm: a delivery-focused offering that brings AI to life inside the enterprise—streamlining operations, 
+              automating inefficiencies, and embedding AI-native capabilities where they'll have the most impact.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="bg-white p-6 rounded-lg shadow-lg">

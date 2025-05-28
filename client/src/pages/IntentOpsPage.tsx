@@ -49,17 +49,20 @@ export default function IntentOpsPage() {
         </div>
       </nav>
 
-      {/* Header */}
-      <header className="bg-gradient-to-br from-primary via-secondary to-[hsl(var(--flow-blue-dark))] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-electric">Intent</span>
-            <span className="text-accent">Ops</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto">
-            Visualising Cognitive Debt in AI Adoption: How governance failures compound 
-            and how IntentOps prevents delivery collapse through continuous alignment monitoring.
-          </p>
+      {/* Hero Banner */}
+      <header className="bg-gradient-to-br from-primary via-slate-800 to-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-5xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+              <span className="text-electric">"AI adoption is consensus.</span><br/>
+              <span className="text-accent">Intent alignment is competitive advantage."</span>
+            </h1>
+            <p className="text-xl md:text-2xl leading-relaxed text-gray-200 max-w-4xl mx-auto">
+              IntentOps is not another AI tool or framework. It is a <strong className="text-white">strategic control layer</strong>, 
+              an adaptive system for aligning AI-driven activity with human intent, value delivery, 
+              and organisational governance in complex enterprises.
+            </p>
+          </div>
         </div>
       </header>
 

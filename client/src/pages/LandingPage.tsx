@@ -42,7 +42,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black">
+            <h1 className="text-4xl md:text-6xl font-light mb-6 text-black">
               We help your Delivery Systems Flow
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">
@@ -60,43 +60,42 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Flowency Definition Card - Floating Design */}
-      <section id="more" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Flowency Definition Card - Business Card Size */}
+      <section id="more" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <div className="floating-card bg-white rounded-2xl p-8 md:p-12 max-w-2xl text-center gradient-border">
-              {/* Logo/Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                    <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z" 
-                          fill="currentColor"/>
-                  </svg>
-                </div>
+            <div className="bg-white rounded-xl p-6 max-w-md text-center shadow-lg border border-gray-100">
+              {/* Flowency Logo */}
+              <div className="flex justify-center mb-4">
+                <img 
+                  src="/assets/images/flowency-logo.svg" 
+                  alt="Flowency"
+                  className="w-10 h-10"
+                />
               </div>
               
               {/* Title */}
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+              <h2 className="text-2xl font-medium text-primary mb-3">
                 Flowency
               </h2>
               
               {/* Pronunciation */}
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-sm text-gray-600 mb-4">
                 /ˈfloʊənsi/ • <span className="text-accent font-medium">noun</span>
               </p>
               
               {/* Definition */}
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-sm text-gray-700 leading-relaxed">
                 The quality or condition of being{" "}
-                <span className="text-electric font-semibold">fluent in flow</span>{" "}
+                <span className="text-electric font-medium">fluent in flow</span>{" "}
                 and achieving{" "}
-                <span className="text-accent font-semibold">optimal flow</span>{" "}
+                <span className="text-accent font-medium">optimal flow</span>{" "}
                 in your delivery organisation.
               </p>
             </div>
@@ -119,9 +118,7 @@ export default function LandingPage() {
                 Our Approach
               </div>
               <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-                Adaptive Delivery
-                <br />
-                <span className="text-electric">Framework</span>
+                <span className="text-electric">Adaptive Delivery</span>
               </h2>
               <p className="text-xl text-gray-600 font-medium mb-6">
                 Framework agnostic, method diverse, value focused.
@@ -216,28 +213,48 @@ export default function LandingPage() {
               </button>
             </div>
           </motion.div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      {/* Our Services Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Our Services
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              How We Help You Achieve <span className="text-electric">Flow</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Four core service areas designed to transform your delivery capabilities and drive lasting organizational change.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Work System Optimisation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-xl bg-gradient-to-br from-electric to-[hsl(var(--flow-blue-light))] p-8 text-white"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Work System Optimisation</h3>
-                <p className="text-white/90 text-lg">
-                  Including our revolutionary IntentOps framework for managing cognitive debt in AI adoption and maintaining strategic alignment.
-                </p>
+              <div className="w-12 h-12 bg-electric rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-bold text-primary mb-4">Work System Optimisation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Streamline your delivery systems and processes. Includes our revolutionary IntentOps framework for managing cognitive debt in AI adoption and maintaining strategic alignment.
+              </p>
             </motion.div>
 
             {/* Value Outcome Leadership */}
@@ -246,20 +263,17 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-xl bg-gradient-to-br from-accent to-[hsl(16,100%,45%)] p-8 text-white"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Value Outcome Leadership</h3>
-                <p className="text-white/90 text-lg">
-                  Focus on measurable business outcomes and value creation throughout the delivery process.
-                </p>
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-bold text-primary mb-4">Value Outcome Leadership</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Focus on measurable business outcomes and value creation throughout the delivery process. Drive strategic alignment and demonstrate tangible ROI.
+              </p>
             </motion.div>
 
             {/* Tooling & Transparency */}
@@ -268,20 +282,17 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[hsl(var(--flow-blue-dark))] to-primary p-8 text-white"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Tooling & Transparency</h3>
-                <p className="text-white/90 text-lg">
-                  Implement systems and processes that provide clear visibility into work flow and delivery metrics.
-                </p>
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-bold text-primary mb-4">Tooling & Transparency</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Implement systems and processes that provide clear visibility into work flow and delivery metrics. Make the invisible visible across your organization.
+              </p>
             </motion.div>
 
             {/* Team Coaching & Dynamics */}
@@ -290,24 +301,29 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-xl bg-gradient-to-br from-secondary to-[hsl(var(--flow-blue-light))] p-8 text-white"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Team Coaching & Dynamics</h3>
-                <p className="text-white/90 text-lg">
-                  Build high-performing teams through coaching, skill development, and improved collaboration patterns.
-                </p>
+              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-bold text-primary mb-4">Team Coaching & Dynamics</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Build high-performing teams through coaching, skill development, and improved collaboration patterns. Foster a culture of continuous improvement.
+              </p>
             </motion.div>
           </div>
+        </div>
+      </section>
 
-          {/* Visualise, Optimise, Sustain */}
+      {/* Visualise, Optimise, Sustain */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How We Deliver Results</h2>
+            <p className="text-xl text-gray-600">Our proven three-step methodology</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

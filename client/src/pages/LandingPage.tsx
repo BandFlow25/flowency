@@ -74,52 +74,52 @@ export default function LandingPage() {
             className="flex justify-center"
           >
             <div 
-              className="w-80 h-48 perspective-1000 cursor-pointer"
+              className="w-96 h-56 perspective-1000 cursor-pointer"
               onClick={() => setIsCardFlipped(!isCardFlipped)}
             >
               <div className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${isCardFlipped ? 'rotate-y-180' : ''}`}>
                 {/* Front of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl p-6 shadow-xl border border-gray-200">
-                  {/* Flowency Logo - correct geometric icon */}
-                  <div className="flex justify-center mb-4">
+                <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl p-8 shadow-xl border border-gray-200">
+                  {/* Flowency Logo - same airplane icon from header */}
+                  <div className="flex justify-center mb-6">
                     <svg className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                      <path d="M20.56 3.44c.59-.59.59-1.54 0-2.12-.59-.59-1.54-.59-2.12 0L12 7.76 5.56 1.32c-.59-.59-1.54-.59-2.12 0-.59.59-.59 1.54 0 2.12L9.88 9.88 2 12l3 3 6-2 6 6 3-3-2-6 6.44-6.44z"/>
                     </svg>
                   </div>
                   
                   {/* Title */}
-                  <h2 className="text-xl font-medium text-primary mb-2">
+                  <h2 className="text-2xl font-medium text-primary text-center mb-3">
                     Flowency
                   </h2>
                   
                   {/* Pronunciation */}
-                  <p className="text-xs text-gray-500 mb-3 italic">
+                  <p className="text-sm text-gray-500 text-center mb-4">
                     / ˈfləʊənsi / • noun
                   </p>
                   
                   {/* Definition */}
-                  <p className="text-gray-700 leading-relaxed text-xs">
-                    The quality or condition of being fluent in <span className="text-primary font-medium">flow</span> and achieving{" "}
+                  <p className="text-gray-700 leading-relaxed text-sm text-center">
+                    The quality or condition of being fluent in <strong>flow</strong> and achieving{" "}
                     <span className="text-accent font-medium">optimal flow</span> in your delivery organisation.
                   </p>
                   
                   {/* Click hint */}
-                  <p className="text-xs text-gray-400 mt-3 italic">Click to flip</p>
+                  <p className="text-xs text-gray-400 text-center mt-4 italic">Click to flip</p>
                 </div>
 
                 {/* Back of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl p-5 shadow-xl text-white">
-                  <h3 className="text-sm font-bold mb-3">Our Services</h3>
-                  <ul className="text-xs space-y-1 mb-4">
+                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl p-8 shadow-xl text-white">
+                  <h3 className="text-lg font-bold mb-4 text-center">Our Services</h3>
+                  <ul className="text-sm space-y-2 mb-6">
                     <li>• Delivery System Optimisation</li>
                     <li>• AI Strategy & Augmentation</li>
                     <li>• AI Native Delivery</li>
                     <li>• IntentOps - Value Outcome Alignment</li>
                   </ul>
                   
-                  <div className="border-t border-white/20 pt-3">
-                    <p className="text-xs font-medium">Contact Us</p>
-                    <p className="text-xs text-white/90">hello@flowency.co.uk</p>
+                  <div className="border-t border-white/20 pt-4 text-center">
+                    <p className="text-sm font-medium">Contact Us</p>
+                    <p className="text-sm text-white/90">hello@flowency.co.uk</p>
                   </div>
                 </div>
               </div>

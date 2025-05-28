@@ -142,99 +142,101 @@ export default function LandingPage() {
           {/* Desktop: Carousel with lighter gray side panels */}
           <div className="hidden md:flex">
             <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
-            <div className="w-full max-w-2xl relative overflow-hidden">
+            <div className="w-full max-w-2xl relative overflow-hidden h-96">
               {/* Carousel Images */}
-              <div className="relative">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out h-full"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
                 {carouselImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`transition-opacity duration-500 ${
-                      index === currentSlide ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
-                    }`}
+                    className="w-full flex-shrink-0 h-full"
                   >
                     <img 
                       src={image.src} 
                       alt={image.alt}
-                      className="w-full"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
+              </div>
                 
-                {/* Navigation Controls */}
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-                
-                {/* Dots Indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {carouselImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${
-                        index === currentSlide ? 'bg-white' : 'bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
+              {/* Navigation Controls */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+              
+              {/* Dots Indicator */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
             <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
           </div>
 
           {/* Mobile: Full width carousel */}
-          <div className="md:hidden px-0 relative overflow-hidden">
-            <div className="relative">
+          <div className="md:hidden px-0 relative overflow-hidden h-64">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out h-full"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
               {carouselImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`transition-opacity duration-500 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
-                  }`}
+                  className="w-full flex-shrink-0 h-full"
                 >
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
+            </div>
               
-              {/* Mobile Navigation Controls */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-              
-              {/* Mobile Dots Indicator */}
-              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
-                {carouselImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/50'
-                    }`}
-                  />
-                ))}
-              </div>
+            {/* Mobile Navigation Controls */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+            
+            {/* Mobile Dots Indicator */}
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </motion.div>

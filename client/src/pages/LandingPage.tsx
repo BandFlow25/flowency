@@ -139,57 +139,54 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Desktop: Carousel with lighter gray side panels */}
-          <div className="hidden md:flex">
-            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
-            <div className="w-full max-w-2xl relative overflow-hidden h-96">
-              {/* Carousel Images */}
-              <div 
-                className="flex transition-transform duration-500 ease-in-out h-full"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {carouselImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="w-full flex-shrink-0 h-full"
-                  >
-                    <img 
-                      src={image.src} 
-                      alt={image.alt}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-                
-              {/* Navigation Controls */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-              
-              {/* Dots Indicator */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {carouselImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/50'
-                    }`}
+          {/* Desktop: Full width continuous carousel */}
+          <div className="hidden md:block relative overflow-hidden h-96 bg-gray-100">
+            {/* Continuous scrolling carousel */}
+            <div 
+              className="flex transition-transform duration-500 ease-in-out h-full"
+              style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}
+            >
+              {/* Duplicate images for continuous effect */}
+              {[...carouselImages, ...carouselImages, ...carouselImages].map((image, index) => (
+                <div
+                  key={index}
+                  className="w-1/3 flex-shrink-0 h-full px-2"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-contain rounded-lg"
                   />
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-            <div className="flex-1" style={{ backgroundColor: '#847f7b' }}></div>
+              
+            {/* Navigation Controls */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors z-10"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors z-10"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Mobile: Full width carousel */}

@@ -382,14 +382,10 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-electric to-blue-500 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-white" fill="white" viewBox="0 0 24 24">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14l-5-5 1.41-1.41L11 14.17l7.59-7.59L19 8l-8 8z" fill="white"/>
-                  <circle cx="7" cy="7" r="1" fill="white"/>
-                  <circle cx="12" cy="7" r="1" fill="white"/>
-                  <circle cx="17" cy="7" r="1" fill="white"/>
-                  <rect x="5" y="10" width="14" height="1" fill="white"/>
-                  <rect x="5" y="12" width="10" height="1" fill="white"/>
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Work System Optimisation</h3>
@@ -409,7 +405,7 @@ export default function LandingPage() {
               {/* IntentOps Stamp */}
               <Link 
                 to="/intentops"
-                className="absolute top-4 right-4 w-16 h-16 transform rotate-12 cursor-pointer"
+                className="absolute top-2 right-4 w-28 h-28 transform rotate-12 cursor-pointer"
               >
                 <img 
                   src="/assets/images/PoewredByIntentOpsBadge.png" 

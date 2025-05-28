@@ -662,7 +662,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Combined Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -671,48 +671,29 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
-            <p className="text-xl text-gray-200 mb-8">
-              Ready to optimise your delivery for flow? Let's start the conversation.
-            </p>
-            <a 
-              href="mailto:hello@flowency.co.uk"
-              className="inline-block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors shadow-lg"
-            >
-              Contact Us
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Card Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-          <div className="bg-slate-700 rounded-lg p-8 max-w-md w-full text-center text-white shadow-xl relative">
-            {/* Top Section - Service Mapping */}
-            <div className="mb-6">
-              <div className="space-y-2 text-lg font-bold">
+            {/* Service Mapping */}
+            <div className="mb-8">
+              <div className="space-y-3 text-xl md:text-2xl font-bold">
                 <div>Flowency → Capability</div>
                 <div>IntentOps → Alignment</div>
                 <div>Actuate → Activation</div>
               </div>
             </div>
             
-            {/* Bottom Section - Contact */}
-            <div className="pt-4 border-t border-slate-600">
-              <h4 className="text-lg font-medium mb-2">Contact Us</h4>
-              <p className="text-slate-300">hello@flowency.co.uk</p>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              Ready to optimise your delivery for flow? Let's start the conversation.
+            </h2>
             
-            {/* Flowency Logo */}
-            <div className="absolute bottom-4 right-4">
-              <img 
-                src="/assets/images/Flowency Logo - Orange.svg" 
-                alt="Flowency Logo"
-                className="w-8 h-8"
-              />
+            <div className="space-y-4">
+              <h3 className="text-xl font-medium">Contact Us</h3>
+              <a 
+                href="mailto:hello@flowency.co.uk"
+                className="inline-block text-accent hover:text-orange-300 text-lg font-medium transition-colors"
+              >
+                hello@flowency.co.uk
+              </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 

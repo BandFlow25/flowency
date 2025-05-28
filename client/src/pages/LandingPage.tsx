@@ -74,23 +74,14 @@ export default function LandingPage() {
             className="flex justify-center"
           >
             <div 
-              className="w-96 h-56 perspective-1000 cursor-pointer"
+              className="w-80 h-48 perspective-1000 cursor-pointer"
               onClick={() => setIsCardFlipped(!isCardFlipped)}
             >
               <div className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${isCardFlipped ? 'rotate-y-180' : ''}`}>
                 {/* Front of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl p-8 shadow-xl border border-gray-200">
-                  {/* Flowency Logo - exact same as header */}
-                  <div className="flex justify-center mb-6">
-                    <img 
-                      src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-                      alt="Flowency"
-                      className="w-8 h-8"
-                    />
-                  </div>
-                  
+                <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl p-6 shadow-xl border border-gray-200 flex flex-col justify-center">
                   {/* Title */}
-                  <h2 className="text-2xl font-medium text-primary text-center mb-3">
+                  <h2 className="text-3xl font-medium text-primary text-center mb-3">
                     Flowency
                   </h2>
                   
@@ -100,7 +91,7 @@ export default function LandingPage() {
                   </p>
                   
                   {/* Definition */}
-                  <p className="text-gray-700 leading-relaxed text-sm text-center">
+                  <p className="text-gray-700 leading-relaxed text-sm text-center px-2">
                     The quality or condition of being fluent in <strong>flow</strong> and achieving{" "}
                     <span className="text-accent font-medium">optimal flow</span> in your delivery organisation.
                   </p>
@@ -110,16 +101,16 @@ export default function LandingPage() {
                 </div>
 
                 {/* Back of Card */}
-                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl p-8 shadow-xl text-white">
-                  <h3 className="text-lg font-bold mb-4 text-center">Our Services</h3>
-                  <ul className="text-sm space-y-2 mb-6">
+                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-xl text-white flex flex-col justify-center">
+                  <h3 className="text-lg font-bold mb-3 text-center">Our Services</h3>
+                  <ul className="text-sm space-y-1 mb-4">
                     <li>• Delivery System Optimisation</li>
                     <li>• AI Strategy & Augmentation</li>
                     <li>• AI Native Delivery</li>
                     <li>• IntentOps - Value Outcome Alignment</li>
                   </ul>
                   
-                  <div className="border-t border-white/20 pt-4 text-center">
+                  <div className="border-t border-white/20 pt-3 text-center">
                     <p className="text-sm font-medium">Contact Us</p>
                     <p className="text-sm text-white/90">hello@flowency.co.uk</p>
                   </div>

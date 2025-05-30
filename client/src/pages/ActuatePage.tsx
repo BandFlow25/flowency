@@ -64,7 +64,7 @@ export default function ActuatePage() {
       </nav>
 
       {/* Hero Section - Powerful Execution Engine */}
-      <section id="home" className="pt-16 bg-gradient-to-br from-cyan-500 via-blue-600 to-blue-900">
+      <section id="home" className="pt-16 bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div 
             className="text-center"
@@ -72,14 +72,14 @@ export default function ActuatePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-yellow-400/30">
+            <div className="inline-block bg-emerald-400/20 text-emerald-200 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-400/30">
               🔩 Applied AI Delivery & Optimisation
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight">
               <span className="block md:inline">Actuate is your</span>
               <span className="hidden md:inline"> </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">AI-native execution engine</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-green-400">AI-native execution engine</span>
             </h1>
             
             <p className="text-xl md:text-2xl mb-12 max-w-5xl mx-auto text-gray-300 leading-relaxed">
@@ -94,7 +94,7 @@ export default function ActuatePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+              <button className="bg-emerald-400 hover:bg-emerald-500 text-green-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
                 START ACTUATING →
               </button>
               <button className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300">
@@ -110,17 +110,17 @@ export default function ActuatePage() {
               className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">⚡</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">⚡</div>
                 <div className="text-white font-semibold">AI-Native Builds</div>
                 <div className="text-gray-400 text-sm">End-to-end execution</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">🔄</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">🔄</div>
                 <div className="text-white font-semibold">Process Automation</div>
                 <div className="text-gray-400 text-sm">Intelligent workflows</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">🎯</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">🎯</div>
                 <div className="text-white font-semibold">Measurable Outcomes</div>
                 <div className="text-gray-400 text-sm">Real business impact</div>
               </div>
@@ -143,7 +143,7 @@ export default function ActuatePage() {
               🔩 Actuate: Applied AI Delivery & Optimisation
             </h2>
             
-            <div className="bg-electric/10 border-l-4 border-electric p-8 rounded-r-lg mb-8 text-left max-w-4xl mx-auto">
+            <div className="bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg mb-8 text-left max-w-4xl mx-auto">
               <h3 className="text-xl font-bold text-primary mb-4">💡 Core Insight</h3>
               <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-4">
                 "Actuate combines the cognition of your people with the execution power of AI. It's not about replacing work—it's about delivering the future faster, with the people who know what matters."
@@ -163,7 +163,7 @@ export default function ActuatePage() {
               viewport={{ once: true }}
               className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
             >
-              <div className="w-12 h-12 bg-electric rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">⚡</span>
               </div>
               <h3 className="text-lg font-semibold text-primary mb-3">AI-native Product Development</h3>
@@ -205,7 +205,7 @@ export default function ActuatePage() {
               viewport={{ once: true }}
               className="bg-white p-6 rounded-lg shadow-lg border border-gray-100"
             >
-              <div className="w-12 h-12 bg-electric rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">🤖</span>
               </div>
               <h3 className="text-lg font-semibold text-primary mb-3">Applied AI Enablement</h3>
@@ -244,12 +244,12 @@ export default function ActuatePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-16">
+      <footer className="bg-green-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Actuate Your AI Strategy?</h3>
             <p className="text-lg mb-8 opacity-90">Transform potential into production with AI-native execution.</p>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-bold transition-colors">
+            <button className="bg-emerald-400 hover:bg-emerald-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">
               Get Started
             </button>
           </div>

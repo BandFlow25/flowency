@@ -89,9 +89,9 @@ export default function IntentOpsPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-              <span className="block md:inline text-amber-400">"AI adoption is consensus.</span>
+              <span className="block md:inline text-amber-400">AI adoption is consensus.</span>
               <span className="hidden md:inline"> </span>
-              <span className="text-yellow-300">Intent alignment is competitive advantage."</span>
+              <span className="text-yellow-300">Intent alignment is competitive advantage.</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
               IntentOps is not another AI tool or framework. It is a <strong className="text-white">strategic control layer</strong>, 

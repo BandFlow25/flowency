@@ -1,0 +1,154 @@
+⚙️ Actuate AI - Applied AI Delivery & Optimisation
+
+Tagline: From problem to product. From process to intelligence.
+
+Positioning Statement:
+Actuate AI is your AI-native execution engine - a modular service suite built to embed applicable, governed AI across the enterprise. Whether you're operationalising an AI strategy or solving a specific business process challenge, Actuate delivers componentised services that work within the broader IntentOps governance layer or stand alone as tactical interventions.
+
+"Actuate combines the cognition of your people with the execution power of AI. It's not about replacing work - it's about delivering the future faster, with the people who know what matters."
+
+"AI is only useful if it moves the needle. Actuate brings the tools, the talent, and the tempo to get real outcomes shipped - not just imagined."
+
+From PRD-to-prompt, prototype-to-product
+
+From manual bottlenecks to AI-enhanced flow
+
+From uncontrolled experimentation to governed execution
+
+Actuate ensures AI doesn’t just land-it works.
+
+🎯 What Actuate Solves
+
+Organisations struggle to move beyond GenAI prototypes
+
+Delivery teams face tool fragmentation, hallucination risk, and misaligned scope
+
+Legacy operations continue to create drag despite AI investments
+
+Process automation lacks context, accuracy, and resilience
+
+Actuate solves this by combining:
+
+Strategy-to-systems alignment
+
+Outcome-first GenAI delivery
+
+Enterprise-safe prompt engineering
+
+Intelligent BPM overlay
+
+🚀 Actuate Services
+
+1. AI Opportunity Discovery & Use Case Design
+
+Executive facilitation, PRD design support
+
+Marketplace mapping across LLMs, APIs, frameworks
+
+Feasibility scoping, technical risk, hallucination analysis
+
+Early ROI, delivery impact, and risk indicators
+
+What makes it different:
+Grounded in IntentOps governance. Everything begins with outcome and traceability.
+
+2. AI-Native Product & Prototype Development
+
+Build custom copilots, agents, AI-native workflows
+
+RAG pipelines, tool/agent chaining, UX-integrated prompts
+
+Context-aware response models with fallback & testing
+
+Early telemetry, feedback loops, hallucination suppression
+
+What makes it different:
+Outcome loops are embedded from sprint zero. It’s not just working code - it’s governable, trackable, accountable product.
+
+3. Process Optimisation (BPO+)
+
+Identify high-friction, manual, or error-prone workflows
+
+Pair GenAI + RPA + human-in-loop for true cognitive automation
+
+Handle semi-structured data, summarisation, routing, enrichment
+
+Multilingual pipelines with quality thresholds (98%+)
+
+What makes it different:
+Based on real-world results from scaled automation delivery (abstracted from NashTech).
+
+4. Prompt Engineering as a Service
+
+Refine PRDs into prompt libraries
+
+Model-agnostic design (Claude, GPT, Mistral, open models)
+
+Safe system prompts, structured guardrails, persona switching
+
+Test cases, performance tuning, reusable prompt libraries
+
+What makes it different:
+PromptOps discipline built into delivery. We treat this like product dev, not copywriting.
+
+5. AI-Augmented Delivery & Ops
+
+Project ops copilots, velocity forecasting, delivery retros
+
+System telemetry fed back into IntentOps governance
+
+AI-enhanced feedback loops, risk analysis, value decay alerts
+
+FlowOps patterns for unblocking delivery friction
+
+What makes it different:
+Uses SPACE and DORA frameworks as the delivery signal, not effort or burn-down.
+
+6. Enterprise AI Operations (via strategic partners)
+
+Large-scale data labelling, image enrichment, structured QA
+
+Model performance monitoring, hallucination tracing, black-box detection
+
+AI behaviour explainability frameworks
+
+Integration with governance dashboards
+
+What makes it different:
+Our partners provide scale, but we control the model lifecycle and governance standards.
+
+🔑 Differentiators
+
+Feature
+
+Why It Matters
+
+Intent-aligned from day one
+
+Not just building - aligning to enterprise objectives
+
+Fast PRD-to-Prototype pipeline
+
+Get to a demo, not a slide deck
+
+Prompt Engineering as a service
+
+Structured, testable, reusable
+
+GenAI + RPA + HITL fusion
+
+The only way to automate real-world processes
+
+Feedback and governance embedded
+
+No AI product is complete without oversight
+
+Built to scale across teams and tools
+
+Language, tools, and telemetry designed for reuse
+
+📎 Ready to Actuate?
+
+Actuate is the engine that drives value from AI. Whether you’re trying to scale a GenAI proof of concept, reimagine a legacy workflow, or embed intelligence into your delivery model - we’ll help you ship what matters.
+
+Transform potential into production.

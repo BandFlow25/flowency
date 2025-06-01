@@ -25,7 +25,7 @@ const solutionsData = [
     title: "AI-Native Product & Prototype Development",
     icon: "⚡",
     description: "Build custom copilots, agents, AI-native workflows. RAG pipelines, tool/agent chaining, UX-integrated prompts with context-aware response models, fallback testing, and early telemetry.",
-    differentiator: "Outcome loops are embedded from sprint zero. It's not just working code—it's governable, trackable, accountable product.",
+    differentiator: "Outcome loops are embedded from sprint zero. It's not just working code - it's governable, trackable, accountable product.",
     capabilities: [
       "Custom copilots & agents",
       "RAG pipeline development",
@@ -445,10 +445,10 @@ export default function ActuatePage() {
             <div className="mt-12 bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg text-left max-w-4xl mx-auto">
               <h3 className="text-xl font-bold text-primary mb-4">💡 Core Insight</h3>
               <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-4">
-                "Actuate combines the cognition of your people with the execution power of AI. It's not about replacing work—it's about delivering the future faster, with the people who know what matters."
+                "Actuate combines the cognition of your people with the execution power of AI. It's not about replacing work - it's about delivering the future faster, with the people who know what matters."
               </blockquote>
               <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-                "AI is only useful if it moves the needle. Actuate brings the tools, the talent, and the tempo to get real outcomes shipped—not just imagined."
+                "AI is only useful if it moves the needle. Actuate brings the tools, the talent, and the tempo to get real outcomes shipped - not just imagined."
               </blockquote>
             </div>
           </motion.div>
@@ -485,7 +485,7 @@ export default function ActuatePage() {
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">📎 Ready to Actuate?</h3>
             <p className="text-lg mb-8 opacity-90 max-w-4xl mx-auto">
-              Actuate is the engine that drives value from AI. Whether you're trying to scale a GenAI proof of concept, reimagine a legacy workflow, or embed intelligence into your delivery model—we'll help you ship what matters.
+              Actuate is the engine that drives value from AI. Whether you're trying to scale a GenAI proof of concept, reimagine a legacy workflow, or embed intelligence into your delivery model - we'll help you ship what matters.
             </p>
             <p className="text-xl font-semibold mb-8 text-yellow-400">Transform potential into production.</p>
             <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">

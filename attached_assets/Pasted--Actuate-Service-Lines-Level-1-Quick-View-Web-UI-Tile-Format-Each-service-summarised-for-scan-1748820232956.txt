@@ -1,0 +1,107 @@
+🚀 Actuate Service Lines
+
+Level 1: Quick View (Web UI Tile Format)
+
+Each service summarised for scanning and click-through:
+
+1. AI Strategy to Action
+
+🔥 Need: Disconnected initiatives, unclear value, and delivery misalignment
+
+⚙️ What We Do: Structure and prioritise your AI efforts to match business outcomes
+
+✅ Outcome: Aligned, feasible opportunities and clear execution paths
+
+2. AI-Native Product & Prototyping
+
+🔥 Need: You’ve got ideas or use cases but nothing testable or live
+
+⚙️ What We Do: Build prototypes or full features using the right models, guardrails, and telemetry
+
+✅ Outcome: Tangible, testable outputs aligned to business value
+
+3. Intelligent Process Transformation
+
+🔥 Need: Your workflows are bloated and slow due to legacy manual layers
+
+⚙️ What We Do: Redesign and automate key operational processes using GenAI, RPA, and orchestration
+
+✅ Outcome: Faster, cleaner, more reliable business operations with lower effort and risk
+
+4. Prompt Engineering as a Service
+
+🔥 Need: LLM results are inconsistent, off-brand, or not production-safe
+
+⚙️ What We Do: Craft prompt libraries tied to business intent, with controls, tuning, and versioning
+
+✅ Outcome: Reliable AI outputs you can trace, test, and govern
+
+5. Operational Decision Support
+
+🔥 Need: You cannot see where delivery is blocked or value is lost
+
+⚙️ What We Do: Visualise flow, identify friction, and highlight cost-of-delay across the system
+
+✅ Outcome: Real-time decision support and insight across delivery and operations
+
+Level 2: Expansion (Drawer/Modal Format)
+
+1. AI Strategy to Action
+
+Problem: AI investment is happening, but without cohesion or clear value.
+What We Do: We help you identify, shape, and structure AI initiatives with business alignment, delivery feasibility, and governance readiness.
+What You Get:
+
+Clear portfolio of opportunities prioritised by value
+
+Ready-to-build project briefs with aligned business context
+
+Tooling and model recommendations matched to need
+
+2. AI-Native Product & Prototyping
+
+Problem: You’ve got use cases but lack the team, clarity, or capacity to deliver working features.
+What We Do: We rapidly deliver working AI-native prototypes or production tools with traceable logic, telemetry, and aligned context.
+What You Get:
+
+Live or testable features aligned to core business outcomes
+
+Built-in testing, safety, and observability patterns
+
+Optional wrap-around with IntentOps for sustained value tracking
+
+3. Intelligent Process Transformation
+
+Problem: Your operations are clogged with manual tasks, legacy workarounds, and costly inefficiencies.
+What We Do: We apply AI to redesign high-friction workflows using GenAI, RPA, and smart human-in-loop design to drive resilience and remove waste.
+What You Get:
+
+Refactored process maps and simplified decision trees
+
+Automated outputs with measurable improvements in time, quality, and cost
+
+Reduction in operational risk, toil, and drag
+
+4. Prompt Engineering as a Service
+
+Problem: Your GenAI tools produce inconsistent, brittle, or off-message results.
+What We Do: We build production-grade prompt systems designed for reliability, governance, and aligned usage across tools and teams.
+What You Get:
+
+Reusable enterprise prompt libraries linked to real business intent
+
+Safe fallback strategies, persona design, and output shaping
+
+Model-agnostic compatibility and monitoring
+
+5. Operational Decision Support
+
+Problem: You don’t know where delivery is stalling or where value leaks are happening.
+What We Do: We embed observability into your delivery system using AI to surface blockers, delays, discard patterns, and friction.
+What You Get:
+
+Visualised flow data and intent-to-outcome traceability
+
+Quantified economic impact of delay, failure, and blocked work
+
+Continuous signals for intervention and improvement

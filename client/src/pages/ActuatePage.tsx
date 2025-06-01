@@ -105,31 +105,12 @@ export default function ActuatePage() {
               </button>
             </motion.div>
             
-            {/* Key Stats/Benefits */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto"
-            >
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400 mb-2">PRD-to-prompt</div>
-                <div className="text-gray-400 text-sm">prototype-to-product</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400 mb-2">Manual bottlenecks</div>
-                <div className="text-gray-400 text-sm">to AI-enhanced flow</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400 mb-2">Uncontrolled experimentation</div>
-                <div className="text-gray-400 text-sm">to governed execution</div>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </section>
 
-      {/* What Actuate Solves */}
+      {/* How Can Actuate Help You */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -140,30 +121,48 @@ export default function ActuatePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              🎯 What Actuate Solves
+              🔍 How Can Actuate Help You?
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+            <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Actuate offers modular, practical AI services designed to deliver measurable value fast. Whether you're exploring GenAI capabilities or already working through transformation programmes, we support drop-in execution and scalable delivery across:
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-left">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-red-600 mb-3">Organisations struggle to move beyond GenAI prototypes</h3>
-                <p className="text-gray-600 text-sm">Most AI initiatives get stuck in proof-of-concept purgatory, never reaching production value.</p>
+                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Outcome-first GenAI delivery</h3>
+                <p className="text-gray-600 text-sm">Rapidly design, build and iterate production-grade products and features</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-red-600 mb-3">Delivery teams face tool fragmentation and risk</h3>
-                <p className="text-gray-600 text-sm">Hallucination risk, misaligned scope, and disconnected tools create delivery chaos.</p>
+                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Enterprise-safe prompt engineering</h3>
+                <p className="text-gray-600 text-sm">Model-agnostic, governed, and reusable</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-red-600 mb-3">Legacy operations continue to create drag</h3>
-                <p className="text-gray-600 text-sm">Despite AI investments, manual processes and inefficiencies persist across the organization.</p>
+                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Tool fragmentation</h3>
+                <p className="text-gray-600 text-sm">Unify LLMs, RAG pipelines, and APIs under expert guidance</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-red-600 mb-3">Process automation lacks context and resilience</h3>
-                <p className="text-gray-600 text-sm">Automated workflows break under real-world complexity and edge cases.</p>
+                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Reducing hallucination risk</h3>
+                <p className="text-gray-600 text-sm">Embedded patterns, fallback design, and explainability</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Legacy drag</h3>
+                <p className="text-gray-600 text-sm">Intelligent augmentation of brittle workflows without replatforming</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Process automation</h3>
+                <p className="text-gray-600 text-sm">Combine GenAI with RPA and human-in-loop for accuracy, not just speed</p>
               </div>
             </div>
+            
+            <p className="text-lg text-gray-700 mt-12 max-w-4xl mx-auto leading-relaxed italic">
+              Whether you need end-to-end delivery or a tactical drop-in capability, Actuate is designed to meet you where you are.
+            </p>
             
             <div className="mt-12 bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg text-left max-w-4xl mx-auto">
               <h3 className="text-xl font-bold text-primary mb-4">💡 Core Insight</h3>

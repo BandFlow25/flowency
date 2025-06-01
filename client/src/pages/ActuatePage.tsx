@@ -4,81 +4,97 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 
-// Solutions data for the interactive explorer
-const solutionsData = [
+// 3-Level Model Service Lines Data
+const serviceLines = [
   {
     id: 1,
     title: "AI Strategy to Action",
     icon: "🎯",
-    description: "Structured definition and alignment of AI strategy with clear prioritisation, roadmap design, and governance-ready execution framing.",
-    problem: "Organisations often face a disconnect between executive ambition, scattered experiments, and actual delivery. AI investments lack coordination, leading to duplication and cognitive debt.",
-    differentiator: "Intent-aligned from day one. Not just building - aligning to enterprise objectives.",
-    capabilities: [
-      "Prioritised use case portfolio aligned to business value",
-      "Production-ready PRDs with integrated feasibility analysis",
-      "Tooling and model landscape matched to your context",
-      "Optional IntentOps support to track intent through to value"
+    // Level 1: Quick View Tile
+    pain: "Disconnected initiatives, unclear value, and delivery misalignment",
+    service: "Structure and prioritise your AI efforts to match business outcomes",
+    result: "Aligned, feasible opportunities and clear execution paths",
+    // Level 2: Expansion Details
+    problemDetail: "AI investment is happening, but without cohesion or clear value.",
+    whatWeDo: "We help you identify, shape, and structure AI initiatives with business alignment, delivery feasibility, and governance readiness.",
+    whatYouGet: [
+      "Clear portfolio of opportunities prioritised by value",
+      "Ready-to-build project briefs with aligned business context",
+      "Tooling and model recommendations matched to need"
     ]
   },
   {
     id: 2,
-    title: "AI-Native Product and Prototype Development",
+    title: "AI-Native Product & Prototyping",
     icon: "⚡",
-    description: "Full-cycle product and prototype development, from intent framing to testable build, with embedded context and telemetry.",
-    problem: "You have a defined use case but need rapid, secure, and effective delivery of AI-native tools.",
-    differentiator: "Modular services, fast value. Start small, scale confidently.",
-    capabilities: [
-      "Live features or high-fidelity prototypes ready for test or scale",
-      "UX-integrated LLM pipelines, agents, and orchestration",
-      "Testing, observability, and control measures built-in",
-      "IntentOps optional integration for traceable value loops"
+    // Level 1: Quick View Tile
+    pain: "You've got ideas or use cases but nothing testable or live",
+    service: "Build prototypes or full features using the right models, guardrails, and telemetry",
+    result: "Tangible, testable outputs aligned to business value",
+    // Level 2: Expansion Details
+    problemDetail: "You've got use cases but lack the team, clarity, or capacity to deliver working features.",
+    whatWeDo: "We rapidly deliver working AI-native prototypes or production tools with traceable logic, telemetry, and aligned context.",
+    whatYouGet: [
+      "Live or testable features aligned to core business outcomes",
+      "Built-in testing, safety, and observability patterns",
+      "Optional wrap-around with IntentOps for sustained value tracking"
     ]
   },
   {
     id: 3,
     title: "Intelligent Process Transformation",
     icon: "🔄",
-    description: "Business process re-engineering and targeted automation using GenAI, RPA, and human-in-the-loop design to remove waste and improve resilience.",
-    problem: "Your operations are encumbered by layers of legacy workflows, manual interventions, and nested processes that generate drag.",
-    differentiator: "GenAI + RPA + HITL fusion. Real-world automation, not lab experiments.",
-    capabilities: [
-      "Refactored process maps with automation targets",
-      "GenAI-enhanced automation flows with structured output",
-      "Improved speed, quality, compliance, and customer outcomes",
-      "Optional execution with delivery partners to scale rapidly"
+    // Level 1: Quick View Tile
+    pain: "Your workflows are bloated and slow due to legacy manual layers",
+    service: "Redesign and automate key operational processes using GenAI, RPA, and orchestration",
+    result: "Faster, cleaner, more reliable business operations with lower effort and risk",
+    // Level 2: Expansion Details
+    problemDetail: "Your operations are clogged with manual tasks, legacy workarounds, and costly inefficiencies.",
+    whatWeDo: "We apply AI to redesign high-friction workflows using GenAI, RPA, and smart human-in-loop design to drive resilience and remove waste.",
+    whatYouGet: [
+      "Refactored process maps and simplified decision trees",
+      "Automated outputs with measurable improvements in time, quality, and cost",
+      "Reduction in operational risk, toil, and drag"
     ]
   },
   {
     id: 4,
     title: "Prompt Engineering as a Service",
     icon: "🤖",
-    description: "High-quality prompt design, tuning, testing, and lifecycle management, grounded in deep expertise and business context.",
-    problem: "Your LLM-based products lack consistency, reliability, or alignment to business goals.",
-    differentiator: "Prompt Engineering as a service. Structured, testable, reusable.",
-    capabilities: [
-      "Enterprise prompt libraries tailored to business intent",
-      "Persona switching, fallback logic, and response guardrails",
-      "Model-agnostic patterns with performance monitoring",
-      "Integration into AI features or operations, with IntentOps if required"
+    // Level 1: Quick View Tile
+    pain: "LLM results are inconsistent, off-brand, or not production-safe",
+    service: "Craft prompt libraries tied to business intent, with controls, tuning, and versioning",
+    result: "Reliable AI outputs you can trace, test, and govern",
+    // Level 2: Expansion Details
+    problemDetail: "Your GenAI tools produce inconsistent, brittle, or off-message results.",
+    whatWeDo: "We build production-grade prompt systems designed for reliability, governance, and aligned usage across tools and teams.",
+    whatYouGet: [
+      "Reusable enterprise prompt libraries linked to real business intent",
+      "Safe fallback strategies, persona design, and output shaping",
+      "Model-agnostic compatibility and monitoring"
     ]
   },
   {
     id: 5,
-    title: "Operational Decision Support with AI",
+    title: "Operational Decision Support",
     icon: "⚙️",
-    description: "AI-augmented observability, surfacing friction points, risk patterns, and waste hotspots to inform faster, better decisions.",
-    problem: "Delivery leaders lack real-time insight into blockers, waste, and drift. Traditional metrics are lagging and blind to value.",
-    differentiator: "Built to scale across teams and tools. Designed for reuse, integration, and control.",
-    capabilities: [
-      "Delivery copilots and dashboards highlighting where value is stuck",
-      "Quantified blocker, discard, and delay costs",
-      "Visual intent-to-outcome maps for portfolio and product flow",
-      "Seamless alignment with IntentOps for governed execution"
+    // Level 1: Quick View Tile
+    pain: "You cannot see where delivery is blocked or value is lost",
+    service: "Visualise flow, identify friction, and highlight cost-of-delay across the system",
+    result: "Real-time decision support and insight across delivery and operations",
+    // Level 2: Expansion Details
+    problemDetail: "You don't know where delivery is stalling or where value leaks are happening.",
+    whatWeDo: "We embed observability into your delivery system using AI to surface blockers, delays, discard patterns, and friction.",
+    whatYouGet: [
+      "Visualised flow data and intent-to-outcome traceability",
+      "Quantified economic impact of delay, failure, and blocked work",
+      "Continuous signals for intervention and improvement"
     ]
   }
 ];
 
-function SolutionsExplorer() {
+// Level 1: Web UI-ready tiles component
+function ServiceTiles() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const toggleExpanded = (id: number) => {
@@ -86,185 +102,154 @@ function SolutionsExplorer() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto">
-      {/* Desktop: Tabs, Mobile: Expandable Cards */}
-      <div className="hidden md:block">
-        {/* Desktop Tab Interface */}
-        <DesktopSolutionsExplorer />
-      </div>
-      
-      <div className="md:hidden space-y-4">
-        {/* Mobile Expandable Cards */}
-        {solutionsData.map((solution) => (
-          <motion.div
-            key={solution.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: solution.id * 0.1 }}
-            className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
-          >
-            <button
-              onClick={() => toggleExpanded(solution.id)}
-              className="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-lg">{solution.icon}</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">
-                    {solution.id}. {solution.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1 line-clamp-2">
-                    {solution.description.substring(0, 80)}...
-                  </p>
-                </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {serviceLines.map((service) => (
+        <motion.div
+          key={service.id}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: service.id * 0.1 }}
+          className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+          onClick={() => toggleExpanded(service.id)}
+        >
+          {/* Level 1: Quick Scan Tile */}
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">{service.icon}</span>
               </div>
               <motion.div
-                animate={{ rotate: expandedId === solution.id ? 180 : 0 }}
+                animate={{ rotate: expandedId === service.id ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
                 className="text-gray-400"
               >
                 ↓
               </motion.div>
-            </button>
+            </div>
             
-            <AnimatePresence>
-              {expandedId === solution.id && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="border-t border-gray-100"
-                >
-                  <div className="p-4 space-y-4">
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {solution.description}
-                    </p>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Capabilities:</h4>
-                      <ul className="space-y-1">
-                        {solution.capabilities.map((capability, index) => (
-                          <motion.li
-                            key={index}
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.05 }}
-                            className="flex items-center gap-2 text-xs text-gray-600"
-                          >
-                            <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full flex-shrink-0"></div>
-                            {capability}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded-r">
-                      <h4 className="font-semibold text-gray-800 mb-1 text-xs">What Makes It Different:</h4>
-                      <p className="text-xs font-medium text-yellow-800">
-                        {solution.differentiator}
-                      </p>
-                    </div>
+            <h3 className="font-bold text-lg text-gray-900 mb-4">
+              {service.title}
+            </h3>
+            
+            {/* Pain Point */}
+            <div className="mb-3">
+              <div className="flex items-start gap-2">
+                <span className="text-red-500 text-sm mt-0.5">🔥</span>
+                <p className="text-sm text-gray-700 font-medium">{service.pain}</p>
+              </div>
+            </div>
+            
+            {/* Service */}
+            <div className="mb-3">
+              <div className="flex items-start gap-2">
+                <span className="text-blue-500 text-sm mt-0.5">⚙️</span>
+                <p className="text-sm text-gray-600">{service.service}</p>
+              </div>
+            </div>
+            
+            {/* Result */}
+            <div className="mb-4">
+              <div className="flex items-start gap-2">
+                <span className="text-green-500 text-sm mt-0.5">✅</span>
+                <p className="text-sm text-emerald-700 font-medium">{service.result}</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Level 2: Expansion Details */}
+          <AnimatePresence>
+            {expandedId === service.id && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="border-t border-gray-100"
+              >
+                <div className="p-6 bg-gray-50 space-y-4">
+                  {/* Problem Detail */}
+                  <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r">
+                    <h4 className="font-semibold text-red-800 mb-2 text-sm">Problem</h4>
+                    <p className="text-sm text-red-700">{service.problemDetail}</p>
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        ))}
-      </div>
+                  
+                  {/* What We Do */}
+                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r">
+                    <h4 className="font-semibold text-blue-800 mb-2 text-sm">What We Do</h4>
+                    <p className="text-sm text-blue-700">{service.whatWeDo}</p>
+                  </div>
+                  
+                  {/* What You Get */}
+                  <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r">
+                    <h4 className="font-semibold text-green-800 mb-2 text-sm">What You Get</h4>
+                    <ul className="space-y-2">
+                      {service.whatYouGet.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-green-700">
+                          <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      ))}
     </div>
   );
 }
 
-function DesktopSolutionsExplorer() {
-  const [selectedSolution, setSelectedSolution] = useState(solutionsData[0]);
-
+// New simplified how we help component
+function HowWeHelp() {
   return (
-    <>
-      {/* Solution Tabs */}
-      <div className="flex flex-wrap gap-4 mb-8 justify-center">
-        {solutionsData.map((solution) => (
-          <button
-            key={solution.id}
-            onClick={() => setSelectedSolution(solution)}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-              selectedSolution.id === solution.id
-                ? 'bg-emerald-500 text-white shadow-lg transform scale-105'
-                : 'bg-white text-gray-700 hover:bg-emerald-50 border border-gray-200'
-            }`}
-          >
-            <span className="text-lg">{solution.icon}</span>
-            <span>{solution.id}.</span>
-            <span className="text-sm font-semibold">{solution.title.split(' ')[0]} {solution.title.split(' ')[1]}</span>
-          </button>
-        ))}
-      </div>
-
-      {/* Selected Solution Content */}
-      <AnimatePresence mode="wait">
+    <div className="max-w-4xl mx-auto text-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <motion.div
-          key={selectedSolution.id}
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
         >
-          <div className="flex items-start gap-6">
-            <div className="w-16 h-16 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="text-white text-2xl">{selectedSolution.icon}</span>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                {selectedSolution.id}. {selectedSolution.title}
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {selectedSolution.description}
-              </p>
-              
-              {/* Problem Statement */}
-              <div className="mb-6">
-                <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r">
-                  <h4 className="font-semibold text-red-800 mb-2">⚠️ The Problem</h4>
-                  <p className="text-sm text-red-700">{selectedSolution.problem}</p>
-                </div>
-              </div>
-
-              {/* Capabilities Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">🎯 What You Get:</h4>
-                  <ul className="space-y-2">
-                    {selectedSolution.capabilities.map((capability, index) => (
-                      <motion.li
-                        key={index}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex items-center gap-2 text-sm text-gray-600"
-                      >
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                        {capability}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">💡 What Makes It Different:</h4>
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r">
-                    <p className="text-sm font-medium text-yellow-800">
-                      {selectedSolution.differentiator}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">🎯</span>
           </div>
+          <h3 className="font-bold text-lg text-gray-900 mb-2">Outcome-first GenAI delivery</h3>
+          <p className="text-sm text-gray-600">Rapidly build usable features tied to business value</p>
         </motion.div>
-      </AnimatePresence>
-    </>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
+        >
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">⚙️</span>
+          </div>
+          <h3 className="font-bold text-lg text-gray-900 mb-2">Enterprise-safe prompt engineering</h3>
+          <p className="text-sm text-gray-600">Production-ready AI with governance and reliability built-in</p>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
+        >
+          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">🔄</span>
+          </div>
+          <h3 className="font-bold text-lg text-gray-900 mb-2">Modular AI services</h3>
+          <p className="text-sm text-gray-600">Independent engagements or integrated transformation programmes</p>
+        </motion.div>
+      </div>
+    </div>
   );
 }
 
@@ -472,80 +457,34 @@ export default function ActuatePage() {
             </h2>
           </motion.div>
           
-          <div className="space-y-8">
-            {solutionsData.map((service) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: service.id * 0.1 }}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
-              >
-                <div className="p-8">
-                  {/* Service Header */}
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">{service.icon}</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {service.id}. {service.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* The Problem */}
-                  <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-400 rounded-r">
-                    <div className="flex items-start gap-2 mb-2">
-                      <span className="text-lg">⚠️</span>
-                      <h4 className="font-semibold text-red-800">The Problem</h4>
-                    </div>
-                    <p className="text-red-700 text-sm">
-                      {service.problem}
-                    </p>
-                  </div>
-                  
-                  {/* Two column layout for What You Get and What Makes It Different */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* What You Get */}
-                    <div>
-                      <div className="flex items-start gap-2 mb-3">
-                        <span className="text-lg">🎯</span>
-                        <h4 className="font-semibold text-gray-800">What You Get:</h4>
-                      </div>
-                      <ul className="space-y-2">
-                        {service.capabilities.map((capability, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                            {capability}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    {/* What Makes It Different */}
-                    <div>
-                      <div className="flex items-start gap-2 mb-3">
-                        <span className="text-lg">💡</span>
-                        <h4 className="font-semibold text-gray-800">What Makes It Different:</h4>
-                      </div>
-                      <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r">
-                        <p className="text-sm font-medium text-yellow-800">
-                          {service.differentiator}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <ServiceTiles />
         </div>
       </section>
+
+      {/* How Can Actuate Help You - Refined */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              🔍 How Can Actuate Help You?
+            </h2>
+            
+            <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discrete engagement or can be combined under a broader capability uplift programme with IntentOps.
+            </p>
+          </motion.div>
+          
+          <HowWeHelp />
+        </div>
+      </section>
+
+
 
       {/* How Actuate and IntentOps Work Together */}
       <ActuateIntentOpsCollaboration />

@@ -98,10 +98,110 @@ const solutionsData = [
 ];
 
 function SolutionsExplorer() {
-  const [selectedSolution, setSelectedSolution] = useState(solutionsData[0]);
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const toggleExpanded = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
 
   return (
     <div className="max-w-6xl mx-auto">
+      {/* Desktop: Tabs, Mobile: Expandable Cards */}
+      <div className="hidden md:block">
+        {/* Desktop Tab Interface */}
+        <DesktopSolutionsExplorer />
+      </div>
+      
+      <div className="md:hidden space-y-4">
+        {/* Mobile Expandable Cards */}
+        {solutionsData.map((solution) => (
+          <motion.div
+            key={solution.id}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: solution.id * 0.1 }}
+            className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+          >
+            <button
+              onClick={() => toggleExpanded(solution.id)}
+              className="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-lg">{solution.icon}</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 text-sm">
+                    {solution.id}. {solution.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                    {solution.description.substring(0, 80)}...
+                  </p>
+                </div>
+              </div>
+              <motion.div
+                animate={{ rotate: expandedId === solution.id ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-gray-400"
+              >
+                ↓
+              </motion.div>
+            </button>
+            
+            <AnimatePresence>
+              {expandedId === solution.id && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="border-t border-gray-100"
+                >
+                  <div className="p-4 space-y-4">
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {solution.description}
+                    </p>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Capabilities:</h4>
+                      <ul className="space-y-1">
+                        {solution.capabilities.map((capability, index) => (
+                          <motion.li
+                            key={index}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                            className="flex items-center gap-2 text-xs text-gray-600"
+                          >
+                            <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full flex-shrink-0"></div>
+                            {capability}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded-r">
+                      <h4 className="font-semibold text-gray-800 mb-1 text-xs">What Makes It Different:</h4>
+                      <p className="text-xs font-medium text-yellow-800">
+                        {solution.differentiator}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function DesktopSolutionsExplorer() {
+  const [selectedSolution, setSelectedSolution] = useState(solutionsData[0]);
+
+  return (
+    <>
       {/* Solution Tabs */}
       <div className="flex flex-wrap gap-4 mb-8 justify-center">
         {solutionsData.map((solution) => (
@@ -115,7 +215,7 @@ function SolutionsExplorer() {
             }`}
           >
             <span className="text-lg">{solution.icon}</span>
-            <span className="hidden sm:inline">{solution.id}.</span>
+            <span>{solution.id}.</span>
             <span className="text-sm font-semibold">{solution.title.split(' ')[0]} {solution.title.split(' ')[1]}</span>
           </button>
         ))}
@@ -144,7 +244,7 @@ function SolutionsExplorer() {
               </p>
               
               {/* Capabilities Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-3">Key Capabilities:</h4>
                   <ul className="space-y-2">
@@ -175,7 +275,7 @@ function SolutionsExplorer() {
           </div>
         </motion.div>
       </AnimatePresence>
-    </div>
+    </>
   );
 }
 

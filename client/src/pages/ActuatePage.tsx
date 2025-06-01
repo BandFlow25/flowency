@@ -1,7 +1,183 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+
+// Solutions data for the interactive explorer
+const solutionsData = [
+  {
+    id: 1,
+    title: "AI Opportunity Discovery & Use Case Design",
+    icon: "🎯",
+    description: "Executive facilitation, PRD design support, marketplace mapping across LLMs, APIs, frameworks. Feasibility scoping, technical risk, hallucination analysis with early ROI and delivery impact indicators.",
+    differentiator: "Grounded in IntentOps governance. Everything begins with outcome and traceability.",
+    capabilities: [
+      "Executive facilitation sessions",
+      "PRD design support",
+      "LLM marketplace mapping",
+      "Technical risk assessment",
+      "Hallucination analysis",
+      "ROI impact indicators"
+    ]
+  },
+  {
+    id: 2,
+    title: "AI-Native Product & Prototype Development",
+    icon: "⚡",
+    description: "Build custom copilots, agents, AI-native workflows. RAG pipelines, tool/agent chaining, UX-integrated prompts with context-aware response models, fallback testing, and early telemetry.",
+    differentiator: "Outcome loops are embedded from sprint zero. It's not just working code—it's governable, trackable, accountable product.",
+    capabilities: [
+      "Custom copilots & agents",
+      "RAG pipeline development",
+      "Tool/agent chaining",
+      "UX-integrated prompts",
+      "Context-aware models",
+      "Early telemetry systems"
+    ]
+  },
+  {
+    id: 3,
+    title: "Process Optimisation (BPO+)",
+    icon: "🔄",
+    description: "Identify high-friction, manual, or error-prone workflows. Pair GenAI + RPA + human-in-loop for true cognitive automation. Handle semi-structured data, summarisation, routing, enrichment with multilingual pipelines at 98%+ quality thresholds.",
+    differentiator: "Based on real-world results from scaled automation delivery (abstracted from NashTech).",
+    capabilities: [
+      "Workflow friction analysis",
+      "GenAI + RPA integration",
+      "Human-in-loop design",
+      "Semi-structured data handling",
+      "Multilingual pipelines",
+      "98%+ quality thresholds"
+    ]
+  },
+  {
+    id: 4,
+    title: "Prompt Engineering as a Service",
+    icon: "🤖",
+    description: "Refine PRDs into prompt libraries. Model-agnostic design (Claude, GPT, Mistral, open models). Safe system prompts, structured guardrails, persona switching with test cases, performance tuning, and reusable prompt libraries.",
+    differentiator: "PromptOps discipline built into delivery. We treat this like product dev, not copywriting.",
+    capabilities: [
+      "PRD to prompt conversion",
+      "Model-agnostic design",
+      "Safe system prompts",
+      "Structured guardrails",
+      "Performance tuning",
+      "Reusable libraries"
+    ]
+  },
+  {
+    id: 5,
+    title: "AI-Augmented Delivery & Ops",
+    icon: "⚙️",
+    description: "Project ops copilots, velocity forecasting, delivery retros. System telemetry fed back into IntentOps governance. AI-enhanced feedback loops, risk analysis, value decay alerts, and FlowOps patterns for unblocking delivery friction.",
+    differentiator: "Uses SPACE and DORA frameworks as the delivery signal, not effort or burn-down.",
+    capabilities: [
+      "Project ops copilots",
+      "Velocity forecasting",
+      "Delivery retrospectives",
+      "System telemetry",
+      "Risk analysis",
+      "FlowOps patterns"
+    ]
+  },
+  {
+    id: 6,
+    title: "Enterprise AI Operations (via strategic partners)",
+    icon: "🔧",
+    description: "Large-scale data labelling, image enrichment, structured QA. Model performance monitoring, hallucination tracing, black-box detection. AI behaviour explainability frameworks with integration to governance dashboards.",
+    differentiator: "Our partners provide scale, but we control the model lifecycle and governance standards.",
+    capabilities: [
+      "Large-scale data labelling",
+      "Image enrichment",
+      "Model performance monitoring",
+      "Hallucination tracing",
+      "Explainability frameworks",
+      "Governance integration"
+    ]
+  }
+];
+
+function SolutionsExplorer() {
+  const [selectedSolution, setSelectedSolution] = useState(solutionsData[0]);
+
+  return (
+    <div className="max-w-6xl mx-auto">
+      {/* Solution Tabs */}
+      <div className="flex flex-wrap gap-4 mb-8 justify-center">
+        {solutionsData.map((solution) => (
+          <button
+            key={solution.id}
+            onClick={() => setSelectedSolution(solution)}
+            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+              selectedSolution.id === solution.id
+                ? 'bg-emerald-500 text-white shadow-lg transform scale-105'
+                : 'bg-white text-gray-700 hover:bg-emerald-50 border border-gray-200'
+            }`}
+          >
+            <span className="text-lg">{solution.icon}</span>
+            <span className="hidden sm:inline">{solution.id}.</span>
+            <span className="text-sm font-semibold">{solution.title.split(' ')[0]} {solution.title.split(' ')[1]}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Selected Solution Content */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={selectedSolution.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+          className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+        >
+          <div className="flex items-start gap-6">
+            <div className="w-16 h-16 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span className="text-white text-2xl">{selectedSolution.icon}</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-primary mb-4">
+                {selectedSolution.id}. {selectedSolution.title}
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {selectedSolution.description}
+              </p>
+              
+              {/* Capabilities Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">Key Capabilities:</h4>
+                  <ul className="space-y-2">
+                    {selectedSolution.capabilities.map((capability, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                        {capability}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">What Makes It Different:</h4>
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r">
+                    <p className="text-sm font-medium text-yellow-800">
+                      {selectedSolution.differentiator}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function ActuatePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -177,7 +353,7 @@ export default function ActuatePage() {
         </div>
       </section>
 
-      {/* Actuate Services */}
+      {/* Solutions Explorer */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -188,11 +364,20 @@ export default function ActuatePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              🚀 Actuate Services
+              🚀 Solutions Explorer
             </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Explore our comprehensive AI delivery services. Click on any service to learn more about capabilities and differentiators.
+            </p>
           </motion.div>
+          
+          <SolutionsExplorer />
+        </div>
+      </section>
 
-          {/* Services Grid */}
+      {/* Detailed Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

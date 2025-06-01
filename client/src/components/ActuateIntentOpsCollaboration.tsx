@@ -186,25 +186,29 @@ export default function ActuateIntentOpsCollaboration() {
               while Actuate delivers the execution power to turn vision into reality.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm border-l-4 border-orange-400">
                 <div className="text-orange-400 text-2xl mb-2">1</div>
                 <div className="text-white font-semibold mb-1">Align</div>
-                <div className="text-gray-400 text-sm">Strategic definition</div>
+                <div className="text-gray-400 text-sm">IntentOps</div>
+                <div className="text-gray-300 text-xs mt-1">Strategic definition</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-yellow-400 text-2xl mb-2">2</div>
+              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm border-l-4 border-emerald-400">
+                <div className="text-emerald-400 text-2xl mb-2">2</div>
                 <div className="text-white font-semibold mb-1">Execute</div>
-                <div className="text-gray-400 text-sm">AI implementation</div>
+                <div className="text-gray-400 text-sm">Actuate</div>
+                <div className="text-gray-300 text-xs mt-1">AI implementation</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-emerald-400 text-2xl mb-2">3</div>
+              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm border-l-4 border-orange-400">
+                <div className="text-orange-400 text-2xl mb-2">3</div>
                 <div className="text-white font-semibold mb-1">Measure</div>
-                <div className="text-gray-400 text-sm">Value tracking</div>
+                <div className="text-gray-400 text-sm">IntentOps</div>
+                <div className="text-gray-300 text-xs mt-1">Value tracking</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                <div className="text-blue-400 text-2xl mb-2">4</div>
+              <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm border-l-4 border-yellow-400">
+                <div className="text-yellow-400 text-2xl mb-2">4</div>
                 <div className="text-white font-semibold mb-1">Optimize</div>
-                <div className="text-gray-400 text-sm">Continuous improvement</div>
+                <div className="text-gray-400 text-sm">Actuate + IntentOps</div>
+                <div className="text-gray-300 text-xs mt-1">Continuous loop</div>
               </div>
             </div>
           </div>

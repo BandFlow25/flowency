@@ -8,7 +8,7 @@ import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollabo
 const serviceLines = [
   {
     id: 1,
-    title: "AI Strategy to Action",
+    title: "AI Value Alignment",
     icon: "🎯",
     // Level 1: Quick View Tile
     pain: "Disconnected initiatives, unclear value, and delivery misalignment",
@@ -337,8 +337,12 @@ export default function ActuatePage() {
               <strong className="text-white block mt-2">From raw intent to production-ready prototypes.</strong>
             </p>
             
-            <p className="text-lg mb-12 max-w-4xl mx-auto text-gray-400 leading-relaxed">
-              Actuate AI is your AI-native execution engine - a modular service suite designed to deliver applied artificial intelligence across the enterprise. Whether you are automating a specific business process, experimenting with a GenAI prototype, or building production-ready tools, Actuate offers flexible services that can be consumed independently or as part of a larger transformation programme.
+            <p className="text-lg mb-8 max-w-4xl mx-auto text-yellow-300 leading-relaxed font-semibold">
+              Actuate is your go-to team for getting GenAI live, governed, and delivering real business outcomes — fast.
+            </p>
+            
+            <p className="text-base mb-12 max-w-4xl mx-auto text-gray-400 leading-relaxed">
+              A modular service suite designed to deliver applied artificial intelligence across the enterprise. Whether you are automating a specific business process, experimenting with a GenAI prototype, or building production-ready tools, Actuate offers flexible services that can be consumed independently or as part of a larger transformation programme.
             </p>
             
             <motion.div
@@ -348,10 +352,10 @@ export default function ActuatePage() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
-                START ACTUATING →
+                Show me what you can build →
               </button>
               <button className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300">
-                View Capabilities
+                Book a real delivery call
               </button>
             </motion.div>
             
@@ -499,7 +503,7 @@ export default function ActuatePage() {
             </p>
             <p className="text-xl font-semibold mb-8 text-yellow-400">Start anywhere. Align as you grow.</p>
             <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">
-              Get Started
+              See working AI in 10 days
             </button>
           </div>
         </div>

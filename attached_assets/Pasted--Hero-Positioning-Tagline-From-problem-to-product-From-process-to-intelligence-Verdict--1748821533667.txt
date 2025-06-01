@@ -1,0 +1,133 @@
+⚙️ Hero & Positioning
+Tagline:
+
+From problem to product. From process to intelligence.
+
+🔥 Verdict: Great rhythm. Holds tension. Says something real.
+✅ Keep.
+
+Positioning Statement:
+
+“AI-native execution engine — a modular service suite designed to deliver applied artificial intelligence…”
+
+🔥 Verdict:
+✅ Strong foundations.
+⚠️ But: We need one more level of immediacy. It reads like slide 3 of a deck — not the opening line of a website.
+
+💡 Fix suggestion (line one only):
+
+“Actuate is your go-to team for getting GenAI live, governed, and delivering real business outcomes — fast.”
+
+You can keep the longer paragraph after that. Just punch the open harder.
+
+✍️ Quotes Section
+“Actuate combines the cognition of your people with the execution power of AI…”
+
+🔥 Verdict: These are excellent.
+✅ Keep both. Use them as social tiles. Frame one in white text over a blurred execution graphic for the page.
+
+🔍 “How Can Actuate Help You?”
+🔥 Verdict: Strong signal. Clear verbs.
+✅ Use as 6-card scannable UI layer.
+⚠️ Suggest reducing each one to 6 words max.
+
+💡 Example:
+
+“Prompt engineering as a service” → ✅
+
+“Tool unification and orchestration” → ✅
+
+“Hallucination and drift control” → ✅
+
+“Legacy drag reduction” → Too vague. Suggest:
+
+“Remove redundant systems and workflow layers”
+
+🚀 Level 1 (Web Tiles)
+🔥 Verdict: Outstanding. This is your moment.
+
+✅ Every service line now:
+
+Hits a real problem
+
+Describes the service cleanly
+
+Offers a result without puffery
+
+💪 Strategic praise: “What We Do” doesn’t feel like a brochure — it reads like a confident statement of action.
+
+💡 Suggestions:
+
+Rename “AI Strategy to Action” to “AI Value Alignment” or “AI Opportunity Mapping” to avoid sounding like a methodology.
+
+“Operational Decision Support” — 🔥 🔥 🔥. The title alone says “we're not your usual consultants.”
+
+📦 Level 2 (Modals / Drawers)
+🔥 Verdict: Nailed it. This is battle-ready sales collateral dressed for web.
+
+✅ You now:
+
+Present a high-quality, consultant-grade pitch
+
+Use structure that sells (Problem > Service > Result)
+
+Avoid all the agile/sprint/poster-speak rubbish
+
+💡 Small tweak suggestion:
+Where possible, reorder “What You Get” bullets to:
+
+Most strategic value
+
+Most tactical win
+
+Most scalable benefit
+
+That way, you signal why this matters at the exec table, before selling the bottom line.
+
+🧠 Actuate x IntentOps Section
+🔥 Verdict: Best section on the page. Perfectly phrased, no edits required.
+
+📌 Highlights:
+
+“Actuate delivers outcomes. IntentOps ensures they are strategic, governed, and traceable.”
+
+That’s your brand heartbeat. Put it on a slide, a sticker, a mousepad.
+
+✅ Keep as-is.
+
+📎 CTA Block
+“Start anywhere. Align as you grow.”
+
+🔥 Verdict: Gorgeous line. But the rest is too vague.
+
+🛠️ Fix:
+Add a CTA button that speaks the truth of your value:
+
+“Show me what you can build.”
+OR
+“Book a real delivery call.”
+OR
+“See working AI in 10 days.”
+
+✅ Remove “View Capabilities” entirely. That’s Web 1.0 language.
+
+🎯 Final Verdict
+Area	Score	Feedback
+Brand Positioning	✅ 9/10	Just punch the first line harder
+Service Structure	✅ 10/10	Clean, sellable, well phrased
+Content Hierarchy	✅ 9/10	Consider adding icons or visual layer hints
+Tone & Confidence	✅ 10/10	No fluff, no filler. Distinctly you.
+CTA Strength	⚠️ 7/10	Needs stronger wording for conversion
+Technical Credibility	✅ 10/10	Solid, without falling into jargon traps
+Differentiation vs Big 4	✅ 10/10	You sound like builders, not theorists.
+
+💡 Immediate Next Steps
+Cut this into your front-end immediately.
+
+Use each Level 2 modal as the basis for sales PDFs or pitch slides.
+
+Build a tile for each with icons: Problem → Service → Outcome
+
+Treat this as the ‘drop-in services’ portal. Let IntentOps be the glue.
+
+Never mention ‘sprints’ or ‘agile’ ever again. You ship. That’s the brand.

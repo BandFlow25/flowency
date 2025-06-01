@@ -400,45 +400,47 @@ export default function ActuatePage() {
               🔍 How Can Actuate Help You?
             </h2>
             
-            <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
               Actuate offers modular, practical AI services designed to deliver measurable value fast. Whether you're exploring GenAI capabilities or already working through transformation programmes, we support drop-in execution and scalable delivery across:
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-left">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Outcome-first GenAI delivery</h3>
-                <p className="text-gray-600 text-sm">Rapidly design, build and iterate production-grade products and features</p>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Outcome-first GenAI delivery</h3>
+                  <p className="text-xs text-emerald-600">Production-grade products & features</p>
+                </div>
+                
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Enterprise-safe prompting</h3>
+                  <p className="text-xs text-emerald-600">Governed, reusable, model-agnostic</p>
+                </div>
+                
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Tool unification</h3>
+                  <p className="text-xs text-emerald-600">LLMs, RAG, APIs under guidance</p>
+                </div>
+                
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Hallucination control</h3>
+                  <p className="text-xs text-emerald-600">Patterns, fallbacks, explainability</p>
+                </div>
+                
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Legacy augmentation</h3>
+                  <p className="text-xs text-emerald-600">Workflow intelligence, no replatforming</p>
+                </div>
+                
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Smart automation</h3>
+                  <p className="text-xs text-emerald-600">GenAI + RPA + human-in-loop</p>
+                </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Enterprise-safe prompt engineering</h3>
-                <p className="text-gray-600 text-sm">Model-agnostic, governed, and reusable</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Tool fragmentation</h3>
-                <p className="text-gray-600 text-sm">Unify LLMs, RAG pipelines, and APIs under expert guidance</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Reducing hallucination risk</h3>
-                <p className="text-gray-600 text-sm">Embedded patterns, fallback design, and explainability</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Legacy drag</h3>
-                <p className="text-gray-600 text-sm">Intelligent augmentation of brittle workflows without replatforming</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-lg font-semibold text-emerald-600 mb-3">Process automation</h3>
-                <p className="text-gray-600 text-sm">Combine GenAI with RPA and human-in-loop for accuracy, not just speed</p>
-              </div>
+              <p className="text-base text-gray-600 text-center italic">
+                Whether you need end-to-end delivery or a tactical drop-in capability, Actuate is designed to meet you where you are.
+              </p>
             </div>
-            
-            <p className="text-lg text-gray-700 mt-12 max-w-4xl mx-auto leading-relaxed italic">
-              Whether you need end-to-end delivery or a tactical drop-in capability, Actuate is designed to meet you where you are.
-            </p>
             
             <div className="mt-12 bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg text-left max-w-4xl mx-auto">
               <h3 className="text-xl font-bold text-primary mb-4">💡 Core Insight</h3>

@@ -95,9 +95,15 @@ export default function ActuateIntentOpsCollaboration() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              {/* Simple X symbol - no background circle */}
+              {/* Refined X with subtle background */}
               <div className="relative flex items-center justify-center mb-8">
-                <span className="text-8xl font-bold text-yellow-400 drop-shadow-2xl">×</span>
+                {/* Smaller, more subtle background with animation */}
+                <div className="absolute w-24 h-24 bg-gradient-to-br from-yellow-400/20 via-orange-400/30 to-yellow-300/20 rounded-full animate-pulse"></div>
+                <div className="absolute w-32 h-32 border border-yellow-400/20 rounded-full animate-ping"></div>
+                <div className="absolute w-40 h-40 border border-orange-400/10 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                
+                {/* Prominent X symbol */}
+                <span className="relative text-6xl font-bold text-yellow-400 drop-shadow-2xl z-10">×</span>
               </div>
               
               {/* Central text */}

@@ -95,16 +95,9 @@ export default function ActuateIntentOpsCollaboration() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              {/* Glowing fusion point */}
-              <div className="relative w-40 h-40 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-300 rounded-full animate-pulse shadow-2xl"></div>
-                <div className="absolute inset-2 bg-gradient-to-br from-white via-yellow-100 to-orange-100 rounded-full flex items-center justify-center">
-                  <span className="text-3xl font-bold text-gray-800">×</span>
-                </div>
-                
-                {/* Radiating energy rings */}
-                <div className="absolute -inset-4 border-2 border-yellow-400/30 rounded-full animate-ping"></div>
-                <div className="absolute -inset-8 border border-orange-400/20 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+              {/* Simple X symbol - no background circle */}
+              <div className="relative flex items-center justify-center mb-8">
+                <span className="text-8xl font-bold text-yellow-400 drop-shadow-2xl">×</span>
               </div>
               
               {/* Central text */}
@@ -113,9 +106,9 @@ export default function ActuateIntentOpsCollaboration() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-center mt-6"
+                className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 whitespace-nowrap">
                   Actuate × IntentOps
                 </h2>
                 <p className="text-yellow-300 font-semibold">Where strategy meets execution</p>

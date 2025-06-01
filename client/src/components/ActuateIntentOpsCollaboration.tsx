@@ -66,21 +66,26 @@ export default function ActuateIntentOpsCollaboration() {
             >
               <h3 className="text-4xl font-bold text-white mb-4">Actuate</h3>
               <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-yellow-400 mb-6"></div>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed mb-4">
                 AI-native execution engine that transforms strategic intent into production-ready solutions with measurable business impact.
               </p>
-              <div className="mt-6 space-y-2">
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Rapid prototyping</span>
+              <p className="text-yellow-300 text-sm font-medium mb-6">
+                AI-native delivery with embedded telemetry, trust, and value assurance.
+              </p>
+              
+              {/* Modular service blocks */}
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-4 h-4 bg-emerald-400 rounded-sm flex-shrink-0"></div>
+                  <span className="text-sm text-gray-300">Outcome-led GenAI delivery</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Production deployment</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-4 h-4 bg-yellow-400 rounded-sm flex-shrink-0"></div>
+                  <span className="text-sm text-gray-300">Drop-in prompt engineering</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Intelligent automation</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-4 h-4 bg-teal-400 rounded-sm flex-shrink-0"></div>
+                  <span className="text-sm text-gray-300">Modular AI services</span>
                 </div>
               </div>
             </motion.div>
@@ -95,12 +100,20 @@ export default function ActuateIntentOpsCollaboration() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              {/* Refined X with subtle background */}
+              {/* Refined X with modularity indicators */}
               <div className="relative flex items-center justify-center mb-8">
-                {/* Smaller, more subtle background with animation */}
+                {/* Subtle background with animation */}
                 <div className="absolute w-24 h-24 bg-gradient-to-br from-yellow-400/20 via-orange-400/30 to-yellow-300/20 rounded-full animate-pulse"></div>
                 <div className="absolute w-32 h-32 border border-yellow-400/20 rounded-full animate-ping"></div>
                 <div className="absolute w-40 h-40 border border-orange-400/10 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                
+                {/* Modular service blocks floating around the X */}
+                <div className="absolute -top-6 -left-6 w-3 h-3 bg-emerald-400 rounded-sm animate-pulse opacity-70"></div>
+                <div className="absolute -top-6 -right-6 w-3 h-3 bg-orange-400 rounded-sm animate-pulse opacity-70" style={{ animationDelay: '0.3s' }}></div>
+                <div className="absolute -bottom-6 -left-6 w-3 h-3 bg-yellow-400 rounded-sm animate-pulse opacity-70" style={{ animationDelay: '0.6s' }}></div>
+                <div className="absolute -bottom-6 -right-6 w-3 h-3 bg-blue-400 rounded-sm animate-pulse opacity-70" style={{ animationDelay: '0.9s' }}></div>
+                <div className="absolute top-0 -left-12 w-2 h-2 bg-teal-400 rounded-sm animate-pulse opacity-50" style={{ animationDelay: '1.2s' }}></div>
+                <div className="absolute top-0 -right-12 w-2 h-2 bg-indigo-400 rounded-sm animate-pulse opacity-50" style={{ animationDelay: '1.5s' }}></div>
                 
                 {/* Prominent X symbol */}
                 <span className="relative text-6xl font-bold text-yellow-400 drop-shadow-2xl z-10">×</span>
@@ -133,21 +146,26 @@ export default function ActuateIntentOpsCollaboration() {
             >
               <h3 className="text-4xl font-bold text-white mb-4">IntentOps</h3>
               <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mb-6 ml-auto"></div>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed mb-4">
                 Strategic orchestration and governance that ensures AI initiatives align with business objectives and deliver measurable value.
               </p>
-              <div className="mt-6 space-y-2">
-                <div className="flex items-center justify-end gap-2 text-sm text-gray-400">
-                  <span>Strategic alignment</span>
-                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+              <p className="text-orange-300 text-sm font-medium mb-6">
+                Live oversight of AI value, flow, and accountability from roadmap to rollout.
+              </p>
+              
+              {/* Connected governance elements */}
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center justify-end gap-3">
+                  <span className="text-sm text-gray-300">Real-time value visibility</span>
+                  <div className="w-4 h-4 bg-orange-400 rounded-sm flex-shrink-0"></div>
                 </div>
-                <div className="flex items-center justify-end gap-2 text-sm text-gray-400">
-                  <span>Governance frameworks</span>
-                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                <div className="flex items-center justify-end gap-3">
+                  <span className="text-sm text-gray-300">Wrap-around governance</span>
+                  <div className="w-4 h-4 bg-yellow-400 rounded-sm flex-shrink-0"></div>
                 </div>
-                <div className="flex items-center justify-end gap-2 text-sm text-gray-400">
-                  <span>Value tracking</span>
-                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                <div className="flex items-center justify-end gap-3">
+                  <span className="text-sm text-gray-300">Flow accountability</span>
+                  <div className="w-4 h-4 bg-blue-400 rounded-sm flex-shrink-0"></div>
                 </div>
               </div>
             </motion.div>

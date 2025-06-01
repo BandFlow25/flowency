@@ -1,0 +1,117 @@
+How Can Actuate Help You?
+
+Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discreet engagement or can be combined under a broader capability uplift programme with IntentOps.
+
+Outcome-first GenAI delivery – rapidly build usable features tied to business value
+
+Prompt engineering as a service – model-agnostic, governed, and reusable
+
+Tool unification and orchestration – streamline fragmented LLMs, APIs, and workflows
+
+Process re-engineering and automation – redesign manual and inefficient workflows
+
+Hallucination and drift control – add guardrails, fallback patterns, and quality signals
+
+Legacy drag reduction – automate and eliminate redundant layers of complexity
+
+🚀 Actuate Service Lines
+
+1. AI Strategy to Action
+
+The ProblemAmbition without execution. AI strategies stall when scattered initiatives, experimental prototypes, or disconnected tools fail to connect to business value.
+
+What We OfferFacilitated working sessions, portfolio design, feasibility mapping, and enterprise-aligned AI strategy execution plans.
+
+What You Get
+
+A prioritised portfolio of AI use cases, aligned to strategic outcomes
+
+Production-ready PRDs with model/tool fit, risks, and feasibility indicators
+
+Optional telemetry and traceability via IntentOps
+
+2. AI-Native Product and Prototype Development
+
+The ProblemEven with a strong use case, turning intent into working software is risky, fragmented, and slow. Most prototypes lack observability and value signals.
+
+What We OfferFast-turnaround development of AI-native tools, copilots, RAG workflows, and context-integrated LLM interfaces.
+
+What You Get
+
+Testable prototypes or production-ready tools
+
+Built-in observability, telemetry, and fallback logic
+
+Delivery framed against business intent, not feature checklists
+
+3. Intelligent Process Transformation
+
+The ProblemLayered processes, manual workarounds, and embedded inefficiencies increase cost and complexity.
+
+What We OfferBusiness process re-engineering and smart automation using GenAI, RPA, and human-in-loop design.
+
+What You Get
+
+Process maps with bottlenecks, blockers, and automation targets
+
+Applied cognitive automation that reduces—not adds—workflow burden
+
+Optional execution at scale via trusted delivery partners
+
+4. Prompt Engineering as a Service
+
+The ProblemLLMs underperform without structured, context-aware prompting. Teams waste time iterating blindly.
+
+What We OfferEnd-to-end design and delivery of governed prompt libraries, tuned for business alignment and operational safety.
+
+What You Get
+
+Prompt patterns and playbooks built around your intent
+
+Fallback logic, guardrails, test cases, and persona switching
+
+Integration into your tools, platforms, or customer experience
+
+5. Operational Decision Support with AI
+
+The ProblemDelivery drift, invisible blockers, and decision latency are everywhere. Traditional dashboards show effort, not value.
+
+What We OfferAI-enhanced delivery visibility, including real-time flow metrics, value leakage, and strategic telemetry.
+
+What You Get
+
+Visualised bottlenecks, discard rates, and flow inefficiencies
+
+Quantified waste and cost-of-delay signals
+
+Portfolio-wide decision support with optional IntentOps alignment
+
+🔑 Differentiators
+
+Feature
+
+Why It Matters
+
+Intent-aligned from day one
+
+Not just building - aligning to enterprise objectives
+
+Modular services, fast value
+
+Start small, scale confidently
+
+Prompt Engineering as a service
+
+Structured, testable, reusable
+
+GenAI + RPA + HITL fusion
+
+Real-world automation, not lab experiments
+
+Feedback and governance embedded
+
+No AI product is complete without oversight
+
+Built to scale across teams and tools
+
+Designed for reuse, integration, and control

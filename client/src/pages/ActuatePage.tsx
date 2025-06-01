@@ -393,47 +393,55 @@ export default function ActuatePage() {
               Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discrete engagement or can be combined under a broader capability uplift programme with IntentOps.
             </p>
             
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Outcome-first GenAI delivery</h3>
-                  <p className="text-xs text-emerald-600">Rapidly design, build, and iterate production-grade features with measurable business value</p>
-                </div>
-                
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Enterprise-safe prompt engineering</h3>
-                  <p className="text-xs text-emerald-600">Model-agnostic, governed, and reusable</p>
-                </div>
-                
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Prototyping at speed</h3>
-                  <p className="text-xs text-emerald-600">Turn ideas into working demos quickly</p>
-                </div>
-                
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Tool fragmentation</h3>
-                  <p className="text-xs text-emerald-600">Unify LLMs, APIs, and workflows under expert guidance</p>
-                </div>
-                
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Reducing hallucination risk</h3>
-                  <p className="text-xs text-emerald-600">Prompt testing, guardrails, and fallback patterns</p>
-                </div>
-                
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Legacy drag</h3>
-                  <p className="text-xs text-emerald-600">Intelligent automation that reduces or removes unnecessary layers of workflow</p>
-                </div>
-                
-                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Process re-engineering and automation</h3>
-                  <p className="text-xs text-emerald-600">Optimise and rebuild business processes to improve speed, accuracy, and cost-efficiency</p>
+            {/* Simple list format */}
+            <div className="max-w-4xl mx-auto text-left space-y-4 mb-12">
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <span className="font-semibold text-gray-800">Outcome-first GenAI delivery</span>
+                  <span className="text-gray-600"> – rapidly build usable features tied to business value</span>
                 </div>
               </div>
               
-              <p className="text-base text-gray-600 text-center italic">
-                Whether you need to streamline a single process or build an internal AI capability, Actuate is built for flexibility.
-              </p>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <span className="font-semibold text-gray-800">Prompt engineering as a service</span>
+                  <span className="text-gray-600"> – model-agnostic, governed, and reusable</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <span className="font-semibold text-gray-800">Tool unification and orchestration</span>
+                  <span className="text-gray-600"> – streamline fragmented LLMs, APIs, and workflows</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <span className="font-semibold text-gray-800">Process re-engineering and automation</span>
+                  <span className="text-gray-600"> – redesign manual and inefficient workflows</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <span className="font-semibold text-gray-800">Hallucination and drift control</span>
+                  <span className="text-gray-600"> – add guardrails, fallback patterns, and quality signals</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <span className="font-semibold text-gray-800">Legacy drag reduction</span>
+                  <span className="text-gray-600"> – automate and eliminate redundant layers of complexity</span>
+                </div>
+              </div>
             </div>
             
             <div className="mt-12 bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg text-left max-w-4xl mx-auto">
@@ -449,25 +457,93 @@ export default function ActuatePage() {
         </div>
       </section>
 
-      {/* Solutions Explorer */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Actuate Service Lines */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              🚀 Solutions Explorer
+              🚀 Actuate Service Lines
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive AI delivery services. Click on any service to learn more about capabilities and differentiators.
-            </p>
           </motion.div>
           
-          <SolutionsExplorer />
+          <div className="space-y-8">
+            {solutionsData.map((service) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: service.id * 0.1 }}
+                className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+              >
+                <div className="p-8">
+                  {/* Service Header */}
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">{service.icon}</span>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {service.id}. {service.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* The Problem */}
+                  <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-400 rounded-r">
+                    <div className="flex items-start gap-2 mb-2">
+                      <span className="text-lg">⚠️</span>
+                      <h4 className="font-semibold text-red-800">The Problem</h4>
+                    </div>
+                    <p className="text-red-700 text-sm">
+                      {service.problem}
+                    </p>
+                  </div>
+                  
+                  {/* Two column layout for What You Get and What Makes It Different */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* What You Get */}
+                    <div>
+                      <div className="flex items-start gap-2 mb-3">
+                        <span className="text-lg">🎯</span>
+                        <h4 className="font-semibold text-gray-800">What You Get:</h4>
+                      </div>
+                      <ul className="space-y-2">
+                        {service.capabilities.map((capability, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                            {capability}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* What Makes It Different */}
+                    <div>
+                      <div className="flex items-start gap-2 mb-3">
+                        <span className="text-lg">💡</span>
+                        <h4 className="font-semibold text-gray-800">What Makes It Different:</h4>
+                      </div>
+                      <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r">
+                        <p className="text-sm font-medium text-yellow-800">
+                          {service.differentiator}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

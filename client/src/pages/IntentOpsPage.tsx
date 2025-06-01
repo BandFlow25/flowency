@@ -6,6 +6,7 @@ import CognitiveDebtFlow from "@/components/CognitiveDebtFlow";
 import IntentOpsLayer from "@/components/IntentOpsLayer";
 import StageDetails from "@/components/StageDetails";
 import ComparisonSection from "@/components/ComparisonSection";
+import ActuateIntentOpsCollaboration from "@/components/ActuateIntentOpsCollaboration";
 import { stages } from "@/data/stagesData";
 
 export default function IntentOpsPage() {
@@ -147,6 +148,9 @@ export default function IntentOpsPage() {
           </a>
         </section>
       </main>
+
+      {/* Actuate and IntentOps Collaboration */}
+      <ActuateIntentOpsCollaboration />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 mt-16">

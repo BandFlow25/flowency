@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 
 // Solutions data for the interactive explorer
 const solutionsData = [
@@ -471,103 +472,7 @@ export default function ActuatePage() {
       </section>
 
       {/* How Actuate and IntentOps Work Together */}
-      <section className="bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              🧠 How Actuate and IntentOps Work Together
-            </h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-              <div className="text-left">
-                <h3 className="text-2xl font-bold mb-6 text-yellow-300">Perfect Synergy</h3>
-                <div className="space-y-4">
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    <strong className="text-yellow-300">Actuate delivers outcomes.</strong> IntentOps ensures they are strategic, governed, and traceable.
-                  </p>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    Every Actuate engagement can operate standalone. But when paired with IntentOps, value becomes visible across the lifecycle:
-                  </p>
-                  <div className="bg-emerald-800/50 p-6 rounded-lg mt-6">
-                    <h4 className="font-semibold text-yellow-300 mb-3">The Continuous Loop:</h4>
-                    <ul className="space-y-3 text-sm">
-                      <li className="flex items-start gap-3">
-                        <span className="text-yellow-400 text-lg">1.</span>
-                        <span><strong>IntentOps defines the strategic north star</strong></span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-yellow-400 text-lg">2.</span>
-                        <span><strong>Actuate operationalises it with tangible AI execution</strong></span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-yellow-400 text-lg">3.</span>
-                        <span><strong>Outcomes are measured, waste is flagged, and telemetry feeds back</strong></span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-yellow-400 text-lg">4.</span>
-                        <span><strong>Together, they form a continuous delivery and governance loop for AI-native enterprises</strong></span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex justify-center">
-                <div className="relative">
-                  {/* Main Actuate x IntentOps Graphic */}
-                  <div className="w-80 h-80 relative">
-                    {/* Background circle with gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-400 rounded-full shadow-2xl"></div>
-                    
-                    {/* Actuate section (left half) */}
-                    <div className="absolute left-0 top-0 w-40 h-80 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-l-full flex items-center justify-center opacity-90">
-                      <div className="text-center text-white transform -rotate-12">
-                        <div className="text-2xl font-bold mb-1">ACTUATE</div>
-                        <div className="text-xs">Execution</div>
-                      </div>
-                    </div>
-                    
-                    {/* IntentOps section (right half) */}
-                    <div className="absolute right-0 top-0 w-40 h-80 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-r-full flex items-center justify-center opacity-90">
-                      <div className="text-center text-white transform rotate-12">
-                        <div className="text-2xl font-bold mb-1">INTENTOPS</div>
-                        <div className="text-xs">Governance</div>
-                      </div>
-                    </div>
-                    
-                    {/* Center X connector */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-yellow-400">
-                        <span className="text-4xl font-bold text-gray-800">×</span>
-                      </div>
-                    </div>
-                    
-                    {/* Orbital elements */}
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-xl">⚡</span>
-                    </div>
-                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-xl">🎯</span>
-                    </div>
-                    <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-xl">🔄</span>
-                    </div>
-                    <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-xl">📊</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <ActuateIntentOpsCollaboration />
 
       {/* Footer */}
       <footer className="bg-green-900 text-white py-16">

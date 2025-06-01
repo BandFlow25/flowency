@@ -197,57 +197,93 @@ function ServiceTiles() {
 }
 
 export default function ActuatePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
-        </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold text-gray-900">Flowency</h1>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-8">
+              <a href="/" className="text-gray-900 hover:text-emerald-600 font-medium transition-colors">Home</a>
+              <a href="/intentops" className="text-gray-900 hover:text-emerald-600 font-medium transition-colors">IntentOps</a>
+              <a href="/actuate" className="text-emerald-600 font-medium">Actuate</a>
+            </nav>
+            
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+        
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-t">
+            <div className="px-4 py-2 space-y-1">
+              <a href="/" className="block px-3 py-2 text-gray-900 hover:text-emerald-600 transition-colors">Home</a>
+              <a href="/intentops" className="block px-3 py-2 text-gray-900 hover:text-emerald-600 transition-colors">IntentOps</a>
+              <a href="/actuate" className="block px-3 py-2 text-emerald-600 font-medium">Actuate</a>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-emerald-50 via-white to-emerald-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-16 h-16 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <Target className="w-8 h-8 text-white" />
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="w-20 h-20 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Target className="w-10 h-10 text-white" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold">
-                <span className="text-gray-900">Actuate</span>
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900">
+                Actuate
               </h1>
             </div>
             
-            <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-4xl mx-auto leading-relaxed">
-              AI-native delivery with embedded telemetry, trust, and value assurance
+            <p className="text-2xl md:text-3xl text-gray-700 mb-6 max-w-5xl mx-auto font-light">
+              Applied AI Delivery and Optimisation
             </p>
             
-            <p className="text-lg text-gray-500 mb-8 max-w-3xl mx-auto">
-              Outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service available as discrete engagement or combined under broader capability uplift.
+            <p className="text-xl text-gray-600 mb-4 max-w-4xl mx-auto">
+              Tagline: From problem to product. From process to performance.
+            </p>
+            
+            <p className="text-lg text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discreet engagement or can be combined under a broader capability uplift programme with IntentOps.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg shadow-lg hover:bg-emerald-700 transition-colors flex items-center gap-2"
+                className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg shadow-lg hover:bg-emerald-700 transition-all duration-200 flex items-center justify-center gap-2"
               >
-                Explore Services
+                Explore Our Services
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
+                className="px-8 py-4 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg hover:bg-emerald-50 transition-all duration-200"
               >
-                Talk to Us
+                Start a Conversation
               </motion.button>
             </div>
           </motion.div>

@@ -67,10 +67,10 @@ export default function ActuateIntentOpsCollaboration() {
               <h3 className="text-4xl font-bold text-white mb-4">Actuate</h3>
               <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-yellow-400 mb-6"></div>
               <p className="text-gray-300 leading-relaxed mb-4">
-                AI-native execution engine that transforms strategic intent into production-ready solutions with measurable business impact.
+                AI-native delivery engine that converts strategic intent into production-grade outcomes.
               </p>
               <p className="text-yellow-300 text-sm font-medium mb-6">
-                AI-native delivery with embedded telemetry, trust, and value assurance.
+                Embedded telemetry, trust, and measurable business value by design.
               </p>
               
               {/* Modular service blocks */}
@@ -147,10 +147,10 @@ export default function ActuateIntentOpsCollaboration() {
               <h3 className="text-4xl font-bold text-white mb-4">IntentOps</h3>
               <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mb-6 ml-auto"></div>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Strategic orchestration and governance that ensures AI initiatives align with business objectives and deliver measurable value.
+                Strategic orchestration layer that ensures AI initiatives align with enterprise goals.
               </p>
               <p className="text-orange-300 text-sm font-medium mb-6">
-                Live oversight of AI value, flow, and accountability from roadmap to rollout.
+                Delivers live oversight of value, flow, and accountability from roadmap to rollout.
               </p>
               
               {/* Connected governance elements */}

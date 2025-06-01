@@ -7,92 +7,72 @@ import { useState } from "react";
 const solutionsData = [
   {
     id: 1,
-    title: "AI Opportunity Discovery & Use Case Design",
+    title: "AI Strategy to Action",
     icon: "🎯",
-    description: "Executive facilitation, PRD design support, marketplace mapping across LLMs, APIs, frameworks. Feasibility scoping, technical risk, hallucination analysis with early ROI and delivery impact indicators.",
-    differentiator: "Grounded in IntentOps governance. Everything begins with outcome and traceability.",
+    description: "Structured definition and alignment of AI strategy with clear prioritisation, roadmap design, and governance-ready execution framing.",
+    problem: "Organisations often face a disconnect between executive ambition, scattered experiments, and actual delivery. AI investments lack coordination, leading to duplication and cognitive debt.",
+    differentiator: "Intent-aligned from day one. Not just building - aligning to enterprise objectives.",
     capabilities: [
-      "Executive facilitation sessions",
-      "PRD design support",
-      "LLM marketplace mapping",
-      "Technical risk assessment",
-      "Hallucination analysis",
-      "ROI impact indicators"
+      "Prioritised use case portfolio aligned to business value",
+      "Production-ready PRDs with integrated feasibility analysis",
+      "Tooling and model landscape matched to your context",
+      "Optional IntentOps support to track intent through to value"
     ]
   },
   {
     id: 2,
-    title: "AI-Native Product & Prototype Development",
+    title: "AI-Native Product and Prototype Development",
     icon: "⚡",
-    description: "Build custom copilots, agents, AI-native workflows. RAG pipelines, tool/agent chaining, UX-integrated prompts with context-aware response models, fallback testing, and early telemetry.",
-    differentiator: "Outcome loops are embedded from sprint zero. It's not just working code - it's governable, trackable, accountable product.",
+    description: "Full-cycle product and prototype development, from intent framing to testable build, with embedded context and telemetry.",
+    problem: "You have a defined use case but need rapid, secure, and effective delivery of AI-native tools.",
+    differentiator: "Modular services, fast value. Start small, scale confidently.",
     capabilities: [
-      "Custom copilots & agents",
-      "RAG pipeline development",
-      "Tool/agent chaining",
-      "UX-integrated prompts",
-      "Context-aware models",
-      "Early telemetry systems"
+      "Live features or high-fidelity prototypes ready for test or scale",
+      "UX-integrated LLM pipelines, agents, and orchestration",
+      "Testing, observability, and control measures built-in",
+      "IntentOps optional integration for traceable value loops"
     ]
   },
   {
     id: 3,
-    title: "Process Optimisation (BPO+)",
+    title: "Intelligent Process Transformation",
     icon: "🔄",
-    description: "Identify high-friction, manual, or error-prone workflows. Pair GenAI + RPA + human-in-loop for true cognitive automation. Handle semi-structured data, summarisation, routing, enrichment with multilingual pipelines at 98%+ quality thresholds.",
-    differentiator: "Based on real-world results from scaled automation delivery (abstracted from NashTech).",
+    description: "Business process re-engineering and targeted automation using GenAI, RPA, and human-in-the-loop design to remove waste and improve resilience.",
+    problem: "Your operations are encumbered by layers of legacy workflows, manual interventions, and nested processes that generate drag.",
+    differentiator: "GenAI + RPA + HITL fusion. Real-world automation, not lab experiments.",
     capabilities: [
-      "Workflow friction analysis",
-      "GenAI + RPA integration",
-      "Human-in-loop design",
-      "Semi-structured data handling",
-      "Multilingual pipelines",
-      "98%+ quality thresholds"
+      "Refactored process maps with automation targets",
+      "GenAI-enhanced automation flows with structured output",
+      "Improved speed, quality, compliance, and customer outcomes",
+      "Optional execution with delivery partners to scale rapidly"
     ]
   },
   {
     id: 4,
     title: "Prompt Engineering as a Service",
     icon: "🤖",
-    description: "Refine PRDs into prompt libraries. Model-agnostic design (Claude, GPT, Mistral, open models). Safe system prompts, structured guardrails, persona switching with test cases, performance tuning, and reusable prompt libraries.",
-    differentiator: "PromptOps discipline built into delivery. We treat this like product dev, not copywriting.",
+    description: "High-quality prompt design, tuning, testing, and lifecycle management, grounded in deep expertise and business context.",
+    problem: "Your LLM-based products lack consistency, reliability, or alignment to business goals.",
+    differentiator: "Prompt Engineering as a service. Structured, testable, reusable.",
     capabilities: [
-      "PRD to prompt conversion",
-      "Model-agnostic design",
-      "Safe system prompts",
-      "Structured guardrails",
-      "Performance tuning",
-      "Reusable libraries"
+      "Enterprise prompt libraries tailored to business intent",
+      "Persona switching, fallback logic, and response guardrails",
+      "Model-agnostic patterns with performance monitoring",
+      "Integration into AI features or operations, with IntentOps if required"
     ]
   },
   {
     id: 5,
-    title: "AI-Augmented Delivery & Ops",
+    title: "Operational Decision Support with AI",
     icon: "⚙️",
-    description: "Project ops copilots, velocity forecasting, delivery retros. System telemetry fed back into IntentOps governance. AI-enhanced feedback loops, risk analysis, value decay alerts, and FlowOps patterns for unblocking delivery friction.",
-    differentiator: "Uses SPACE and DORA frameworks as the delivery signal, not effort or burn-down.",
+    description: "AI-augmented observability, surfacing friction points, risk patterns, and waste hotspots to inform faster, better decisions.",
+    problem: "Delivery leaders lack real-time insight into blockers, waste, and drift. Traditional metrics are lagging and blind to value.",
+    differentiator: "Built to scale across teams and tools. Designed for reuse, integration, and control.",
     capabilities: [
-      "Project ops copilots",
-      "Velocity forecasting",
-      "Delivery retrospectives",
-      "System telemetry",
-      "Risk analysis",
-      "FlowOps patterns"
-    ]
-  },
-  {
-    id: 6,
-    title: "Enterprise AI Operations (via strategic partners)",
-    icon: "🔧",
-    description: "Large-scale data labelling, image enrichment, structured QA. Model performance monitoring, hallucination tracing, black-box detection. AI behaviour explainability frameworks with integration to governance dashboards.",
-    differentiator: "Our partners provide scale, but we control the model lifecycle and governance standards.",
-    capabilities: [
-      "Large-scale data labelling",
-      "Image enrichment",
-      "Model performance monitoring",
-      "Hallucination tracing",
-      "Explainability frameworks",
-      "Governance integration"
+      "Delivery copilots and dashboards highlighting where value is stuck",
+      "Quantified blocker, discard, and delay costs",
+      "Visual intent-to-outcome maps for portfolio and product flow",
+      "Seamless alignment with IntentOps for governed execution"
     ]
   }
 ];
@@ -243,10 +223,18 @@ function DesktopSolutionsExplorer() {
                 {selectedSolution.description}
               </p>
               
+              {/* Problem Statement */}
+              <div className="mb-6">
+                <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r">
+                  <h4 className="font-semibold text-red-800 mb-2">⚠️ The Problem</h4>
+                  <p className="text-sm text-red-700">{selectedSolution.problem}</p>
+                </div>
+              </div>
+
               {/* Capabilities Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">Key Capabilities:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">🎯 What You Get:</h4>
                   <ul className="space-y-2">
                     {selectedSolution.capabilities.map((capability, index) => (
                       <motion.li
@@ -263,7 +251,7 @@ function DesktopSolutionsExplorer() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">What Makes It Different:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">💡 What Makes It Different:</h4>
                   <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r">
                     <p className="text-sm font-medium text-yellow-800">
                       {selectedSolution.differentiator}
@@ -360,11 +348,11 @@ export default function ActuatePage() {
             
             <p className="text-xl md:text-2xl mb-8 max-w-5xl mx-auto text-gray-300 leading-relaxed">
               From problem to product. From process to intelligence. 
-              <strong className="text-white block mt-2">Where strategy turns into systems, and potential becomes production.</strong>
+              <strong className="text-white block mt-2">From raw intent to production-ready prototypes.</strong>
             </p>
             
             <p className="text-lg mb-12 max-w-4xl mx-auto text-gray-400 leading-relaxed">
-              A modular service suite built to embed applicable, governed AI across the enterprise. Whether you're operationalising an AI strategy or solving a specific business process challenge, Actuate delivers componentised services that work within the broader IntentOps governance layer or stand alone as tactical interventions.
+              Actuate AI is your AI-native execution engine - a modular service suite designed to deliver applied artificial intelligence across the enterprise. Whether you are automating a specific business process, experimenting with a GenAI prototype, or building production-ready tools, Actuate offers flexible services that can be consumed independently or as part of a larger transformation programme.
             </p>
             
             <motion.div
@@ -401,44 +389,49 @@ export default function ActuatePage() {
             </h2>
             
             <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Actuate offers modular, practical AI services designed to deliver measurable value fast. Whether you're exploring GenAI capabilities or already working through transformation programmes, we support drop-in execution and scalable delivery across:
+              Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discrete engagement or can be combined under a broader capability uplift programme with IntentOps.
             </p>
             
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
                   <h3 className="text-sm font-semibold text-emerald-700 mb-1">Outcome-first GenAI delivery</h3>
-                  <p className="text-xs text-emerald-600">Production-grade products & features</p>
+                  <p className="text-xs text-emerald-600">Rapidly design, build, and iterate production-grade features with measurable business value</p>
                 </div>
                 
                 <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Enterprise-safe prompting</h3>
-                  <p className="text-xs text-emerald-600">Governed, reusable, model-agnostic</p>
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Enterprise-safe prompt engineering</h3>
+                  <p className="text-xs text-emerald-600">Model-agnostic, governed, and reusable</p>
                 </div>
                 
                 <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Tool unification</h3>
-                  <p className="text-xs text-emerald-600">LLMs, RAG, APIs under guidance</p>
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Prototyping at speed</h3>
+                  <p className="text-xs text-emerald-600">Turn ideas into working demos quickly</p>
                 </div>
                 
                 <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Hallucination control</h3>
-                  <p className="text-xs text-emerald-600">Patterns, fallbacks, explainability</p>
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Tool fragmentation</h3>
+                  <p className="text-xs text-emerald-600">Unify LLMs, APIs, and workflows under expert guidance</p>
                 </div>
                 
                 <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Legacy augmentation</h3>
-                  <p className="text-xs text-emerald-600">Workflow intelligence, no replatforming</p>
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Reducing hallucination risk</h3>
+                  <p className="text-xs text-emerald-600">Prompt testing, guardrails, and fallback patterns</p>
                 </div>
                 
                 <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Smart automation</h3>
-                  <p className="text-xs text-emerald-600">GenAI + RPA + human-in-loop</p>
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Legacy drag</h3>
+                  <p className="text-xs text-emerald-600">Intelligent automation that reduces or removes unnecessary layers of workflow</p>
+                </div>
+                
+                <div className="text-center p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <h3 className="text-sm font-semibold text-emerald-700 mb-1">Process re-engineering and automation</h3>
+                  <p className="text-xs text-emerald-600">Optimise and rebuild business processes to improve speed, accuracy, and cost-efficiency</p>
                 </div>
               </div>
               
               <p className="text-base text-gray-600 text-center italic">
-                Whether you need end-to-end delivery or a tactical drop-in capability, Actuate is designed to meet you where you are.
+                Whether you need to streamline a single process or build an internal AI capability, Actuate is built for flexibility.
               </p>
             </div>
             
@@ -477,7 +470,104 @@ export default function ActuatePage() {
         </div>
       </section>
 
-
+      {/* How Actuate and IntentOps Work Together */}
+      <section className="bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              🧠 How Actuate and IntentOps Work Together
+            </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+              <div className="text-left">
+                <h3 className="text-2xl font-bold mb-6 text-yellow-300">Perfect Synergy</h3>
+                <div className="space-y-4">
+                  <p className="text-lg opacity-90 leading-relaxed">
+                    <strong className="text-yellow-300">Actuate delivers outcomes.</strong> IntentOps ensures they are strategic, governed, and traceable.
+                  </p>
+                  <p className="text-lg opacity-90 leading-relaxed">
+                    Every Actuate engagement can operate standalone. But when paired with IntentOps, value becomes visible across the lifecycle:
+                  </p>
+                  <div className="bg-emerald-800/50 p-6 rounded-lg mt-6">
+                    <h4 className="font-semibold text-yellow-300 mb-3">The Continuous Loop:</h4>
+                    <ul className="space-y-3 text-sm">
+                      <li className="flex items-start gap-3">
+                        <span className="text-yellow-400 text-lg">1.</span>
+                        <span><strong>IntentOps defines the strategic north star</strong></span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-yellow-400 text-lg">2.</span>
+                        <span><strong>Actuate operationalises it with tangible AI execution</strong></span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-yellow-400 text-lg">3.</span>
+                        <span><strong>Outcomes are measured, waste is flagged, and telemetry feeds back</strong></span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-yellow-400 text-lg">4.</span>
+                        <span><strong>Together, they form a continuous delivery and governance loop for AI-native enterprises</strong></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex justify-center">
+                <div className="relative">
+                  {/* Main Actuate x IntentOps Graphic */}
+                  <div className="w-80 h-80 relative">
+                    {/* Background circle with gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-400 rounded-full shadow-2xl"></div>
+                    
+                    {/* Actuate section (left half) */}
+                    <div className="absolute left-0 top-0 w-40 h-80 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-l-full flex items-center justify-center opacity-90">
+                      <div className="text-center text-white transform -rotate-12">
+                        <div className="text-2xl font-bold mb-1">ACTUATE</div>
+                        <div className="text-xs">Execution</div>
+                      </div>
+                    </div>
+                    
+                    {/* IntentOps section (right half) */}
+                    <div className="absolute right-0 top-0 w-40 h-80 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-r-full flex items-center justify-center opacity-90">
+                      <div className="text-center text-white transform rotate-12">
+                        <div className="text-2xl font-bold mb-1">INTENTOPS</div>
+                        <div className="text-xs">Governance</div>
+                      </div>
+                    </div>
+                    
+                    {/* Center X connector */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-yellow-400">
+                        <span className="text-4xl font-bold text-gray-800">×</span>
+                      </div>
+                    </div>
+                    
+                    {/* Orbital elements */}
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-xl">⚡</span>
+                    </div>
+                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-xl">🎯</span>
+                    </div>
+                    <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-xl">🔄</span>
+                    </div>
+                    <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-xl">📊</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-green-900 text-white py-16">
@@ -485,9 +575,9 @@ export default function ActuatePage() {
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">📎 Ready to Actuate?</h3>
             <p className="text-lg mb-8 opacity-90 max-w-4xl mx-auto">
-              Actuate is the engine that drives value from AI. Whether you're trying to scale a GenAI proof of concept, reimagine a legacy workflow, or embed intelligence into your delivery model - we'll help you ship what matters.
+              Actuate is your delivery engine for applied AI. Whether you are running a discovery sprint, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results.
             </p>
-            <p className="text-xl font-semibold mb-8 text-yellow-400">Transform potential into production.</p>
+            <p className="text-xl font-semibold mb-8 text-yellow-400">Start anywhere. Align as you grow.</p>
             <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">
               Get Started
             </button>

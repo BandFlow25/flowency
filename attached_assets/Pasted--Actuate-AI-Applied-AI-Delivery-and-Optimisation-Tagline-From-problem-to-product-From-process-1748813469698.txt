@@ -1,0 +1,170 @@
+⚙️ Actuate AI - Applied AI Delivery and Optimisation
+
+Tagline: From problem to product. From process to intelligence.
+
+Positioning Statement:
+Actuate AI is your AI-native execution engine - a modular service suite designed to deliver applied artificial intelligence across the enterprise. Whether you are automating a specific business process, experimenting with a GenAI prototype, or building production-ready tools, Actuate offers a flexible set of services that can be consumed independently or delivered as part of a larger transformation programme. All services operate within optional guardrails provided by IntentOps, ensuring quality, safety, and value alignment without requiring heavy upfront strategy work.
+
+"Actuate combines the cognition of your people with the execution power of AI. It's not about replacing work - it's about delivering the future faster, with the people who know what matters."
+
+"AI is only useful if it moves the needle. Actuate brings the tools, the talent, and the tempo to get real outcomes shipped - not just imagined."
+
+From raw intent to production-ready prototypes
+
+From manual bottlenecks to AI-enhanced flow
+
+From uncontrolled experimentation to governed execution
+
+Actuate ensures AI does not just land - it works.
+
+🔍 How Can Actuate Help You?
+
+Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discreet engagement or can be combined under a broader capability uplift programme with IntentOps.
+
+Outcome-first GenAI delivery - rapidly design, build, and iterate production-grade features with measurable business value
+
+Enterprise-safe prompt engineering - model-agnostic, governed, and reusable
+
+Prototyping at speed - turn ideas into working demos quickly
+
+Tool fragmentation - unify LLMs, APIs, and workflows under expert guidance
+
+Reducing hallucination risk - prompt testing, guardrails, and fallback patterns
+
+Legacy drag - intelligent automation that reduces or removes unnecessary layers of workflow
+
+Process re-engineering and automation - optimise and rebuild business processes to improve speed, accuracy, and cost-efficiency
+
+Whether you need to streamline a single process or build an internal AI capability, Actuate is built for flexibility.
+
+🚀 Actuate Service Lines
+
+1. AI Strategy to Action
+
+The problem: Organisations often face a disconnect between executive ambition, scattered experiments, and actual delivery. AI investments lack coordination, leading to duplication and cognitive debt.
+
+What we offer: Structured definition and alignment of AI strategy with clear prioritisation, roadmap design, and governance-ready execution framing.
+
+What you get:
+
+Prioritised use case portfolio aligned to business value
+
+Production-ready PRDs with integrated feasibility analysis
+
+Tooling and model landscape matched to your context
+
+Optional IntentOps support to track intent through to value
+
+2. AI-Native Product and Prototype Development
+
+The problem: You have a defined use case but need rapid, secure, and effective delivery of AI-native tools.
+
+What we offer: Full-cycle product and prototype development, from intent framing to testable build, with embedded context and telemetry.
+
+What you get:
+
+Live features or high-fidelity prototypes ready for test or scale
+
+UX-integrated LLM pipelines, agents, and orchestration
+
+Testing, observability, and control measures built-in
+
+IntentOps optional integration for traceable value loops
+
+3. Intelligent Process Transformation
+
+The problem: Your operations are encumbered by layers of legacy workflows, manual interventions, and nested processes that generate drag.
+
+What we offer: Business process re-engineering and targeted automation using GenAI, RPA, and human-in-the-loop design to remove waste and improve resilience.
+
+What you get:
+
+Refactored process maps with automation targets
+
+GenAI-enhanced automation flows with structured output
+
+Improved speed, quality, compliance, and customer outcomes
+
+Optional execution with delivery partners to scale rapidly
+
+4. Prompt Engineering as a Service
+
+The problem: Your LLM-based products lack consistency, reliability, or alignment to business goals.
+
+What we offer: High-quality prompt design, tuning, testing, and lifecycle management, grounded in deep expertise and business context.
+
+What you get:
+
+Enterprise prompt libraries tailored to business intent
+
+Persona switching, fallback logic, and response guardrails
+
+Model-agnostic patterns with performance monitoring
+
+Integration into AI features or operations, with IntentOps if required
+
+5. Operational Decision Support with AI
+
+The problem: Delivery leaders lack real-time insight into blockers, waste, and drift. Traditional metrics are lagging and blind to value.
+
+What we offer: AI-augmented observability, surfacing friction points, risk patterns, and waste hotspots to inform faster, better decisions.
+
+What you get:
+
+Delivery copilots and dashboards highlighting where value is stuck
+
+Quantified blocker, discard, and delay costs
+
+Visual intent-to-outcome maps for portfolio and product flow
+
+Seamless alignment with IntentOps for governed execution
+
+🔑 Differentiators
+
+Feature
+
+Why It Matters
+
+Intent-aligned from day one
+
+Not just building - aligning to enterprise objectives
+
+Modular services, fast value
+
+Start small, scale confidently
+
+Prompt Engineering as a service
+
+Structured, testable, reusable
+
+GenAI + RPA + HITL fusion
+
+Real-world automation, not lab experiments
+
+Feedback and governance embedded
+
+No AI product is complete without oversight
+
+Built to scale across teams and tools
+
+Designed for reuse, integration, and control
+
+🧠 How Actuate and IntentOps Work Together
+
+Actuate delivers outcomes. IntentOps ensures they are strategic, governed, and traceable.
+
+Every Actuate engagement can operate standalone. But when paired with IntentOps, value becomes visible across the lifecycle:
+
+IntentOps defines the strategic north star
+
+Actuate operationalises it with tangible AI execution
+
+Outcomes are measured, waste is flagged, and telemetry feeds back
+
+Together, they form a continuous delivery and governance loop for AI-native enterprises.
+
+📎 Ready to Actuate?
+
+Actuate is your delivery engine for applied AI. Whether you are running a discovery sprint, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results.
+
+Start anywhere. Align as you grow.

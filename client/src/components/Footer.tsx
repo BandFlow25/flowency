@@ -4,19 +4,19 @@ interface FooterProps {
   ctaText?: string;
   ctaDescription?: string;
   ctaButtonText?: string;
-  bgColor?: string;
-  textColor?: string;
+  ctaBgColor?: string;
+  ctaTextColor?: string;
 }
 
 export default function Footer({ 
   ctaText = "Ready to optimise your delivery systems?",
   ctaDescription = "Let's discuss how we can help transform your organisation's flow.",
   ctaButtonText = "Get in touch",
-  bgColor = "bg-gray-900",
-  textColor = "text-white"
+  ctaBgColor = "bg-white/10",
+  ctaTextColor = "text-white"
 }: FooterProps) {
   return (
-    <footer className={`${bgColor} ${textColor} py-12`}>
+    <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
@@ -81,8 +81,8 @@ export default function Footer({
 
           {/* CTA Section */}
           <div className="lg:col-span-1">
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <h3 className="text-lg font-bold mb-2">{ctaText}</h3>
+            <div className={`${ctaBgColor} backdrop-blur-sm p-4 rounded-lg border border-white/20`}>
+              <h3 className={`text-lg font-bold mb-2 ${ctaTextColor}`}>{ctaText}</h3>
               <p className="text-gray-400 mb-4 text-sm">{ctaDescription}</p>
               <button 
                 onClick={() => window.open('mailto:hello@flowency.co.uk?subject=Contact Us', '_blank')}

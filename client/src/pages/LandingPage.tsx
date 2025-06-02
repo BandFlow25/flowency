@@ -113,8 +113,8 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             {/* Pill graphic */}
-            <div className="inline-block bg-gradient-to-r from-accent to-primary text-white px-6 py-3 rounded-full text-sm font-medium mb-8">
-              Adaptive Delivery
+            <div className="inline-block bg-slate-700 text-white px-6 py-3 rounded-full text-sm font-medium mb-8">
+              <span className="text-accent">Adaptive</span> <span className="text-slate-200">Delivery</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-light mb-6 text-black leading-tight">
               <span className="block md:inline">We help your</span>
@@ -375,10 +375,10 @@ export default function LandingPage() {
               <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
                 Flowency → Capability
               </div>
-              <div className="bg-gradient-to-r from-electric to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium">
+              <div className="bg-blue-900 text-orange-400 px-6 py-3 rounded-full text-sm font-medium border border-orange-400/30">
                 IntentOps → Alignment
               </div>
-              <div className="bg-gradient-to-r from-accent to-orange-600 text-white px-6 py-3 rounded-full text-sm font-medium">
+              <div className="bg-teal-800 text-yellow-400 px-6 py-3 rounded-full text-sm font-medium border border-yellow-400/30">
                 Actuate → Activation
               </div>
             </div>
@@ -711,80 +711,8 @@ export default function LandingPage() {
               <p className="text-lg text-gray-700 mb-6">
                 We start where you are, bring clarity and stability, and optimise from there.
               </p>
-              <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-electric">
-                <p className="text-2xl md:text-3xl font-bold text-primary">
-                  We won't tell you the way; <span className="text-accent">we help you find your way</span>.
-                </p>
-              </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* IntentOps Feature Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Introducing <span className="text-electric">Intent</span><span className="text-accent">Ops</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our revolutionary approach to managing cognitive debt in AI adoption through continuous governance and alignment monitoring.
-            </p>
-          </motion.div>
-
-          <div className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-accent">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-primary mb-4">
-                  Prevent AI Adoption Failures
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Visualise how cognitive debt compounds through your AI adoption journey and implement 
-                  governance layers that maintain strategic alignment throughout the process.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-electric rounded-full mr-3"></div>
-                    <span>Real-time drift detection</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                    <span>Value feedback loops</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--flow-blue-dark))] rounded-full mr-3"></div>
-                    <span>Governance overlay framework</span>
-                  </li>
-                </ul>
-                <Link 
-                  href="/intentops"
-                  className="inline-block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md"
-                >
-                  Explore IntentOps →
-                </Link>
-              </div>
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 text-white">
-                  <div className="text-3xl font-bold mb-2">5 Stages</div>
-                  <div className="text-sm opacity-90 mb-4">of Cognitive Debt</div>
-                  <div className="flex justify-center space-x-2">
-                    <div className="w-4 h-4 bg-electric rounded-full"></div>
-                    <div className="w-4 h-4 bg-[hsl(var(--flow-blue-light))] rounded-full"></div>
-                    <div className="w-4 h-4 bg-accent rounded-full"></div>
-                    <div className="w-4 h-4 bg-[hsl(var(--flow-blue-dark))] rounded-full"></div>
-                    <div className="w-4 h-4 bg-destructive rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -793,55 +721,11 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-lg font-medium text-gray-500 mb-8">Friends we've helped get flowing</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {/* Note: In a real implementation, these would be the actual client logos from the legacy site */}
             <div className="text-2xl font-bold text-gray-400">HUEL</div>
             <div className="text-2xl font-bold text-gray-400">CARWOW</div>
             <div className="text-2xl font-bold text-gray-400">LUCKY SAINT</div>
             <div className="text-2xl font-bold text-gray-400">& MORE</div>
           </div>
-        </div>
-      </section>
-
-      {/* Enhanced Description Section - Moved to Bottom */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-                <span className="text-accent">Enhancing operational efficiency</span>, fostering strategic alignment and building internal capability.
-              </h3>
-              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-                Visualise and optimise FLOW at all altitudes in the delivery organisation. From strategy formulation, 
-                lean portfolio coordination to execution, we deliver insights and practical solutions designed to elevate 
-                your delivery performance and value outcomes, ensuring resilience and adaptability in an ever-evolving market landscape.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-electric">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
-                <span className="text-accent">Immediate impact</span> and <span className="text-electric">sticky change</span>
-              </h3>
-              <p className="text-lg text-gray-700 mb-6">
-                Flowency delivers rapid and sustainable improvements in delivery efficiency, leading to significant 
-                reductions in lead times and increases in value delivery and strategic alignment. Starting with where 
-                you are today, we help bring clarity, focus and stability, then optimise for flow. Our context-sensitive 
-                approach ensures that change is not imposed. By leveraging your data insights and our experience, we help 
-                you pursue evolutionary, continuous improvement, building internal capability and ensuring changes stick.
-              </p>
-              
-              {/* Key Strapline */}
-              <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-6 text-center">
-                <p className="text-2xl md:text-3xl font-bold">
-                  We won't tell you the way; <span className="text-accent">we help you find your way</span>.
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -869,10 +753,10 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-br from-electric/20 to-blue-600/20 backdrop-blur-sm p-8 rounded-xl border border-white/20"
+                className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm p-8 rounded-xl border border-orange-400/30"
               >
-                <h3 className="text-2xl font-bold text-electric mb-4">→ IntentOps</h3>
-                <p className="text-lg font-semibold mb-4">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4">→ IntentOps</h3>
+                <p className="text-lg font-semibold mb-4 text-orange-200">
                   AI adoption is consensus. Aligned execution is competitive advantage.
                 </p>
                 <p className="text-white/90 mb-4">
@@ -888,10 +772,10 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-accent/20 to-orange-600/20 backdrop-blur-sm p-8 rounded-xl border border-white/20"
+                className="bg-gradient-to-br from-teal-800/40 to-teal-700/40 backdrop-blur-sm p-8 rounded-xl border border-yellow-400/30"
               >
-                <h3 className="text-2xl font-bold text-accent mb-4">→ Actuate</h3>
-                <p className="text-lg font-semibold mb-4">
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4">→ Actuate</h3>
+                <p className="text-lg font-semibold mb-4 text-yellow-200">
                   From problem to product. From process to intelligence.
                 </p>
                 <p className="text-white/90 mb-4">

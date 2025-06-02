@@ -713,34 +713,34 @@ export default function LandingPage() {
           <h3 className="text-lg font-medium text-gray-500 mb-8">Friends we've helped get flowing</h3>
           
           {/* Continuous Ticker Tape */}
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
+          <div className="relative overflow-hidden py-4">
+            <div className="flex animate-scroll whitespace-nowrap">
               {/* First set of logos */}
-              <div className="flex items-center justify-center gap-12 min-w-full">
-                <img src="/assets/images/ClientLogos/668fd36112697a494027a019_5.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3613f99311183fe084f_1-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3614791016018169276_2-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3615f621d8571b090f0_8-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd36164dca1b9c365d5c3_6-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3616ed4cd3d5a7e2e4f_7.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361b4e0d8db10d03d54_9-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361c6ae39ccd09de9d6_10.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361fd70e42e1c1db0a9_4-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361ff36d3ec709cb15e_3-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
+              <div className="flex items-center gap-16 flex-shrink-0">
+                <img src="/assets/images/ClientLogos/668fd36112697a494027a019_5.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3613f99311183fe084f_1-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3614791016018169276_2-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3615f621d8571b090f0_8-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd36164dca1b9c365d5c3_6-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3616ed4cd3d5a7e2e4f_7.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361b4e0d8db10d03d54_9-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361c6ae39ccd09de9d6_10.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361fd70e42e1c1db0a9_4-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361ff36d3ec709cb15e_3-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
               </div>
               
               {/* Duplicate set for seamless loop */}
-              <div className="flex items-center justify-center gap-12 min-w-full">
-                <img src="/assets/images/ClientLogos/668fd36112697a494027a019_5.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3613f99311183fe084f_1-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3614791016018169276_2-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3615f621d8571b090f0_8-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd36164dca1b9c365d5c3_6-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd3616ed4cd3d5a7e2e4f_7.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361b4e0d8db10d03d54_9-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361c6ae39ccd09de9d6_10.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361fd70e42e1c1db0a9_4-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
-                <img src="/assets/images/ClientLogos/668fd361ff36d3ec709cb15e_3-p-500.png" alt="Client" className="h-12 w-auto opacity-60 hover:opacity-80 transition-opacity" />
+              <div className="flex items-center gap-16 flex-shrink-0 ml-16">
+                <img src="/assets/images/ClientLogos/668fd36112697a494027a019_5.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3613f99311183fe084f_1-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3614791016018169276_2-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3615f621d8571b090f0_8-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd36164dca1b9c365d5c3_6-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd3616ed4cd3d5a7e2e4f_7.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361b4e0d8db10d03d54_9-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361c6ae39ccd09de9d6_10.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361fd70e42e1c1db0a9_4-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
+                <img src="/assets/images/ClientLogos/668fd361ff36d3ec709cb15e_3-p-500.png" alt="Client" className="h-16 w-auto opacity-60 hover:opacity-80 transition-opacity flex-shrink-0" />
               </div>
             </div>
           </div>

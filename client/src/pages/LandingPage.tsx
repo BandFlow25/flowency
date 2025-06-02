@@ -705,9 +705,9 @@ export default function LandingPage() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-lg font-medium text-gray-500 mb-8">Organisations we've helped move faster</h3>
+          <h3 className="text-lg font-medium text-gray-500 mb-4">Organisations we've helped move faster</h3>
           
           {/* Continuous Ticker Tape */}
           <div className="relative overflow-hidden py-4">

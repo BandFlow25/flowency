@@ -1,0 +1,93 @@
+INTENTOPS LANDING PAGE – FINAL COPY
+🎯 Hero Section
+Headline:
+AI adoption is consensus. Intent alignment is competitive advantage.
+
+Subheading:
+IntentOps is a strategic control layer—an adaptive system that aligns AI and human execution with business goals, governance, and measurable value.
+
+CTA:
+[ Explore IntentOps ] – Or [ Talk to a Strategist ]
+
+🧨 The Problem
+Headline:
+The AI revolution is happening inside organisations designed for yesterday.
+
+Paragraph:
+Today’s delivery systems are stacked with complexity, technical debt, and silos. AI tools and agents are being layered on top—without any coherent way to steer them.
+
+Strategy is set at the top, but drift happens fast
+
+Delivery is fragmented across humans and algorithms
+
+Governance can’t keep pace, and oversight is slow or non-existent
+
+Cost of delay, value decay, and cognitive overload go undetected
+
+You don’t need another process framework.
+You need a way to stay aligned as reality moves.
+
+✅ What Is IntentOps?
+Headline:
+Not a framework. Not a platform. A strategic meta-layer for governable AI execution.
+
+Paragraph:
+IntentOps wraps around your existing delivery ecosystem—whether human-led, agentic, or automated—and ensures everything stays anchored to enterprise purpose, priorities, and ethical boundaries.
+
+It brings visibility, traceability, and adaptability to your AI-powered operations.
+
+Think of it as your enterprise’s real-time intent-to-outcome nervous system.
+
+🧠 How It Works
+Headline:
+The IntentOps Layered System Map
+
+Subheading:
+A governance architecture for AI-native enterprises.
+
+(Accompany with visual showing 4 layers from bottom to top)
+
+Execution Layer
+Human teams, AI agents, and automated systems delivering value.
+
+Value Layer
+Value streams, programmes, initiatives, and hypotheses.
+
+IntentOps Layer
+Strategic intent, drift thresholds, alignment rules, escalation pathways.
+
+Signal & Measurement Layer
+Real-time feedback loops, flow metrics, cognitive load, risk alerts.
+
+Paragraph:
+IntentOps doesn’t slow you down—it lets you steer faster and safer, using live signals instead of lagging indicators.
+
+🔧 What It Enables
+Headline:
+From oversight to outcome
+
+Capability	Description
+Traceable Intent	Connect business priorities directly to in-flight workstreams
+Flow Visibility	See blockages, rework, overload, and AI-human friction in real time
+Drift Detection	Identify when delivery veers off-course from strategy or ethics
+Responsive Governance	Embed safety and accountability into delivery without command-and-control
+Strategic Adaptation	Course-correct fast when signals change or priorities evolve
+Outcome Realisation	Track the value and intent of delivery—not just velocity
+
+🟢 When to Use It
+Headline:
+When alignment matters more than speed.
+
+Launching AI pilots and need measurable business outcomes
+
+Scaling AI across business units without losing control
+
+Transforming delivery models but losing strategic clarity
+
+Investing heavily in delivery without seeing proportional value
+
+Seeing signs of overload, rework, or "governance theatre"
+
+IntentOps plugs in without disruption.
+It helps you steer, not stop.
+

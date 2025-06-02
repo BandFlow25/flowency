@@ -95,15 +95,24 @@ export default function IntentOpsPage() {
               <span className="text-yellow-300">Intent alignment is competitive advantage.</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-              IntentOps is your strategic control layer - an adaptive system that aligns AI-driven execution with human intent, business outcomes, and enterprise governance.
+              IntentOps is a strategic control layer—an adaptive system that aligns AI and human execution with business goals, governance, and measurable value.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <button className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg">
                 Explore IntentOps
+              </button>
+              <span className="text-gray-300 hidden sm:inline">–</span>
+              <span className="text-gray-300 sm:hidden">or</span>
+              <button 
+                onClick={() => window.open('mailto:hello@flowency.co.uk?subject=Talk to a Strategist', '_blank')}
+                className="bg-transparent border-2 border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors"
+              >
+                Talk to a Strategist
               </button>
             </motion.div>
           </motion.div>
@@ -121,20 +130,31 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              AI is moving fast. Your organisation isn't.
+              The AI revolution is happening inside organisations designed for yesterday.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6">
               <p>
-                Enterprises are racing to adopt AI tools, models, and platforms. But the way work is managed hasn't caught up. Initiatives are disconnected. Value is unclear. Cognitive debt is rising. And AI is being layered onto legacy systems without any oversight.
+                Today's delivery systems are stacked with complexity, technical debt, and silos. AI tools and agents are being layered on top—without any coherent way to steer them.
               </p>
               
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                <div className="space-y-4">
+                  <p className="text-gray-800">• Strategy is set at the top, but drift happens fast</p>
+                  <p className="text-gray-800">• Delivery is fragmented across humans and algorithms</p>
+                </div>
+                <div className="space-y-4">
+                  <p className="text-gray-800">• Governance can't keep pace, and oversight is slow or non-existent</p>
+                  <p className="text-gray-800">• Cost of delay, value decay, and cognitive overload go undetected</p>
+                </div>
+              </div>
+              
               <p className="font-semibold text-gray-900">
-                You don't need another framework.
+                You don't need another process framework.
               </p>
               
               <p>
-                You need a way to govern AI in the real world - across people, platforms, and priorities.
+                You need a way to stay aligned as reality moves.
               </p>
             </div>
           </motion.div>
@@ -152,54 +172,21 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              A meta-layer for governing intelligent systems.
+              Not a framework. Not a platform. A strategic meta-layer for governable AI execution.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 mb-12">
               <p>
-                IntentOps is not a product or platform. It's a strategic orchestration layer that sits above your delivery stack. It ensures that every AI-driven initiative - whether automated or human-executed - remains aligned with enterprise goals.
+                IntentOps wraps around your existing delivery ecosystem—whether human-led, agentic, or automated—and ensures everything stays anchored to enterprise purpose, priorities, and ethical boundaries.
               </p>
               
-              <p className="font-semibold text-gray-900">
-                It's where governance meets velocity.<br />
-                And where signal replaces assumption.
+              <p>
+                It brings visibility, traceability, and adaptability to your AI-powered operations.
               </p>
-            </div>
-
-            {/* 3 Key Principles */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
-              >
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Flow over form</h3>
-                <p className="text-sm text-gray-600">Govern activity as it happens, not after</p>
-              </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
-              >
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Signals over status</h3>
-                <p className="text-sm text-gray-600">Measure alignment, not milestones</p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
-              >
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Accountability over bureaucracy</h3>
-                <p className="text-sm text-gray-600">Make governance lightweight but meaningful</p>
-              </motion.div>
+              <p className="font-semibold text-gray-900 text-center">
+                Think of it as your enterprise's real-time intent-to-outcome nervous system.
+              </p>
             </div>
           </motion.div>
         </div>
@@ -216,32 +203,22 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              The IntentOps Loop: Govern by Signal, Align by Design
+              The IntentOps Layered System Map
             </h2>
+            <p className="text-lg text-gray-600 mb-12">A governance architecture for AI-native enterprises.</p>
           </motion.div>
 
-          {/* The 4 Layers */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* The 4 Layers - Stacked Vertically */}
+          <div className="max-w-4xl mx-auto space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200"
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg border-l-4 border-blue-500"
             >
-              <h3 className="font-bold text-lg text-gray-900 mb-3">1. Inject Strategic Intent</h3>
-              <p className="text-sm text-gray-700">Map goals, hypotheses, and delivery expectations into traceable workstreams.</p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-lg border border-amber-200"
-            >
-              <h3 className="font-bold text-lg text-gray-900 mb-3">2. Orchestrate Execution</h3>
-              <p className="text-sm text-gray-700">Monitor how AI tools, people, and teams interact - across systems and silos.</p>
+              <h3 className="font-bold text-xl text-blue-900 mb-3">Signal & Measurement Layer</h3>
+              <p className="text-gray-700">Real-time feedback loops, flow metrics, cognitive load, risk alerts.</p>
             </motion.div>
             
             <motion.div
@@ -249,27 +226,44 @@ export default function IntentOpsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200"
+              className="bg-gradient-to-r from-amber-50 to-yellow-50 p-8 rounded-lg border-l-4 border-amber-500"
             >
-              <h3 className="font-bold text-lg text-gray-900 mb-3">3. Detect Misalignment</h3>
-              <p className="text-sm text-gray-700">Use telemetry, blockers, flow metrics, and value signals to surface drift.</p>
+              <h3 className="font-bold text-xl text-amber-900 mb-3">IntentOps Layer</h3>
+              <p className="text-gray-700">Strategic intent, drift thresholds, alignment rules, escalation pathways.</p>
             </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-lg border-l-4 border-purple-500"
             >
-              <h3 className="font-bold text-lg text-gray-900 mb-3">4. Enable Responsive Governance</h3>
-              <p className="text-sm text-gray-700">Trigger interventions, reframe work, or re-prioritise when needed - without slowing delivery.</p>
+              <h3 className="font-bold text-xl text-purple-900 mb-3">Value Layer</h3>
+              <p className="text-gray-700">Value streams, programmes, initiatives, and hypotheses.</p>
             </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-lg border-l-4 border-green-500"
+            >
+              <h3 className="font-bold text-xl text-green-900 mb-3">Execution Layer</h3>
+              <p className="text-gray-700">Human teams, AI agents, and automated systems delivering value.</p>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              IntentOps doesn't slow you down—it lets you steer faster and safer, using live signals instead of lagging indicators.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* When to Use IntentOps Section */}
+      {/* What It Enables Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -280,37 +274,127 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Start using IntentOps when...
+              From oversight to outcome
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              >
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Traceable Intent</h3>
+                <p className="text-sm text-gray-600">Connect business priorities directly to in-flight workstreams</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              >
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Flow Visibility</h3>
+                <p className="text-sm text-gray-600">See blockages, rework, overload, and AI-human friction in real time</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              >
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Drift Detection</h3>
+                <p className="text-sm text-gray-600">Identify when delivery veers off-course from strategy or ethics</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              >
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Responsive Governance</h3>
+                <p className="text-sm text-gray-600">Embed safety and accountability into delivery without command-and-control</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              >
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Strategic Adaptation</h3>
+                <p className="text-sm text-gray-600">Course-correct fast when signals change or priorities evolve</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              >
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Outcome Realisation</h3>
+                <p className="text-sm text-gray-600">Track the value and intent of delivery—not just velocity</p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* When to Use IntentOps Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              When alignment matters more than speed.
             </h2>
             
             <div className="max-w-4xl mx-auto text-left space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">You're launching AI pilots and need alignment with real business outcomes</p>
+                <p className="text-lg text-gray-700">Launching AI pilots and need measurable business outcomes</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">You're scaling AI use across the enterprise but lack a way to govern it</p>
+                <p className="text-lg text-gray-700">Scaling AI across business units without losing control</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">You're noticing more effort in tracking than in delivering</p>
+                <p className="text-lg text-gray-700">Transforming delivery models but losing strategic clarity</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">You're struggling to explain what your AI spend is actually achieving</p>
+                <p className="text-lg text-gray-700">Investing heavily in delivery without seeing proportional value</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-700">You're tired of firefighting and want proactive value control</p>
+                <p className="text-lg text-gray-700">Seeing signs of overload, rework, or "governance theatre"</p>
               </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-xl font-semibold text-gray-900 mb-2">IntentOps plugs in without disruption.</p>
+              <p className="text-xl font-semibold text-gray-900">It helps you steer, not stop.</p>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Get Started Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -320,25 +404,26 @@ export default function IntentOpsPage() {
             className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              You don't need to rip and replace.<br />
-              You need to see what's really happening.
+              Don't let complexity kill your intent.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 mb-12">
               <p>
-                IntentOps can wrap around your existing delivery systems, AI platforms, or transformation programmes. It works alongside frameworks like SAFe or OKRs - but replaces rigid plans with live signals.
+                You're already building with AI. Now it's time to govern with intelligence. Let Flowency help you implement a strategic operating model for AI-native delivery that's ethical, adaptive, and aligned.
               </p>
-              
-              <div className="text-center space-y-2">
-                <p className="font-semibold text-gray-900">Start with strategic workshops.</p>
-                <p className="font-semibold text-gray-900">Layer in telemetry and measurement.</p>
-                <p className="font-semibold text-gray-900">And align your execution engine (like Actuate) to what matters.</p>
-              </div>
             </div>
 
-            <button className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg">
-              Talk to us about IntentOps
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="mailto:hello@flowency.co.uk"
+                className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
+              >
+                hello@flowency.co.uk
+              </a>
+              <span className="text-gray-600 hidden sm:inline">—</span>
+              <span className="text-gray-600 sm:hidden">or</span>
+              <span className="text-gray-700">Start a conversation today</span>
+            </div>
           </motion.div>
         </div>
       </section>

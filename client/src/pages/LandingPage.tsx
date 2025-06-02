@@ -49,14 +49,14 @@ export default function LandingPage() {
               <a href="#home" className="text-gray-900 hover:text-accent transition-colors">Home</a>
               <a href="#approach" className="text-gray-900 hover:text-accent transition-colors">Our Approach</a>
               <a href="#flow" className="text-gray-900 hover:text-accent transition-colors">Flow</a>
+              <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
+                Actuate
+              </Link>
               <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
               </Link>
               <Link to="/intentops2" className="text-red-500 hover:text-red-600 transition-colors font-medium">
                 IntentOps v2
-              </Link>
-              <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
-                Actuate
               </Link>
             </div>
             
@@ -93,14 +93,14 @@ export default function LandingPage() {
               <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</a>
               <a href="#approach" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Our Approach</a>
               <a href="#flow" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Flow</a>
+              <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">
+                Actuate
+              </Link>
               <Link to="/intentops" className="block px-3 py-2 text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
               </Link>
               <Link to="/intentops2" className="block px-3 py-2 text-red-500 hover:text-red-600 transition-colors font-medium">
                 IntentOps v2
-              </Link>
-              <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">
-                Actuate
               </Link>
             </div>
           </div>
@@ -117,21 +117,35 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-light mb-6 text-black leading-tight">
-              <span className="block md:inline">We help your</span>
+              <span className="block md:inline">From strategy to</span>
               <span className="hidden md:inline"> </span>
-              <span className="text-electric">Delivery Systems Flow</span>
+              <span className="text-electric">working AI systems</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">
-              Flowency is a Delivery Improvement and Business Change consultancy specialising in 
-              optimising delivery for value flow and driving lasting, transformational change.{" "}
-              <strong className="text-primary font-bold">Enhancing efficiency, maximising value</strong>.
+              We don't do PowerPoints. We ship working AI that delivers measurable business outcomes.{" "}
+              <strong className="text-primary font-bold">Real delivery. Really fast.</strong>
             </p>
-            <a 
-              href="#more" 
-              className="inline-block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors shadow-lg"
-            >
-              LEARN MORE
-            </a>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Link 
+                to="/actuate"
+                className="inline-block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors shadow-lg"
+              >
+                Start Building
+              </Link>
+              <span className="text-gray-500 hidden sm:inline">or</span>
+              <span className="text-gray-500 sm:hidden">or</span>
+              <Link 
+                to="/intentops"
+                className="inline-block bg-electric hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors shadow-lg"
+              >
+                Stop Cognitive Debt
+              </Link>
+            </div>
+            
+            <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+              Whether you're still testing the water or ready to scale, we provide AI-native services that produce results.
+            </p>
           </motion.div>
         </div>
       </section>

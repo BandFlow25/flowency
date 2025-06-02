@@ -1,10 +1,35 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function FlowencyPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselImages = [
+    { src: "/assets/images/Card_on_desk.jpg", alt: "Flowency Card on Desk" },
+    { src: "/assets/images/IntentOps.png", alt: "IntentOps" },
+    { src: "/assets/images/Actuate.png", alt: "Actuate" },
+    { src: "/assets/images/ContactCard.png", alt: "Contact Card" }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 8000); // Change slide every 8 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -98,6 +123,115 @@ export default function FlowencyPage() {
             </a>
           </motion.div>
         </div>
+      </section>
+
+      {/* Image Carousel */}
+      <section className="relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative"
+        >
+          {/* Desktop: Full width continuous carousel */}
+          <div className="hidden md:block relative overflow-hidden h-96 bg-gray-100">
+            {/* Continuous scrolling carousel */}
+            <div 
+              className="flex transition-transform duration-500 ease-in-out h-full"
+              style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}
+            >
+              {/* Duplicate images for continuous effect */}
+              {[...carouselImages, ...carouselImages, ...carouselImages].map((image, index) => (
+                <div
+                  key={index}
+                  className="w-1/3 flex-shrink-0 h-full px-2"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-contain rounded-lg"
+                  />
+                </div>
+              ))}
+            </div>
+              
+            {/* Navigation Controls */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors z-10"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors z-10"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile: Full width carousel */}
+          <div className="md:hidden px-0 relative overflow-hidden h-64">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out h-full"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {carouselImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="w-full flex-shrink-0 h-full"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+              
+            {/* Mobile Navigation Controls */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+            
+            {/* Mobile Dots Indicator */}
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Adaptive Delivery Section */}

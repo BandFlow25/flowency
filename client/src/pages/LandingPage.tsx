@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import ContactModal from "@/components/ContactModal";
 import PBIImage from "@assets/PBI.png";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -9,6 +10,7 @@ import SEOHead from "@/components/SEOHead";
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -81,12 +83,12 @@ export default function LandingPage() {
             
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
-              <a 
-                href="#contact" 
-                className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-3 py-2 rounded-md transition-colors text-sm"
+              <button 
+                onClick={() => setIsContactModalOpen(true)} 
+                className="text-gray-600 hover:text-electric transition-colors"
               >
                 Contact
-              </a>
+              </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-900 hover:text-accent transition-colors"
@@ -96,12 +98,12 @@ export default function LandingPage() {
             </div>
             
             {/* Desktop contact button */}
-            <a 
-              href="#contact" 
-              className="hidden md:block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
+            <button 
+              onClick={() => setIsContactModalOpen(true)} 
+              className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-accent hover:bg-accent/90 transition-colors"
             >
               Contact us
-            </a>
+            </button>
           </div>
         </div>
         
@@ -903,6 +905,12 @@ export default function LandingPage() {
         ctaText="Ready to optimise your delivery systems?"
         ctaDescription="Get in touch to discuss how we can help your delivery systems flow."
         ctaButtonText="Contact Us"
+      />
+      
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
     </div>
   );

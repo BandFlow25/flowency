@@ -1,4 +1,6 @@
 import { Link } from "wouter";
+import { useState } from "react";
+import ContactModal from "./ContactModal";
 
 interface FooterProps {
   ctaText?: string;
@@ -15,6 +17,7 @@ export default function Footer({
   ctaBgColor = "bg-white/10",
   ctaTextColor = "text-white"
 }: FooterProps) {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,12 +70,12 @@ export default function Footer({
                   <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
                   <li><Link to="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">Cookies</Link></li>
                   <li>
-                    <a 
-                      href="mailto:hello@flowency.co.uk" 
-                      className="text-gray-400 hover:text-white transition-colors text-sm mt-2 block"
+                    <button 
+                      onClick={() => setIsContactModalOpen(true)}
+                      className="text-gray-400 hover:text-white transition-colors text-sm mt-2 block text-left"
                     >
-                      hello@flowency.co.uk
-                    </a>
+                      Contact Us
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -85,7 +88,7 @@ export default function Footer({
               <h3 className={`text-lg font-bold mb-2 ${ctaTextColor}`}>{ctaText}</h3>
               <p className="text-gray-400 mb-4 text-sm">{ctaDescription}</p>
               <button 
-                onClick={() => window.open('mailto:hello@flowency.co.uk?subject=Contact Us', '_blank')}
+                onClick={() => setIsContactModalOpen(true)}
                 className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors w-full"
               >
                 {ctaButtonText}
@@ -94,6 +97,12 @@ export default function Footer({
           </div>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </footer>
   );
 }

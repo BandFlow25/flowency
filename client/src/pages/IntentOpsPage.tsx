@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ContactModal from "@/components/ContactModal";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft, Menu, X } from "lucide-react";
@@ -14,6 +15,7 @@ import { stages } from "@/data/stagesData";
 export default function IntentOpsPage() {
   const [selectedStage, setSelectedStage] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const handleStageClick = (stageId: number) => {
     setSelectedStage(stageId);
@@ -69,12 +71,12 @@ export default function IntentOpsPage() {
             
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
-              <a 
-                href="#contact" 
+              <button 
+                onClick={() => setIsContactModalOpen(true)}
                 className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-3 py-2 rounded-md transition-colors text-sm"
               >
                 Contact
-              </a>
+              </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-900 hover:text-accent transition-colors"
@@ -84,12 +86,12 @@ export default function IntentOpsPage() {
             </div>
             
             {/* Desktop contact button */}
-            <a 
-              href="#contact" 
+            <button 
+              onClick={() => setIsContactModalOpen(true)}
               className="hidden md:block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
             >
               Contact us
-            </a>
+            </button>
           </div>
         </div>
         
@@ -145,7 +147,7 @@ export default function IntentOpsPage() {
               <span className="text-gray-300 hidden sm:inline">–</span>
               <span className="text-gray-300 sm:hidden">or</span>
               <button 
-                onClick={() => window.open('mailto:hello@flowency.co.uk?subject=Talk to a Strategist', '_blank')}
+                onClick={() => setIsContactModalOpen(true)}
                 className="bg-transparent border-2 border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors"
               >
                 Talk to a Strategist
@@ -537,12 +539,12 @@ export default function IntentOpsPage() {
               </p>
             </div>
 
-            <a 
-              href="mailto:hello@flowency.co.uk"
+            <button 
+              onClick={() => setIsContactModalOpen(true)}
               className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-6 py-3 rounded-lg font-bold mt-6 inline-block transition-colors shadow-lg"
             >
               Talk to a Strategist
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>
@@ -575,12 +577,18 @@ export default function IntentOpsPage() {
           }}
           whileTap={{ scale: 0.95 }}
           className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300 flex items-center gap-2"
-          onClick={() => window.open('mailto:hello@flowency.co.uk?subject=IntentOps Inquiry', '_blank')}
+          onClick={() => setIsContactModalOpen(true)}
         >
           <span>Need Help?</span>
           <div className="w-2 h-2 bg-blue-950 rounded-full animate-pulse"></div>
         </motion.button>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </div>
   );
 }

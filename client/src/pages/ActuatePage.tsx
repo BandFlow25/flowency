@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import ContactModal from "@/components/ContactModal";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -417,6 +418,7 @@ export default function ActuatePage() {
     "areaServed": "GB"
   };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -448,12 +450,12 @@ export default function ActuatePage() {
             
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
-              <a 
-                href="#contact" 
+              <button 
+                onClick={() => setIsContactModalOpen(true)} 
                 className="bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-3 py-2 rounded-md transition-colors text-sm"
               >
                 Contact
-              </a>
+              </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-900 hover:text-accent transition-colors"
@@ -463,12 +465,12 @@ export default function ActuatePage() {
             </div>
             
             {/* Desktop contact button */}
-            <a 
-              href="#contact" 
+            <button 
+              onClick={() => setIsContactModalOpen(true)} 
               className="hidden md:block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-4 py-2 rounded-md transition-colors"
             >
               Contact us
-            </a>
+            </button>
           </div>
         </div>
         
@@ -613,6 +615,12 @@ export default function ActuatePage() {
       />
       
       <NeedHelpButton />
+      
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </div>
   );
 }

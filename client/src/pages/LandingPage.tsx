@@ -753,9 +753,9 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm p-8 rounded-xl border border-orange-400/30"
+                className="bg-gradient-to-br from-blue-900/80 to-blue-800/80 backdrop-blur-sm p-8 rounded-xl border border-blue-600/40"
               >
-                <h3 className="text-2xl font-bold text-orange-400 mb-4">→ IntentOps</h3>
+                <h3 className="text-2xl font-bold text-orange-300 mb-4">→ IntentOps</h3>
                 <p className="text-lg font-semibold mb-4 text-orange-200">
                   AI adoption is consensus. Aligned execution is competitive advantage.
                 </p>

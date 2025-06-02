@@ -101,6 +101,17 @@ function ServiceTiles() {
     setExpandedId(expandedId === id ? null : id);
   };
 
+  // Listen for auto-expand events from carousel
+  useEffect(() => {
+    const handleExpandService = (event: CustomEvent) => {
+      const serviceId = event.detail.serviceId;
+      setExpandedId(serviceId);
+    };
+
+    window.addEventListener('expandService', handleExpandService as EventListener);
+    return () => window.removeEventListener('expandService', handleExpandService as EventListener);
+  }, []);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {serviceLines.map((service) => (
@@ -262,10 +273,16 @@ function ProblemDiagnosticCarousel() {
   }, [isAutoPlaying, problems.length]);
 
   const handleCardClick = (serviceIndex: number) => {
-    // Scroll to corresponding service tile
+    // Scroll to corresponding service tile and auto-expand
     const serviceSection = document.querySelector('[data-service-index="' + serviceIndex + '"]');
     if (serviceSection) {
       serviceSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Auto-expand the tile after scroll completes
+      setTimeout(() => {
+        const event = new CustomEvent('expandService', { detail: { serviceId: serviceIndex } });
+        window.dispatchEvent(event);
+      }, 800);
     }
   };
 
@@ -356,6 +373,34 @@ function ProblemDiagnosticCarousel() {
   );
 }
 
+// Persistent Need Help Button
+function NeedHelpButton() {
+  const handleClick = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 2, duration: 0.5 }}
+      className="fixed bottom-6 right-6 z-50"
+    >
+      <button
+        onClick={handleClick}
+        className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
+      >
+        <span className="text-lg">💬</span>
+        <span className="font-medium text-sm hidden sm:block group-hover:block">Got a use case in mind?</span>
+        <span className="font-medium text-sm sm:hidden">Need Help?</span>
+      </button>
+    </motion.div>
+  );
+}
+
 export default function ActuatePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -441,10 +486,10 @@ export default function ActuatePage() {
             </p>
             
             <p className="text-lg mb-8 max-w-4xl mx-auto text-yellow-300 leading-relaxed font-semibold">
-              Actuate is your go-to team for getting GenAI live, governed, and delivering real business outcomes - fast.
+              We don't do PowerPoints. We ship working AI that delivers. Actuate builds what others only talk about.
             </p>
             
-            <p className="text-base mb-12 max-w-4xl mx-auto text-gray-400 leading-relaxed">
+            <p className="text-base mb-12 max-w-4xl mx-auto text-white/80 leading-relaxed font-medium">
               A modular service suite designed to deliver applied artificial intelligence across the enterprise. Whether you are automating a specific business process, experimenting with a GenAI prototype, or building production-ready tools, Actuate offers flexible services that can be consumed independently or as part of a larger transformation programme.
             </p>
             
@@ -546,11 +591,13 @@ export default function ActuatePage() {
             </p>
             <p className="text-xl font-semibold mb-8 text-yellow-400">Start anywhere. Align as you grow.</p>
             <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">
-              See working AI in 10 days
+              Real delivery. Really fast. Start here.
             </button>
           </div>
         </div>
       </footer>
+      
+      <NeedHelpButton />
     </div>
   );
 }

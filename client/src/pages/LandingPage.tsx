@@ -701,9 +701,7 @@ export default function LandingPage() {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-amber-200 transition-colors">
-                    <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v-2H7v-2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                    </svg>
+                    <span className="text-lg font-bold text-amber-600">£</span>
                   </div>
                   <h3 className="text-xl font-bold text-amber-900">Flow Economics</h3>
                 </div>

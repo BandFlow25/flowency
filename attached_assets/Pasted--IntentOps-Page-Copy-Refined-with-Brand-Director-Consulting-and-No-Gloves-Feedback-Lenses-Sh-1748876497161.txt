@@ -1,0 +1,78 @@
+/*
+IntentOps Page Copy – Refined with Brand Director, Consulting, and No-Gloves Feedback Lenses
+Shorter, sharper, and more commercially usable
+*/
+
+// HERO
+<h1 className="text-5xl font-bold text-white leading-tight">
+  AI adoption is consensus.<br />
+  <span className="text-yellow-300">Aligned execution is competitive advantage.</span>
+</h1>
+<p className="text-xl text-gray-200 mt-4">
+  IntentOps is your enterprise nervous system—a real-time control layer that keeps AI, automation, and human teams moving in sync with business priorities.
+</p>
+
+// PROBLEM
+<h2 className="text-3xl font-bold text-slate-900 mb-6">
+  The AI revolution is happening inside delivery systems designed for yesterday.
+</h2>
+<p className="text-lg text-slate-700 mb-4">
+  Strategy is set, but delivery drifts. Humans, tools, and AI agents operate in silos. Governance lags. Value leaks.
+</p>
+<p className="text-lg text-slate-700">
+  You don’t need another framework. You need a live view of alignment.
+</p>
+
+// WHAT IS IT
+<h2 className="text-3xl font-bold text-white mb-6">
+  IntentOps is a meta-layer for governable execution.
+</h2>
+<p className="text-blue-100 text-lg mb-6">
+  It wraps your existing teams, tools, and workflows. It connects strategic goals to daily actions—across people, AI, and systems.
+</p>
+<p className="text-amber-200 text-center font-semibold">
+  Think: telemetry for strategic intent.
+</p>
+
+// SYSTEM MAP (cut to key points)
+<h2 className="text-3xl font-bold text-slate-900 mb-6">
+  Four layers. One purpose: aligned delivery.
+</h2>
+<ul className="space-y-4">
+  <li><strong>Execution:</strong> Human teams, AI agents, automated systems</li>
+  <li><strong>Value:</strong> Programmes, experiments, initiatives</li>
+  <li><strong>IntentOps:</strong> Drift thresholds, escalation rules, alignment policy</li>
+  <li><strong>Signals:</strong> Flow, blockers, overload, ethics alerts</li>
+</ul>
+
+// OUTCOMES
+<h2 className="text-3xl font-bold text-white mb-6">
+  What it enables
+</h2>
+<ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <li><strong className="text-amber-300">Traceable Intent</strong>: Strategy mapped to delivery in real time</li>
+  <li><strong className="text-amber-300">Drift Detection</strong>: Catch misalignment early, act fast</li>
+  <li><strong className="text-amber-300">Responsive Governance</strong>: Guide outcomes without slowing delivery</li>
+  <li><strong className="text-amber-300">Flow Intelligence</strong>: Spot rework, overload, and value decay</li>
+</ul>
+
+// HOW TO START
+<h2 className="text-3xl font-bold text-slate-900 mb-6">
+  How IntentOps lands in your organisation
+</h2>
+<ol className="list-decimal space-y-2 pl-6">
+  <li><strong>Discovery:</strong> We trace intent across your delivery spine</li>
+  <li><strong>Integration:</strong> Signals are layered into your systems, not replaced</li>
+  <li><strong>Activation:</strong> Governance rules and dashboards go live—no disruption</li>
+</ol>
+
+// CTA
+<h2 className="text-3xl font-bold text-gray-900 mb-4">
+  Don’t let complexity kill your intent.
+</h2>
+<p className="text-lg text-gray-700">
+  Start a conversation. Discover how IntentOps can steer AI-native delivery, without the theatre.
+</p>
+<a className="bg-amber-500 text-blue-950 px-6 py-3 rounded-lg font-bold mt-6 inline-block" href="mailto:hello@flowency.co.uk">
+  Talk to a Strategist
+</a>

@@ -89,13 +89,12 @@ export default function IntentOpsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-              <span className="block md:inline text-amber-400">AI adoption is consensus.</span>
-              <span className="hidden md:inline"> </span>
-              <span className="text-yellow-300">Intent alignment is competitive advantage.</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+              AI adoption is consensus.<br />
+              <span className="text-yellow-300">Aligned execution is competitive advantage.</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-              IntentOps is a strategic control layer—an adaptive system that aligns AI and human execution with business goals, governance, and measurable value.
+            <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-200">
+              IntentOps is your enterprise nervous system—a real-time control layer that keeps AI, automation, and human teams moving in sync with business priorities.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -130,55 +129,17 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The AI revolution is happening inside organisations designed for yesterday.
+              The AI revolution is happening inside delivery systems designed for yesterday.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg text-slate-700 leading-relaxed space-y-6">
               <p className="text-xl">
-                Today's delivery systems are stacked with complexity, technical debt, and silos. AI tools and agents are being layered on top—without any coherent way to steer them.
+                Strategy is set, but delivery drifts. Humans, tools, and AI agents operate in silos. Governance lags. Value leaks.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-slate-200 space-y-4"
-                >
-                  <p className="text-slate-800 flex items-start gap-3">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></span>
-                    Strategy is set at the top, but drift happens fast
-                  </p>
-                  <p className="text-slate-800 flex items-start gap-3">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></span>
-                    Delivery is fragmented across humans and algorithms
-                  </p>
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-slate-200 space-y-4"
-                >
-                  <p className="text-slate-800 flex items-start gap-3">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></span>
-                    Governance can't keep pace, and oversight is slow or non-existent
-                  </p>
-                  <p className="text-slate-800 flex items-start gap-3">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></span>
-                    Cost of delay, value decay, and cognitive overload go undetected
-                  </p>
-                </motion.div>
-              </div>
-              
               <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl border border-amber-200 mt-8">
-                <p className="font-semibold text-slate-900 text-xl mb-4">
-                  You don't need another process framework.
-                </p>
-                <p className="text-lg text-slate-700">
-                  You need a way to stay aligned as reality moves.
+                <p className="font-semibold text-slate-900 text-xl">
+                  You don't need another framework. You need a live view of alignment.
                 </p>
               </div>
             </div>
@@ -197,21 +158,17 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Not a framework. Not a platform. A strategic meta-layer for governable AI execution.
+              IntentOps is a meta-layer for governable execution.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg leading-relaxed space-y-6 mb-12">
               <p className="text-blue-100 text-xl">
-                IntentOps wraps around your existing delivery ecosystem—whether human-led, agentic, or automated—and ensures everything stays anchored to enterprise purpose, priorities, and ethical boundaries.
-              </p>
-              
-              <p className="text-blue-200">
-                It brings visibility, traceability, and adaptability to your AI-powered operations.
+                It wraps your existing teams, tools, and workflows. It connects strategic goals to daily actions—across people, AI, and systems.
               </p>
               
               <div className="bg-amber-500/20 backdrop-blur-sm p-8 rounded-xl border border-amber-400/30 mt-8">
                 <p className="font-semibold text-amber-200 text-xl text-center">
-                  Think of it as your enterprise's real-time intent-to-outcome nervous system.
+                  Think: telemetry for strategic intent.
                 </p>
               </div>
             </div>
@@ -230,64 +187,52 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The IntentOps Layered System Map
+              Four layers. One purpose: aligned delivery.
             </h2>
-            <p className="text-lg text-slate-600 mb-12">A governance architecture for AI-native enterprises.</p>
           </motion.div>
 
-          {/* The 4 Layers - Stacked Vertically */}
-          <div className="max-w-4xl mx-auto space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-r from-blue-100 to-indigo-100 p-8 rounded-xl border-l-4 border-blue-600 shadow-lg"
-            >
-              <h3 className="font-bold text-xl text-blue-900 mb-3">Signal & Measurement Layer</h3>
-              <p className="text-slate-700">Real-time feedback loops, flow metrics, cognitive load, risk alerts.</p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-r from-amber-100 to-yellow-100 p-8 rounded-xl border-l-4 border-amber-600 shadow-lg"
-            >
-              <h3 className="font-bold text-xl text-amber-900 mb-3">IntentOps Layer</h3>
-              <p className="text-slate-700">Strategic intent, drift thresholds, alignment rules, escalation pathways.</p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-xl border-l-4 border-purple-600 shadow-lg"
-            >
-              <h3 className="font-bold text-xl text-purple-900 mb-3">Value Layer</h3>
-              <p className="text-slate-700">Value streams, programmes, initiatives, and hypotheses.</p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-gradient-to-r from-green-100 to-emerald-100 p-8 rounded-xl border-l-4 border-green-600 shadow-lg"
-            >
-              <h3 className="font-bold text-xl text-green-900 mb-3">Execution Layer</h3>
-              <p className="text-slate-700">Human teams, AI agents, and automated systems delivering value.</p>
-            </motion.div>
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl border border-slate-200 shadow-lg max-w-3xl mx-auto">
-              <p className="text-lg text-slate-700 font-medium">
-                IntentOps doesn't slow you down—it lets you steer faster and safer, using live signals instead of lagging indicators.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <ul className="space-y-6">
+              <motion.li
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-l-4 border-blue-600 shadow-lg"
+              >
+                <strong className="text-blue-900 text-lg">Signals:</strong> <span className="text-slate-700">Flow, blockers, overload, ethics alerts</span>
+              </motion.li>
+              
+              <motion.li
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-gradient-to-r from-amber-100 to-yellow-100 p-6 rounded-xl border-l-4 border-amber-600 shadow-lg"
+              >
+                <strong className="text-amber-900 text-lg">IntentOps:</strong> <span className="text-slate-700">Drift thresholds, escalation rules, alignment policy</span>
+              </motion.li>
+              
+              <motion.li
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-l-4 border-purple-600 shadow-lg"
+              >
+                <strong className="text-purple-900 text-lg">Value:</strong> <span className="text-slate-700">Programmes, experiments, initiatives</span>
+              </motion.li>
+              
+              <motion.li
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-l-4 border-green-600 shadow-lg"
+              >
+                <strong className="text-green-900 text-lg">Execution:</strong> <span className="text-slate-700">Human teams, AI agents, automated systems</span>
+              </motion.li>
+            </ul>
           </div>
         </div>
       </section>
@@ -303,81 +248,55 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              From oversight to outcome
+              What it enables
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <motion.div
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <motion.li
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
               >
-                <h3 className="font-bold text-lg text-amber-300 mb-3">Traceable Intent</h3>
-                <p className="text-sm text-blue-100">Connect business priorities directly to in-flight workstreams</p>
-              </motion.div>
+                <strong className="text-amber-300 text-lg">Traceable Intent</strong>: <span className="text-blue-100">Strategy mapped to delivery in real time</span>
+              </motion.li>
               
-              <motion.div
+              <motion.li
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
               >
-                <h3 className="font-bold text-lg text-amber-300 mb-3">Flow Visibility</h3>
-                <p className="text-sm text-blue-100">See blockages, rework, overload, and AI-human friction in real time</p>
-              </motion.div>
+                <strong className="text-amber-300 text-lg">Drift Detection</strong>: <span className="text-blue-100">Catch misalignment early, act fast</span>
+              </motion.li>
               
-              <motion.div
+              <motion.li
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
               >
-                <h3 className="font-bold text-lg text-amber-300 mb-3">Drift Detection</h3>
-                <p className="text-sm text-blue-100">Identify when delivery veers off-course from strategy or ethics</p>
-              </motion.div>
+                <strong className="text-amber-300 text-lg">Responsive Governance</strong>: <span className="text-blue-100">Guide outcomes without slowing delivery</span>
+              </motion.li>
               
-              <motion.div
+              <motion.li
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
               >
-                <h3 className="font-bold text-lg text-amber-300 mb-3">Responsive Governance</h3>
-                <p className="text-sm text-blue-100">Embed safety and accountability into delivery without command-and-control</p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-              >
-                <h3 className="font-bold text-lg text-amber-300 mb-3">Strategic Adaptation</h3>
-                <p className="text-sm text-blue-100">Course-correct fast when signals change or priorities evolve</p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-              >
-                <h3 className="font-bold text-lg text-amber-300 mb-3">Outcome Realisation</h3>
-                <p className="text-sm text-blue-100">Track the value and intent of delivery—not just velocity</p>
-              </motion.div>
-            </div>
+                <strong className="text-amber-300 text-lg">Flow Intelligence</strong>: <span className="text-blue-100">Spot rework, overload, and value decay</span>
+              </motion.li>
+            </ul>
           </motion.div>
         </div>
       </section>
 
-      {/* When to Use IntentOps Section */}
+      {/* How to Start Section */}
       <section className="py-20 bg-gradient-to-br from-amber-50 via-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -388,82 +307,57 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              When alignment matters more than speed.
+              How IntentOps lands in your organisation
             </h2>
             
-            <div className="max-w-4xl mx-auto space-y-6">
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex items-start gap-4"
-              >
-                <div className="w-3 h-3 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-slate-700">Launching AI pilots and need measurable business outcomes</p>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex items-start gap-4"
-              >
-                <div className="w-3 h-3 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-slate-700">Scaling AI across business units without losing control</p>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex items-start gap-4"
-              >
-                <div className="w-3 h-3 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-slate-700">Transforming delivery models but losing strategic clarity</p>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex items-start gap-4"
-              >
-                <div className="w-3 h-3 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-slate-700">Investing heavily in delivery without seeing proportional value</p>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex items-start gap-4"
-              >
-                <div className="w-3 h-3 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-lg text-slate-700">Seeing signs of overload, rework, or "governance theatre"</p>
-              </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <ol className="space-y-6 text-left">
+                <motion.li 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex gap-4"
+                >
+                  <div className="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                  <div>
+                    <strong className="text-slate-900 text-lg">Discovery:</strong> <span className="text-slate-700">We trace intent across your delivery spine</span>
+                  </div>
+                </motion.li>
+                
+                <motion.li 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex gap-4"
+                >
+                  <div className="bg-amber-500 text-blue-950 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                  <div>
+                    <strong className="text-slate-900 text-lg">Integration:</strong> <span className="text-slate-700">Signals are layered into your systems, not replaced</span>
+                  </div>
+                </motion.li>
+                
+                <motion.li 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-slate-200 shadow-sm flex gap-4"
+                >
+                  <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                  <div>
+                    <strong className="text-slate-900 text-lg">Activation:</strong> <span className="text-slate-700">Governance rules and dashboards go live—no disruption</span>
+                  </div>
+                </motion.li>
+              </ol>
             </div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-xl shadow-lg"
-            >
-              <p className="text-xl font-semibold mb-2">IntentOps plugs in without disruption.</p>
-              <p className="text-xl font-semibold">It helps you steer, not stop.</p>
-            </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Get Started Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -476,23 +370,18 @@ export default function IntentOpsPage() {
               Don't let complexity kill your intent.
             </h2>
             
-            <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 mb-12">
+            <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-12">
               <p>
-                You're already building with AI. Now it's time to govern with intelligence. Let Flowency help you implement a strategic operating model for AI-native delivery that's ethical, adaptive, and aligned.
+                Start a conversation. Discover how IntentOps can steer AI-native delivery, without the theatre.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="mailto:hello@flowency.co.uk"
-                className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
-              >
-                hello@flowency.co.uk
-              </a>
-              <span className="text-gray-600 hidden sm:inline">—</span>
-              <span className="text-gray-600 sm:hidden">or</span>
-              <span className="text-gray-700">Start a conversation today</span>
-            </div>
+            <a 
+              href="mailto:hello@flowency.co.uk"
+              className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-6 py-3 rounded-lg font-bold mt-6 inline-block transition-colors shadow-lg"
+            >
+              Talk to a Strategist
+            </a>
           </motion.div>
         </div>
       </section>

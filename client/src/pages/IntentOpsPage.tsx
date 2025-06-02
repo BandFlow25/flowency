@@ -530,7 +530,7 @@ export default function IntentOpsPage() {
         ctaText="Ready to align your AI strategy?"
         ctaDescription="IntentOps provides the strategy layer. Actuate delivers the execution. Together, they bring AI into real-world operations - accountably."
         ctaButtonText="Talk to a Strategist"
-        bgColor="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950"
+        ctaPanelColor="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950"
       />
 
       {/* Persistent Need Help Button */}

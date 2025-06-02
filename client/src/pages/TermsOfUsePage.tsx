@@ -7,6 +7,12 @@ import SEOHead from "@/components/SEOHead";
 export default function TermsOfUsePage() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Terms of Use | Flowency"
+        description="Read Flowency's terms of use governing our AI consultancy services, website usage, and client relationships."
+        canonicalUrl="https://flowency.co.uk/terms-of-use"
+      />
+      
       {/* Skip link for accessibility */}
       <a href="#main-content" className="skip-link">Skip to main content</a>
       

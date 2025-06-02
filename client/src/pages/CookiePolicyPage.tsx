@@ -2,10 +2,17 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function CookiePolicyPage() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Cookie Policy | Flowency"
+        description="Understand how Flowency uses cookies and tracking technologies on our website. Learn about your choices and how to manage cookie preferences."
+        canonicalUrl="https://flowency.co.uk/cookie-policy"
+      />
+      
       <a href="#main-content" className="skip-link">Skip to main content</a>
       
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">

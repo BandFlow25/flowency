@@ -2,10 +2,17 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Privacy Policy | Flowency"
+        description="Learn how Flowency protects your privacy and handles data in our AI consultancy services. Comprehensive privacy policy and data protection information."
+        canonicalUrl="https://flowency.co.uk/privacy-policy"
+      />
+      
       <a href="#main-content" className="skip-link">Skip to main content</a>
       
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">

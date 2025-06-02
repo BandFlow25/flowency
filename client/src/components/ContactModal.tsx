@@ -31,27 +31,32 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     setError("");
     
     try {
-      // For a static site, we'll use a mailto link with all the form data
-      // In a real implementation, you might use a form service like Formspree, Netlify Forms, etc.
-      const subject = `Contact from ${formData.name} - ${formData.service}`;
-      const body = `
-Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company}
-Service: ${formData.service}
-
-Message:
-${formData.message}
-      `;
+      // Call Firebase Cloud Function to handle the form submission
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15-second timeout
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('https://us-central1-flowencycontact.cloudfunctions.net/sendContactForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+        signal: controller.signal
+      });
       
-      // Open mailto link
-      window.open(`mailto:hello@flowency.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+      clearTimeout(timeoutId);
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error?.message || 'Failed to submit form');
+      }
       
       // Show success state
       setIsSubmitted(true);
+      
+      // Log success for analytics (if needed)
+      console.log('Contact form submitted successfully');
       
       // Reset form after 5 seconds
       setTimeout(() => {
@@ -66,7 +71,16 @@ ${formData.message}
         onClose();
       }, 5000);
     } catch (err) {
-      setError("There was an error sending your message. Please try again.");
+      console.error('Contact form error:', err);
+      
+      // Provide more specific error messages based on error type
+      if (err instanceof TypeError && err.message.includes('NetworkError')) {
+        setError("Network error. Please check your internet connection and try again.");
+      } else if (err instanceof DOMException && err.name === 'AbortError') {
+        setError("Request timed out. Please try again later.");
+      } else {
+        setError(err instanceof Error ? err.message : "There was an error sending your message. Please try again.");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -146,7 +160,7 @@ ${formData.message}
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"
-                        placeholder="John Smith"
+                        placeholder="Your Name"
                       />
                     </div>
                     
@@ -162,7 +176,7 @@ ${formData.message}
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"
-                        placeholder="john@example.com"
+                        placeholder="Your Email"
                       />
                     </div>
                     
@@ -177,7 +191,7 @@ ${formData.message}
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"
-                        placeholder="Acme Inc."
+                        placeholder="Company Name"
                       />
                     </div>
                     

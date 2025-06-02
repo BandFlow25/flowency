@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
+import Footer from "@/components/Footer";
 
 // 3-Level Model Service Lines Data
 const serviceLines = [

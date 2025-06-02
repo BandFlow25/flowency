@@ -1,81 +1,97 @@
 import { Link } from "wouter";
-import { 
-  RectangleEllipsis, 
-  PhoneIcon, 
-  MapPinIcon 
-} from "lucide-react";
 
-export default function Footer() {
+interface FooterProps {
+  ctaText?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  bgColor?: string;
+  textColor?: string;
+}
+
+export default function Footer({ 
+  ctaText = "Ready to optimise your delivery systems?",
+  ctaDescription = "Let's discuss how we can help transform your organisation's flow.",
+  ctaButtonText = "Get in touch",
+  bgColor = "bg-gray-900",
+  textColor = "text-white"
+}: FooterProps) {
   return (
-    <footer className="bg-primary text-primary-foreground py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <div className="bg-accent text-white p-1 rounded mr-2">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 4L4 12L9 20H15V12H9V4Z" fill="currentColor" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold">Flowency</h3>
+    <footer className={`${bgColor} ${textColor} py-16`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          {/* Logo and Brand */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-4 mb-6">
+              <img 
+                src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
+                alt="Flowency"
+                className="h-8 w-auto filter brightness-0 invert"
+              />
             </div>
-            <p className="text-sm text-gray-300 mb-4">
-              Helping enterprises maintain strategic alignment and delivery performance through AI transitions.
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Flowency delivers capability-building consultancy and training for high-performing delivery organisations.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="https://twitter.com" className="text-gray-300 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-              </a>
-              <a href="https://github.com" className="text-gray-300 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="lg:col-span-1">
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-semibold mb-4">Services</h4>
+                <ul className="space-y-3 text-sm">
+                  <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Flowency</Link></li>
+                  <li><Link to="/intentops" className="text-gray-400 hover:text-amber-400 transition-colors">IntentOps</Link></li>
+                  <li><Link to="/actuate" className="text-gray-400 hover:text-yellow-400 transition-colors">Actuate</Link></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold mb-4">Legal</h4>
+                <ul className="space-y-3 text-sm">
+                  <li><a href="https://www.flowency.co.uk/terms-of-use" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-orange-400 transition-colors">Terms of Use</a></li>
+                  <li><a href="https://www.flowency.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                  <li><a href="https://www.flowency.co.uk/cookie-policy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="font-semibold mb-4">FOLLOW</h4>
+              <a 
+                href="https://www.linkedin.com/company/flowency/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center space-x-2 text-sm"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
+                </svg>
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
-            <ul className="space-y-2">
-              <li><Link href="/solutions/intent-monitoring"><span className="text-gray-300 hover:text-white cursor-pointer">Intent Monitoring</span></Link></li>
-              <li><Link href="/solutions/cognitive-debt"><span className="text-gray-300 hover:text-white cursor-pointer">Cognitive Debt Management</span></Link></li>
-              <li><Link href="/solutions/ai-governance"><span className="text-gray-300 hover:text-white cursor-pointer">AI Governance</span></Link></li>
-              <li><Link href="/solutions/value-stream"><span className="text-gray-300 hover:text-white cursor-pointer">Value Stream Optimization</span></Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li><Link href="/resources/blog"><span className="text-gray-300 hover:text-white cursor-pointer">Blog</span></Link></li>
-              <li><Link href="/resources/case-studies"><span className="text-gray-300 hover:text-white cursor-pointer">Case Studies</span></Link></li>
-              <li><Link href="/resources/whitepapers"><span className="text-gray-300 hover:text-white cursor-pointer">Whitepapers</span></Link></li>
-              <li><Link href="/resources/webinars"><span className="text-gray-300 hover:text-white cursor-pointer">Webinars</span></Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <RectangleEllipsis className="h-5 w-5 mt-1 mr-2 text-accent" />
-                <span>hello@flowency.co.uk</span>
-              </li>
-              <li className="flex items-start">
-                <PhoneIcon className="h-5 w-5 mt-1 mr-2 text-accent" />
-                <span>+44 (20) 1234-5678</span>
-              </li>
-              <li className="flex items-start">
-                <MapPinIcon className="h-5 w-5 mt-1 mr-2 text-accent" />
-                <span>45 Innovation Rd, London, UK</span>
-              </li>
-            </ul>
+
+          {/* CTA Section */}
+          <div className="lg:col-span-1">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+              <h3 className="text-xl font-bold mb-2">{ctaText}</h3>
+              <p className="text-gray-400 mb-6 text-sm">{ctaDescription}</p>
+              <button 
+                onClick={() => window.open('mailto:hello@flowency.co.uk?subject=Contact Us', '_blank')}
+                className="bg-accent hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-medium transition-colors w-full"
+              >
+                {ctaButtonText}
+              </button>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Flowency. All rights reserved.</p>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} Flowency. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

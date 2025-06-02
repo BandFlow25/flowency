@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import PBIImage from "@assets/PBI.png";
+import Footer from "@/components/Footer";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -826,37 +827,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-4 mb-4">
-            <img 
-              src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-              alt="Flowency"
-              className="h-6 w-auto"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2">Ready to optimise your delivery systems?</h3>
-          <p className="text-gray-400 mb-6">
-            Get in touch to discuss how we can help your delivery systems flow.
-          </p>
-          <a 
-            href="mailto:hello@flowency.co.uk"
-            className="inline-block bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
-
-      {/* Simple Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-gray-400">
-            <p>&copy; 2024 Flowency. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer 
+        ctaText="Ready to optimise your delivery systems?"
+        ctaDescription="Get in touch to discuss how we can help your delivery systems flow."
+        ctaButtonText="Contact Us"
+      />
     </div>
   );
 }

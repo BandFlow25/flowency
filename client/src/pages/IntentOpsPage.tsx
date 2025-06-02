@@ -7,6 +7,7 @@ import IntentOpsLayer from "@/components/IntentOpsLayer";
 import StageDetails from "@/components/StageDetails";
 import ComparisonSection from "@/components/ComparisonSection";
 import ActuateIntentOpsCollaboration from "@/components/ActuateIntentOpsCollaboration";
+import Footer from "@/components/Footer";
 import { stages } from "@/data/stagesData";
 
 export default function IntentOpsPage() {
@@ -525,25 +526,12 @@ export default function IntentOpsPage() {
       {/* Actuate and IntentOps Collaboration */}
       <ActuateIntentOpsCollaboration />
 
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-4 mb-4">
-            <img 
-              src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-              alt="Flowency"
-              className="h-6 w-auto"
-            />
-            <span className="text-gray-400">×</span>
-            <span className="text-electric font-medium">Intent</span>
-            <span className="text-accent font-medium">Ops</span>
-          </div>
-          <h3 className="text-xl font-bold mb-2">Part of the Flowency Operating Stack</h3>
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            IntentOps provides the strategy layer. Actuate delivers the execution. Together, they bring AI into real-world operations - accountably.
-          </p>
-        </div>
-      </footer>
+      <Footer 
+        ctaText="Ready to align your AI strategy?"
+        ctaDescription="IntentOps provides the strategy layer. Actuate delivers the execution. Together, they bring AI into real-world operations - accountably."
+        ctaButtonText="Talk to a Strategist"
+        bgColor="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950"
+      />
 
       {/* Persistent Need Help Button */}
       <div className="fixed bottom-6 right-6 z-50">

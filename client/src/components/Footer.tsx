@@ -63,9 +63,9 @@ export default function Footer({
               <div>
                 <h4 className="font-semibold mb-3 text-sm">Legal</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="https://www.flowency.co.uk/terms-of-use" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Terms of Use</a></li>
-                  <li><a href="https://www.flowency.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                  <li><a href="https://www.flowency.co.uk/cookie-policy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                  <li><Link to="/terms-of-use" className="text-gray-400 hover:text-white transition-colors">Terms of Use</Link></li>
+                  <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+                  <li><Link to="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">Cookies</Link></li>
                   <li>
                     <a 
                       href="mailto:hello@flowency.co.uk" 

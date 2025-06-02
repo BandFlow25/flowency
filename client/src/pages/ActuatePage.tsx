@@ -587,7 +587,7 @@ export default function ActuatePage() {
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">📎 Ready to Actuate?</h3>
             <p className="text-lg mb-8 opacity-90 max-w-4xl mx-auto">
-              Actuate is your delivery engine for applied AI. Whether you are running a discovery sprint, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results.
+              Actuate is your delivery engine for applied AI. Whether you are still testing the water, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results.
             </p>
             <p className="text-xl font-semibold mb-8 text-yellow-400">Start anywhere. Align as you grow.</p>
             <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">

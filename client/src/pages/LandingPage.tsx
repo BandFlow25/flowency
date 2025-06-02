@@ -47,16 +47,11 @@ export default function LandingPage() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-900 hover:text-accent transition-colors">Home</a>
-              <a href="#approach" className="text-gray-900 hover:text-accent transition-colors">Our Approach</a>
-              <a href="#flow" className="text-gray-900 hover:text-accent transition-colors">Flow</a>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
                 Actuate
               </Link>
               <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
-              </Link>
-              <Link to="/intentops2" className="text-red-500 hover:text-red-600 transition-colors font-medium">
-                IntentOps v2
               </Link>
             </div>
             
@@ -91,16 +86,11 @@ export default function LandingPage() {
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-1">
               <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</a>
-              <a href="#approach" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Our Approach</a>
-              <a href="#flow" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Flow</a>
               <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">
                 Actuate
               </Link>
               <Link to="/intentops" className="block px-3 py-2 text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
-              </Link>
-              <Link to="/intentops2" className="block px-3 py-2 text-red-500 hover:text-red-600 transition-colors font-medium">
-                IntentOps v2
               </Link>
             </div>
           </div>

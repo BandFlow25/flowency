@@ -4,8 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { queryClient } from "./lib/queryClient";
 import { Route, Switch } from "wouter";
 import LandingPage from "@/pages/LandingPage";
+import FlowencyPage from "@/pages/FlowencyPage";
 import IntentOpsPage from "@/pages/IntentOpsPage";
-import IntentOps2Page from "@/pages/IntentOps2Page";
 import ActuatePage from "@/pages/ActuatePage";
 import NotFound from "@/pages/not-found";
 
@@ -13,8 +13,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={LandingPage} />
+      <Route path="/flowency" component={FlowencyPage} />
       <Route path="/intentops" component={IntentOpsPage} />
-      <Route path="/intentops2" component={IntentOps2Page} />
       <Route path="/actuate" component={ActuatePage} />
       <Route component={NotFound} />
     </Switch>

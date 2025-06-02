@@ -5,6 +5,7 @@ import { queryClient } from "./lib/queryClient";
 import { Route, Switch } from "wouter";
 import LandingPage from "@/pages/LandingPage";
 import IntentOpsPage from "@/pages/IntentOpsPage";
+import IntentOps2Page from "@/pages/IntentOps2Page";
 import ActuatePage from "@/pages/ActuatePage";
 import NotFound from "@/pages/not-found";
 
@@ -13,6 +14,7 @@ function Router() {
     <Switch>
       <Route path="/" component={LandingPage} />
       <Route path="/intentops" component={IntentOpsPage} />
+      <Route path="/intentops2" component={IntentOps2Page} />
       <Route path="/actuate" component={ActuatePage} />
       <Route component={NotFound} />
     </Switch>

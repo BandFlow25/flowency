@@ -371,17 +371,7 @@ export default function LandingPage() {
             </div>
 
             {/* Service Mapping Pills */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
-                Flowency → Capability
-              </div>
-              <div className="bg-gradient-to-r from-blue-900 via-slate-800 to-blue-950 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium">
-                IntentOps → Alignment
-              </div>
-              <div className="bg-gradient-to-r from-emerald-600 via-teal-700 to-green-800 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium">
-                Actuate → Activation
-              </div>
-            </div>
+
           </motion.div>
         </div>
       </section>
@@ -590,7 +580,7 @@ export default function LandingPage() {
       </section>
 
       {/* Visualise, Optimise, Sustain */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How We Deliver Results</h2>
@@ -655,7 +645,7 @@ export default function LandingPage() {
       </section>
 
       {/* Flow Domains */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -755,7 +745,7 @@ export default function LandingPage() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-gradient-to-br from-blue-900/90 via-slate-800/90 to-blue-950/90 backdrop-blur-sm p-8 rounded-xl border border-amber-500/30"
               >
-                <h3 className="text-2xl font-bold text-amber-400 mb-4">→ IntentOps</h3>
+                <h3 className="text-2xl font-bold text-amber-400 mb-4">IntentOps</h3>
                 <p className="text-lg font-semibold mb-4 text-amber-200">
                   AI adoption is consensus. Aligned execution is competitive advantage.
                 </p>
@@ -774,7 +764,7 @@ export default function LandingPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-emerald-600/90 via-teal-700/90 to-green-800/90 backdrop-blur-sm p-8 rounded-xl border border-yellow-400/30"
               >
-                <h3 className="text-2xl font-bold text-yellow-400 mb-4">→ Actuate</h3>
+                <h3 className="text-2xl font-bold text-yellow-400 mb-4">Actuate</h3>
                 <p className="text-lg font-semibold mb-4 text-yellow-300">
                   From problem to product. From process to intelligence.
                 </p>
@@ -787,9 +777,22 @@ export default function LandingPage() {
               </motion.div>
             </div>
 
-            <div className="mt-12 bg-white/20 backdrop-blur-sm p-8 rounded-xl border border-white/30">
-              <p className="text-xl font-bold">
-                Together, Flowency + IntentOps + Actuate form an adaptive operating stack - built to govern, deliver and evolve.
+            {/* Service Pills */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8 mb-8">
+              <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
+                Flowency → Capability
+              </div>
+              <div className="bg-gradient-to-r from-blue-900 via-slate-800 to-blue-950 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium">
+                IntentOps → Alignment
+              </div>
+              <div className="bg-gradient-to-r from-emerald-600 via-teal-700 to-green-800 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium">
+                Actuate → Activation
+              </div>
+            </div>
+
+            <div className="mt-8 bg-white/20 backdrop-blur-sm p-8 rounded-xl border-l-4 border-accent shadow-lg">
+              <p className="text-xl font-bold text-center">
+                Together, <span className="text-electric">Flowency</span> + <span className="text-amber-300">IntentOps</span> + <span className="text-yellow-300">Actuate</span> form an adaptive operating stack - built to govern, deliver and evolve.
               </p>
             </div>
           </motion.div>

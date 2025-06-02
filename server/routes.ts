@@ -1,15 +1,13 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // put application routes here
-  // prefix all routes with /api
-
-  // use storage to perform CRUD operations on the storage interface
-  // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
+  // For a static corporate website, we don't need any special API routes
+  // The static files will be served by the server/vite.ts configuration
+  
+  // You can add any custom API endpoints here if needed in the future
+  // Example: app.get('/api/company-info', (req, res) => { ... });
 
   const httpServer = createServer(app);
-
   return httpServer;
 }

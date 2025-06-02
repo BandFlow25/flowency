@@ -421,7 +421,7 @@ export default function ActuatePage() {
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-accent transition-colors">Home</Link>
               <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
-              <Link to="/actuate" className="text-cyan-400 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
+              <Link to="/actuate" className="text-teal-500 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
             </div>
             
             {/* Mobile menu button */}

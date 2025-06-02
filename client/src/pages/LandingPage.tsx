@@ -48,14 +48,11 @@ export default function LandingPage() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-900 hover:text-accent transition-colors">Home</a>
-              <Link to="/flowency" className="text-primary hover:text-accent transition-colors font-medium">
-                Flowency v2
+              <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">
+                IntentOps
               </Link>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
                 Actuate
-              </Link>
-              <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
-                IntentOps
               </Link>
             </div>
             
@@ -710,7 +707,7 @@ export default function LandingPage() {
       {/* Client Logos */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-lg font-medium text-gray-500 mb-8">Friends we've helped get flowing</h3>
+          <h3 className="text-lg font-medium text-gray-500 mb-8">Organisations we've helped move faster</h3>
           
           {/* Continuous Ticker Tape */}
           <div className="relative overflow-hidden py-4">

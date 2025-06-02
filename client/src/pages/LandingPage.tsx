@@ -654,6 +654,73 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Flow Domains */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              Fluent in FLOW. Applied where it matters.
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200"
+              >
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Delivery Flow</h3>
+                <p className="text-gray-700">Focused execution, faster throughput, reduced WIP</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200"
+              >
+                <h3 className="text-xl font-bold text-amber-900 mb-4">Flow Economics</h3>
+                <p className="text-gray-700">Value-centred prioritisation and cost-of-delay insight</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200"
+              >
+                <h3 className="text-xl font-bold text-green-900 mb-4">Team Flow</h3>
+                <p className="text-gray-700">Adaptive collaboration across complex systems</p>
+              </motion.div>
+            </div>
+
+            <div className="mt-16 max-w-4xl mx-auto">
+              <p className="text-xl font-semibold text-gray-900 mb-4">Immediate impact and sticky change.</p>
+              <p className="text-lg text-gray-700 mb-6">
+                We deliver sustainable improvements that reduce lead times, increase value throughput, and align delivery to what matters.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                We start where you are, bring clarity and stability, and optimise from there.
+              </p>
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-electric">
+                <p className="text-2xl md:text-3xl font-bold text-primary">
+                  We won't tell you the way; <span className="text-accent">we help you find your way</span>.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* IntentOps Feature Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -778,38 +845,93 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Combined Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Bridge to Actuate & IntentOps */}
+      <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            {/* Service Mapping */}
-            <div className="mb-8">
-              <div className="space-y-3 text-xl md:text-2xl font-bold">
-                <div>Flowency → Capability</div>
-                <div>IntentOps → Alignment</div>
-                <div>Actuate → Activation</div>
-              </div>
-            </div>
-            
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-              Ready to optimise your delivery for flow? Let's start the conversation.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Capability. Alignment. Activation.
             </h2>
-            
-            <div className="space-y-4">
-              <h3 className="text-xl font-medium">Contact Us</h3>
-              <a 
-                href="mailto:hello@flowency.co.uk"
-                className="inline-block text-accent hover:text-orange-300 text-lg font-medium transition-colors"
+            <p className="text-xl mb-12 max-w-4xl mx-auto opacity-90">
+              Flowency builds capability for FLOW - the foundational layer of delivery performance. 
+              Now, two integrated offerings extend that system for the AI era:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-gradient-to-br from-electric/20 to-blue-600/20 backdrop-blur-sm p-8 rounded-xl border border-white/20"
               >
-                hello@flowency.co.uk
-              </a>
+                <h3 className="text-2xl font-bold text-electric mb-4">→ IntentOps</h3>
+                <p className="text-lg font-semibold mb-4">
+                  AI adoption is consensus. Aligned execution is competitive advantage.
+                </p>
+                <p className="text-white/90 mb-4">
+                  IntentOps is your strategic telemetry layer - aligning portfolio intent to operational delivery in real time.
+                </p>
+                <p className="text-white/80">
+                  It helps you contain cognitive debt, reduce drift, and steer AI-era transformation with confidence.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-gradient-to-br from-accent/20 to-orange-600/20 backdrop-blur-sm p-8 rounded-xl border border-white/20"
+              >
+                <h3 className="text-2xl font-bold text-accent mb-4">→ Actuate</h3>
+                <p className="text-lg font-semibold mb-4">
+                  From problem to product. From process to intelligence.
+                </p>
+                <p className="text-white/90 mb-4">
+                  From raw intent to production-ready prototypes. Actuate is our AI-native delivery engine.
+                </p>
+                <p className="text-white/80">
+                  It transforms ideas into testable tools, streamlines operations with intelligent automation, and delivers applied AI without the fluff.
+                </p>
+              </motion.div>
+            </div>
+
+            <div className="mt-12 bg-white/20 backdrop-blur-sm p-8 rounded-xl border border-white/30">
+              <p className="text-xl font-bold">
+                Together, Flowency + IntentOps + Actuate form an adaptive operating stack - built to govern, deliver and evolve.
+              </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center space-x-4 mb-4">
+            <img 
+              src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
+              alt="Flowency"
+              className="h-6 w-auto"
+            />
+          </div>
+          <h3 className="text-xl font-bold mb-2">Ready to optimise your delivery systems?</h3>
+          <p className="text-gray-400 mb-6">
+            Get in touch to discuss how we can help your delivery systems flow.
+          </p>
+          <a 
+            href="mailto:hello@flowency.co.uk"
+            className="inline-block bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors"
+          >
+            Contact Us
+          </a>
         </div>
       </section>
 

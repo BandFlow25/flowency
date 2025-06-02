@@ -763,43 +763,47 @@ export default function LandingPage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-br from-blue-900/90 via-slate-800/90 to-blue-950/90 backdrop-blur-sm p-8 rounded-xl border border-amber-500/30"
-              >
-                <h3 className="text-2xl font-bold text-amber-400 mb-4">IntentOps</h3>
-                <p className="text-lg font-semibold mb-4 text-amber-200">
-                  AI adoption is consensus. Aligned execution is competitive advantage.
-                </p>
-                <p className="text-white/90 mb-4">
-                  IntentOps is your strategic telemetry layer - aligning portfolio intent to operational delivery in real time.
-                </p>
-                <p className="text-white/80">
-                  It helps you contain cognitive debt, reduce drift, and steer AI-era transformation with confidence.
-                </p>
-              </motion.div>
+              <Link to="/actuate">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-gradient-to-br from-emerald-600/90 via-teal-700/90 to-green-800/90 backdrop-blur-sm p-8 rounded-xl border border-yellow-400/30 hover:border-yellow-300/50 hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                >
+                  <h3 className="text-2xl font-bold text-yellow-400 mb-4 group-hover:text-yellow-300 transition-colors">Actuate</h3>
+                  <p className="text-lg font-semibold mb-4 text-yellow-300">
+                    From problem to product. From process to intelligence.
+                  </p>
+                  <p className="text-white/90 mb-4">
+                    From raw intent to production-ready prototypes. Actuate is our AI-native delivery engine.
+                  </p>
+                  <p className="text-white/80">
+                    It transforms ideas into testable tools, streamlines operations with intelligent automation, and delivers applied AI without the fluff.
+                  </p>
+                </motion.div>
+              </Link>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-emerald-600/90 via-teal-700/90 to-green-800/90 backdrop-blur-sm p-8 rounded-xl border border-yellow-400/30"
-              >
-                <h3 className="text-2xl font-bold text-yellow-400 mb-4">Actuate</h3>
-                <p className="text-lg font-semibold mb-4 text-yellow-300">
-                  From problem to product. From process to intelligence.
-                </p>
-                <p className="text-white/90 mb-4">
-                  From raw intent to production-ready prototypes. Actuate is our AI-native delivery engine.
-                </p>
-                <p className="text-white/80">
-                  It transforms ideas into testable tools, streamlines operations with intelligent automation, and delivers applied AI without the fluff.
-                </p>
-              </motion.div>
+              <Link to="/intentops">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-gradient-to-br from-blue-900/90 via-slate-800/90 to-blue-950/90 backdrop-blur-sm p-8 rounded-xl border border-amber-500/30 hover:border-amber-400/50 hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                >
+                  <h3 className="text-2xl font-bold text-amber-400 mb-4 group-hover:text-amber-300 transition-colors">IntentOps</h3>
+                  <p className="text-lg font-semibold mb-4 text-amber-200">
+                    AI adoption is consensus. Aligned execution is competitive advantage.
+                  </p>
+                  <p className="text-white/90 mb-4">
+                    IntentOps is your strategic telemetry layer - aligning portfolio intent to operational delivery in real time.
+                  </p>
+                  <p className="text-white/80">
+                    It helps you contain cognitive debt, reduce drift, and steer AI-era transformation with confidence.
+                  </p>
+                </motion.div>
+              </Link>
             </div>
 
             {/* Service Pills */}
@@ -807,17 +811,21 @@ export default function LandingPage() {
               <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
                 Flowency → Capability
               </div>
-              <div className="bg-gradient-to-r from-blue-900 via-slate-800 to-blue-950 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium">
-                IntentOps → Alignment
-              </div>
-              <div className="bg-gradient-to-r from-emerald-600 via-teal-700 to-green-800 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium">
-                Actuate → Activation
-              </div>
+              <Link to="/actuate">
+                <div className="bg-gradient-to-r from-emerald-600 via-teal-700 to-green-800 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer">
+                  Actuate → Activation
+                </div>
+              </Link>
+              <Link to="/intentops">
+                <div className="bg-gradient-to-r from-blue-900 via-slate-800 to-blue-950 text-yellow-300 px-6 py-3 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer">
+                  IntentOps → Alignment
+                </div>
+              </Link>
             </div>
 
             <div className="mt-8 bg-white/20 backdrop-blur-sm p-8 rounded-xl border-l-4 border-accent shadow-lg">
               <p className="text-xl font-bold text-center">
-                Together, <span className="text-electric">Flowency</span> + <span className="text-amber-300">IntentOps</span> + <span className="text-yellow-300">Actuate</span> form an adaptive operating stack - built to govern, deliver and evolve.
+                Together, <span className="text-electric">Flowency</span> + <Link to="/intentops" className="text-amber-300 hover:text-amber-200 transition-colors underline decoration-amber-300/50 hover:decoration-amber-200">IntentOps</Link> + <Link to="/actuate" className="text-yellow-300 hover:text-yellow-200 transition-colors underline decoration-yellow-300/50 hover:decoration-yellow-200">Actuate</Link> form an adaptive operating stack - built to govern, deliver and evolve.
               </p>
             </div>
           </motion.div>

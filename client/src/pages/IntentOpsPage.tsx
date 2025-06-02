@@ -89,12 +89,24 @@ export default function IntentOpsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Cognitive Debt Pill */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="inline-block bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-full px-6 py-3 mb-8"
+            >
+              <p className="text-red-200 font-semibold">
+                Cognitive Debt is the new Tech Debt - and it's building faster than you think
+              </p>
+            </motion.div>
+
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
               AI adoption is consensus.<br />
               <span className="text-yellow-300">Aligned execution is competitive advantage.</span>
             </h1>
             <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-200">
-              IntentOps is your enterprise nervous system - a real-time control layer that keeps AI, automation, and human teams moving in sync with business priorities.
+              IntentOps is your real-time control layer for AI-era delivery. See where you're drifting. Act before it's too late.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -134,12 +146,47 @@ export default function IntentOpsPage() {
             
             <div className="max-w-4xl mx-auto text-lg text-slate-700 leading-relaxed space-y-6">
               <p className="text-xl">
-                Strategy is set, but delivery drifts. Humans, tools, and AI agents operate in silos. Governance lags. Value leaks.
+                Most orgs don't know where their AI is drifting. That's not safe governance. That's cognitive debt.
               </p>
               
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl border border-amber-200 mt-8">
-                <p className="font-semibold text-slate-900 text-xl">
-                  You don't need another framework. You need a live view of alignment.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-red-200 shadow-sm"
+                >
+                  <h3 className="font-bold text-red-800 mb-3">Ungoverned AI Deployments</h3>
+                  <p className="text-slate-700 text-sm">LLM agents and automation spreading without oversight</p>
+                </motion.div>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-red-200 shadow-sm"
+                >
+                  <h3 className="font-bold text-red-800 mb-3">Cognitive Fragmentation</h3>
+                  <p className="text-slate-700 text-sm">Teams, tools, and AI operating in disconnected silos</p>
+                </motion.div>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-red-200 shadow-sm"
+                >
+                  <h3 className="font-bold text-red-800 mb-3">Strategic Blindness</h3>
+                  <p className="text-slate-700 text-sm">No telemetry layer to see where value is leaking</p>
+                </motion.div>
+              </div>
+              
+              <div className="bg-red-500/10 backdrop-blur-sm p-8 rounded-xl border border-red-300 mt-8">
+                <p className="font-bold text-slate-900 text-xl">
+                  If you're chasing AI use cases without a telemetry layer, you're stacking cognitive debt.
                 </p>
               </div>
             </div>
@@ -158,17 +205,21 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              IntentOps is a meta-layer for governable execution.
+              Cognitive debt is the new enterprise liability. IntentOps is how you contain it.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg leading-relaxed space-y-6 mb-12">
               <p className="text-blue-100 text-xl">
-                It wraps your existing teams, tools, and workflows. It connects strategic goals to daily actions - across people, AI, and systems.
+                A strategic control layer for aligning AI, people, and processes in real time.
+              </p>
+              
+              <p className="text-blue-200">
+                IntentOps wraps your existing workflows - turning scattered execution into orchestrated action that reflects your intent.
               </p>
               
               <div className="bg-amber-500/20 backdrop-blur-sm p-8 rounded-xl border border-amber-400/30 mt-8">
                 <p className="font-semibold text-amber-200 text-xl text-center">
-                  Think: telemetry for strategic intent.
+                  Think: telemetry for intent. Guardrails for AI. Coordination without chaos.
                 </p>
               </div>
             </div>
@@ -310,50 +361,77 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              What it enables
+              What gets better when you eliminate Cognitive Debt
             </h2>
             
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-              >
-                <strong className="text-amber-300 text-lg">Traceable Intent</strong>: <span className="text-blue-100">Strategy mapped to delivery in real time</span>
-              </motion.li>
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-              >
-                <strong className="text-amber-300 text-lg">Drift Detection</strong>: <span className="text-blue-100">Catch misalignment early, act fast</span>
-              </motion.li>
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-              >
-                <strong className="text-amber-300 text-lg">Responsive Governance</strong>: <span className="text-blue-100">Guide outcomes without slowing delivery</span>
-              </motion.li>
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-              >
-                <strong className="text-amber-300 text-lg">Flow Intelligence</strong>: <span className="text-blue-100">Spot rework, overload, and value decay</span>
-              </motion.li>
-            </ul>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <strong className="text-amber-300 text-lg">Traceable Intent</strong>
+                    <span className="text-blue-100 md:col-span-2">Strategy mapped to delivery, continuously and visibly</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <strong className="text-amber-300 text-lg">Drift Detection</strong>
+                    <span className="text-blue-100 md:col-span-2">Spot misalignment across teams, tools, and agents - before it bakes in cognitive debt</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <strong className="text-amber-300 text-lg">Faster Decision Loops</strong>
+                    <span className="text-blue-100 md:col-span-2">Reduce latency between strategic signal and operational action</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <strong className="text-amber-300 text-lg">Responsive Governance</strong>
+                    <span className="text-blue-100 md:col-span-2">Guide AI, human, and hybrid workflows without slowing down delivery</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <strong className="text-amber-300 text-lg">Flow Intelligence</strong>
+                    <span className="text-blue-100 md:col-span-2">Surface rework, overload, and value decay as it happens</span>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>

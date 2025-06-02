@@ -256,7 +256,7 @@ function ProblemDiagnosticCarousel() {
     
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % problems.length);
-    }, 4000);
+    }, 6000);
     
     return () => clearInterval(interval);
   }, [isAutoPlaying, problems.length]);
@@ -310,11 +310,11 @@ function ProblemDiagnosticCarousel() {
                   </p>
                   
                   <p className="text-base text-orange-700 font-semibold group-hover:text-orange-800 transition-colors">
-                    → {problem.solution}
+                    ⟩ {problem.solution}
                   </p>
                   
                   <div className="mt-6 opacity-75 group-hover:opacity-100 transition-opacity">
-                    <p className="text-sm text-gray-500">Click to see our solution ↓</p>
+                    <p className="text-sm text-gray-500">Click to see our solution ⇓</p>
                   </div>
                 </motion.div>
               </div>
@@ -441,7 +441,7 @@ export default function ActuatePage() {
             </p>
             
             <p className="text-lg mb-8 max-w-4xl mx-auto text-yellow-300 leading-relaxed font-semibold">
-              Actuate is your go-to team for getting GenAI live, governed, and delivering real business outcomes — fast.
+              Actuate is your go-to team for getting GenAI live, governed, and delivering real business outcomes - fast.
             </p>
             
             <p className="text-base mb-12 max-w-4xl mx-auto text-gray-400 leading-relaxed">

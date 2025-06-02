@@ -116,13 +116,10 @@ function ServiceTiles() {
           {/* Level 1: Quick Scan Tile */}
           <div className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white text-xl">{service.icon}</span>
-              </div>
               <motion.div
                 animate={{ rotate: expandedId === service.id ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
-                className="text-gray-400"
+                className="text-gray-400 ml-auto"
               >
                 ↓
               </motion.div>
@@ -392,63 +389,24 @@ export default function ActuatePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              🔍 How Can Actuate Help You?
+              🔍 What Problems Do We Solve?
             </h2>
             
             <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discrete engagement or can be combined under a broader capability uplift programme with IntentOps.
+              Recognize yourself in these common AI challenges? We've built specific solutions for each.
             </p>
             
-            {/* Simple list format */}
-            <div className="max-w-4xl mx-auto text-left space-y-4 mb-12">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold text-gray-800">Outcome-first GenAI delivery</span>
-                  <span className="text-gray-600"> – rapidly build usable features tied to business value</span>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold text-gray-800">Prompt engineering as a service</span>
-                  <span className="text-gray-600"> – model-agnostic, governed, and reusable</span>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold text-gray-800">Tool unification and orchestration</span>
-                  <span className="text-gray-600"> – streamline fragmented LLMs, APIs, and workflows</span>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold text-gray-800">Process re-engineering and automation</span>
-                  <span className="text-gray-600"> – redesign manual and inefficient workflows</span>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold text-gray-800">Hallucination and drift control</span>
-                  <span className="text-gray-600"> – add guardrails, fallback patterns, and quality signals</span>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold text-gray-800">Legacy drag reduction</span>
-                  <span className="text-gray-600"> – automate and eliminate redundant layers of complexity</span>
-                </div>
-              </div>
-            </div>
+          </motion.div>
+          
+          <ProblemRecognitionCards />
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
             
             <div className="mt-12 bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg text-left max-w-4xl mx-auto">
               <h3 className="text-xl font-bold text-primary mb-4">💡 Core Insight</h3>
@@ -482,40 +440,7 @@ export default function ActuatePage() {
         </div>
       </section>
 
-      {/* Level 0: Problem Recognition - Bridge to Service Lines */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              🔍 How Can Actuate Help You?
-            </h2>
-            
-            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Recognize yourself in these common AI challenges? We've built specific solutions for each.
-            </p>
-          </motion.div>
-          
-          <ProblemRecognitionCards />
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <p className="text-sm text-gray-500">
-              ↓ Explore our complete service lines below for detailed solutions ↓
-            </p>
-          </motion.div>
-        </div>
-      </section>
+
 
 
 

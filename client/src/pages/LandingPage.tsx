@@ -47,6 +47,9 @@ export default function LandingPage() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-900 hover:text-accent transition-colors">Home</a>
+              <Link to="/flowency" className="text-primary hover:text-accent transition-colors font-medium">
+                Flowency v2
+              </Link>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
                 Actuate
               </Link>
@@ -86,6 +89,9 @@ export default function LandingPage() {
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-1">
               <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</a>
+              <Link to="/flowency" className="block px-3 py-2 text-primary hover:text-accent transition-colors font-medium">
+                Flowency v2
+              </Link>
               <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">
                 Actuate
               </Link>

@@ -586,7 +586,7 @@ export default function ActuatePage() {
         ctaText="Ready to Actuate?"
         ctaDescription="Actuate is your delivery engine for applied AI. Whether you are still testing the water, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results."
         ctaButtonText="Real delivery. Really fast. Start here."
-        ctaPanelColor="bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800"
+        bgColor="bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800"
       />
       
       <NeedHelpButton />

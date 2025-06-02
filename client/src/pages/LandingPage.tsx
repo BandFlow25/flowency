@@ -375,7 +375,7 @@ export default function LandingPage() {
               <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
                 Flowency → Capability
               </div>
-              <div className="bg-blue-900 text-orange-400 px-6 py-3 rounded-full text-sm font-medium border border-orange-400/30">
+              <div className="bg-blue-800 text-orange-300 px-6 py-3 rounded-full text-sm font-medium">
                 IntentOps → Alignment
               </div>
               <div className="bg-teal-800 text-yellow-400 px-6 py-3 rounded-full text-sm font-medium border border-yellow-400/30">

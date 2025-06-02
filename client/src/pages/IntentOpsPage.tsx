@@ -379,18 +379,7 @@ export default function IntentOpsPage() {
                   </div>
                 </motion.div>
                 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition-colors"
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <strong className="text-amber-300 text-lg">Drift Detection</strong>
-                    <span className="text-blue-100 md:col-span-2">Spot misalignment across teams, tools, and agents - before it bakes in cognitive debt</span>
-                  </div>
-                </motion.div>
+
                 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -507,10 +496,17 @@ export default function IntentOpsPage() {
             className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              AI is already in your organisation. The question is, who's steering?
+              Cognitive debt compounds faster than technical debt ever did.
             </h2>
             
-            <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-12">
+            <p className="text-xl font-semibold text-gray-800 mb-4">
+              AI is already in your organisation. The question is, who's steering?
+            </p>
+            
+            <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-12 space-y-4">
+              <p>
+                Your transformation is happening with or without governance.
+              </p>
               <p>
                 IntentOps gives you the system to align strategy with real delivery, in real time.
               </p>

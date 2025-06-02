@@ -35,7 +35,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 15000); // 15-second timeout
       
-      const response = await fetch('https://us-central1-flowencycontact.cloudfunctions.net/sendContactForm', {
+      // Use a CORS proxy to bypass CORS restrictions
+      const corsProxyUrl = 'https://corsproxy.io/?';
+      const targetUrl = 'https://us-central1-flowencycontact.cloudfunctions.net/sendContactForm';
+      
+      const response = await fetch(corsProxyUrl + encodeURIComponent(targetUrl), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -582,21 +582,12 @@ export default function ActuatePage() {
       {/* How Actuate and IntentOps Work Together */}
       <ActuateIntentOpsCollaboration />
 
-      {/* Footer */}
-      <footer className="bg-green-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">📎 Ready to Actuate?</h3>
-            <p className="text-lg mb-8 opacity-90 max-w-4xl mx-auto">
-              Actuate is your delivery engine for applied AI. Whether you are still testing the water, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results.
-            </p>
-            <p className="text-xl font-semibold mb-8 text-yellow-400">Start anywhere. Align as you grow.</p>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-bold transition-colors">
-              Real delivery. Really fast. Start here.
-            </button>
-          </div>
-        </div>
-      </footer>
+      <Footer 
+        ctaText="Ready to Actuate?"
+        ctaDescription="Actuate is your delivery engine for applied AI. Whether you are still testing the water, building an AI-native tool, or embedding intelligence into your operations, we provide practical services that produce results."
+        ctaButtonText="Real delivery. Really fast. Start here."
+        bgColor="bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800"
+      />
       
       <NeedHelpButton />
     </div>

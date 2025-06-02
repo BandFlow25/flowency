@@ -375,10 +375,10 @@ export default function LandingPage() {
               <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
                 Flowency → Capability
               </div>
-              <div className="bg-blue-800 text-orange-300 px-6 py-3 rounded-full text-sm font-medium">
+              <div className="bg-amber-500 text-blue-950 px-6 py-3 rounded-full text-sm font-medium">
                 IntentOps → Alignment
               </div>
-              <div className="bg-teal-800 text-yellow-400 px-6 py-3 rounded-full text-sm font-medium border border-yellow-400/30">
+              <div className="bg-yellow-400 text-green-900 px-6 py-3 rounded-full text-sm font-medium">
                 Actuate → Activation
               </div>
             </div>
@@ -753,10 +753,10 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-br from-blue-900/80 to-blue-800/80 backdrop-blur-sm p-8 rounded-xl border border-blue-600/40"
+                className="bg-gradient-to-br from-blue-900/90 via-slate-800/90 to-blue-950/90 backdrop-blur-sm p-8 rounded-xl border border-amber-500/30"
               >
-                <h3 className="text-2xl font-bold text-orange-300 mb-4">→ IntentOps</h3>
-                <p className="text-lg font-semibold mb-4 text-orange-200">
+                <h3 className="text-2xl font-bold text-amber-400 mb-4">→ IntentOps</h3>
+                <p className="text-lg font-semibold mb-4 text-amber-200">
                   AI adoption is consensus. Aligned execution is competitive advantage.
                 </p>
                 <p className="text-white/90 mb-4">
@@ -772,10 +772,10 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-teal-800/40 to-teal-700/40 backdrop-blur-sm p-8 rounded-xl border border-yellow-400/30"
+                className="bg-gradient-to-br from-emerald-600/90 via-teal-700/90 to-green-800/90 backdrop-blur-sm p-8 rounded-xl border border-yellow-400/30"
               >
                 <h3 className="text-2xl font-bold text-yellow-400 mb-4">→ Actuate</h3>
-                <p className="text-lg font-semibold mb-4 text-yellow-200">
+                <p className="text-lg font-semibold mb-4 text-yellow-300">
                   From problem to product. From process to intelligence.
                 </p>
                 <p className="text-white/90 mb-4">

@@ -8,6 +8,7 @@ import StageDetails from "@/components/StageDetails";
 import ComparisonSection from "@/components/ComparisonSection";
 import ActuateIntentOpsCollaboration from "@/components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { stages } from "@/data/stagesData";
 
 export default function IntentOpsPage() {

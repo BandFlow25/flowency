@@ -4,10 +4,33 @@ import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import PBIImage from "@assets/PBI.png";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Flowency",
+    "url": "https://flowency.co.uk",
+    "description": "AI-native execution engine delivering capability-building consultancy and training for high-performing delivery organisations",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@flowency.co.uk",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/flowency/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "areaServed": "GB",
+    "serviceType": ["AI Strategy Consulting", "AI Implementation", "Enterprise Training", "Cognitive Debt Management"]
+  };
 
   const carouselImages = [
     { src: "/assets/images/Card_on_desk.jpg", alt: "Flowency Card on Desk" },
@@ -100,6 +123,16 @@ export default function LandingPage() {
           </div>
         )}
       </nav>
+
+      <SEOHead
+        title="Flowency - AI-Native Execution Engine | From Strategy to Intelligence"
+        description="Transform your organisation's AI adoption with Flowency's cognitive debt management solutions. Expert consultancy bridging strategy and execution for enterprise AI implementation."
+        keywords="AI adoption, cognitive debt, enterprise AI, AI strategy, AI implementation, delivery optimisation, IntentOps, Actuate, UK AI consultancy"
+        ogTitle="Flowency - AI-Native Execution Engine"
+        ogDescription="Expert AI consultancy helping UK enterprises bridge strategy and execution. Specialising in cognitive debt management and AI adoption transformation."
+        canonicalUrl="https://flowency.co.uk"
+        structuredData={structuredData}
+      />
 
       {/* Hero Section */}
       <section id="home" className="pt-16 bg-white">

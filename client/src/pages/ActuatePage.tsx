@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 // 3-Level Model Service Lines Data
 const serviceLines = [
@@ -403,10 +404,31 @@ function NeedHelpButton() {
 }
 
 export default function ActuatePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Actuate",
+    "provider": {
+      "@type": "Organization",
+      "name": "Flowency"
+    },
+    "description": "AI delivery engine providing applied AI implementation services and practical solutions for enterprise organizations",
+    "serviceType": "AI Implementation",
+    "areaServed": "GB"
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Actuate - AI Delivery Engine | Applied AI Services | Flowency"
+        description="Get AI working in your business with Actuate's practical implementation services. From proof of concept to production deployment, we deliver real AI solutions that work."
+        keywords="Actuate, AI implementation, applied AI, AI delivery, enterprise AI solutions, AI development, practical AI services"
+        ogTitle="Actuate - AI Delivery Engine"
+        ogDescription="Practical AI implementation services that take your AI projects from concept to production. Real delivery, really fast."
+        canonicalUrl="https://flowency.co.uk/actuate"
+        structuredData={structuredData}
+      />
       {/* Navigation - Consistent with Landing Page */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function TermsOfUsePage() {
   return (

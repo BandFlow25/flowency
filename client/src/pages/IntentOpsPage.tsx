@@ -23,10 +23,33 @@ export default function IntentOpsPage() {
     setSelectedStage(null);
   };
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "IntentOps",
+    "provider": {
+      "@type": "Organization",
+      "name": "Flowency"
+    },
+    "description": "AI strategy alignment framework providing governance and intent orchestration for enterprise AI adoption",
+    "serviceType": "AI Strategy Consulting",
+    "areaServed": "GB"
+  };
+
   const selectedStageData = selectedStage ? stages.find(stage => stage.id === selectedStage) : null;
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="IntentOps - AI Strategy Alignment Framework | Flowency"
+        description="Transform your AI strategy with IntentOps governance framework. Align intent, manage cognitive debt, and orchestrate enterprise AI adoption for measurable business outcomes."
+        keywords="IntentOps, AI strategy, AI governance, cognitive debt management, enterprise AI alignment, AI orchestration, strategy execution"
+        ogTitle="IntentOps - AI Strategy Alignment Framework"
+        ogDescription="Enterprise AI governance framework that bridges strategy and execution. Manage cognitive debt and align organizational intent for successful AI adoption."
+        canonicalUrl="https://flowency.co.uk/intentops"
+        structuredData={structuredData}
+      />
+      
       {/* Navigation - Consistent with Landing Page */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

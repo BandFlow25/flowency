@@ -94,7 +94,7 @@ export default function IntentOpsPage() {
               <span className="text-yellow-300">Aligned execution is competitive advantage.</span>
             </h1>
             <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-200">
-              IntentOps is your enterprise nervous system—a real-time control layer that keeps AI, automation, and human teams moving in sync with business priorities.
+              IntentOps is your enterprise nervous system - a real-time control layer that keeps AI, automation, and human teams moving in sync with business priorities.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ export default function IntentOpsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The AI revolution is happening inside delivery systems designed for yesterday.
+              The AI revolution is landing inside delivery systems still caught in agile framework theatre.
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg text-slate-700 leading-relaxed space-y-6">
@@ -163,7 +163,7 @@ export default function IntentOpsPage() {
             
             <div className="max-w-4xl mx-auto text-lg leading-relaxed space-y-6 mb-12">
               <p className="text-blue-100 text-xl">
-                It wraps your existing teams, tools, and workflows. It connects strategic goals to daily actions—across people, AI, and systems.
+                It wraps your existing teams, tools, and workflows. It connects strategic goals to daily actions - across people, AI, and systems.
               </p>
               
               <div className="bg-amber-500/20 backdrop-blur-sm p-8 rounded-xl border border-amber-400/30 mt-8">
@@ -191,48 +191,110 @@ export default function IntentOpsPage() {
             </h2>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
-            <ul className="space-y-6">
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-l-4 border-blue-600 shadow-lg"
-              >
-                <strong className="text-blue-900 text-lg">Signals:</strong> <span className="text-slate-700">Flow, blockers, overload, ethics alerts</span>
-              </motion.li>
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-r from-amber-100 to-yellow-100 p-6 rounded-xl border-l-4 border-amber-600 shadow-lg"
-              >
-                <strong className="text-amber-900 text-lg">IntentOps:</strong> <span className="text-slate-700">Drift thresholds, escalation rules, alignment policy</span>
-              </motion.li>
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-l-4 border-purple-600 shadow-lg"
-              >
-                <strong className="text-purple-900 text-lg">Value:</strong> <span className="text-slate-700">Programmes, experiments, initiatives</span>
-              </motion.li>
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-l-4 border-green-600 shadow-lg"
-              >
-                <strong className="text-green-900 text-lg">Execution:</strong> <span className="text-slate-700">Human teams, AI agents, automated systems</span>
-              </motion.li>
-            </ul>
+          <div className="max-w-5xl mx-auto">
+            <div className="relative">
+              {/* Visual Stack Representation */}
+              <div className="flex flex-col items-center space-y-1 mb-12">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="w-full max-w-md h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-t-xl shadow-lg flex items-center justify-center"
+                >
+                  <span className="text-white font-bold text-lg">Signals</span>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="w-full max-w-lg h-16 bg-gradient-to-r from-amber-500 to-amber-600 shadow-lg flex items-center justify-center"
+                >
+                  <span className="text-blue-950 font-bold text-lg">IntentOps</span>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="w-full max-w-xl h-16 bg-gradient-to-r from-purple-500 to-purple-600 shadow-lg flex items-center justify-center"
+                >
+                  <span className="text-white font-bold text-lg">Value</span>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="w-full max-w-2xl h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-b-xl shadow-lg flex items-center justify-center"
+                >
+                  <span className="text-white font-bold text-lg">Execution</span>
+                </motion.div>
+              </div>
+
+              {/* Detailed Descriptions */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-blue-200 shadow-sm"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
+                    <h3 className="font-bold text-lg text-blue-900">Signals</h3>
+                  </div>
+                  <p className="text-slate-700">Flow, blockers, overload, ethics alerts</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-amber-200 shadow-sm"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-4 h-4 bg-amber-500 rounded-full"></div>
+                    <h3 className="font-bold text-lg text-amber-900">IntentOps</h3>
+                  </div>
+                  <p className="text-slate-700">Drift thresholds, escalation rules, alignment policy</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                  className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-purple-200 shadow-sm"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                    <h3 className="font-bold text-lg text-purple-900">Value</h3>
+                  </div>
+                  <p className="text-slate-700">Programmes, experiments, initiatives</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-green-200 shadow-sm"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <h3 className="font-bold text-lg text-green-900">Execution</h3>
+                  </div>
+                  <p className="text-slate-700">Human teams, AI agents, automated systems</p>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -347,7 +409,7 @@ export default function IntentOpsPage() {
                 >
                   <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
                   <div>
-                    <strong className="text-slate-900 text-lg">Activation:</strong> <span className="text-slate-700">Governance rules and dashboards go live—no disruption</span>
+                    <strong className="text-slate-900 text-lg">Activation:</strong> <span className="text-slate-700">Governance rules and dashboards go live - no disruption</span>
                   </div>
                 </motion.li>
               </ol>
@@ -367,12 +429,12 @@ export default function IntentOpsPage() {
             className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Don't let complexity kill your intent.
+              AI is already in your organisation. The question is, who's steering?
             </h2>
             
             <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-12">
               <p>
-                Start a conversation. Discover how IntentOps can steer AI-native delivery, without the theatre.
+                IntentOps gives you the system to align strategy with real delivery, in real time.
               </p>
             </div>
 

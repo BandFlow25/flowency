@@ -112,6 +112,10 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Pill graphic */}
+            <div className="inline-block bg-gradient-to-r from-accent to-primary text-white px-6 py-3 rounded-full text-sm font-medium mb-8">
+              Adaptive Delivery
+            </div>
             <h1 className="text-4xl md:text-6xl font-light mb-6 text-black leading-tight">
               <span className="block md:inline">We help your</span>
               <span className="hidden md:inline"> </span>
@@ -249,6 +253,7 @@ export default function LandingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
           >
             {/* Header */}
             <div className="mb-12">
@@ -261,94 +266,121 @@ export default function LandingPage() {
               <p className="text-xl text-gray-600 font-medium mb-6">
                 Framework agnostic, method diverse, value focused.
               </p>
-              <p className="text-lg text-gray-600 max-w-4xl leading-relaxed">
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your organisational context and maturity.
               </p>
             </div>
 
             {/* Key Points Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Framework agnostic solutions</h4>
-                  <p className="text-gray-600 text-sm">Adapt to your existing methodologies</p>
-                </div>
-              </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Framework agnostic solutions</h4>
+                <p className="text-gray-600">Adapt to your existing methodologies</p>
+              </motion.div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Method diverse expertise</h4>
-                  <p className="text-gray-600 text-sm">Drawing from agile, lean, and beyond</p>
-                </div>
-              </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Method diverse expertise</h4>
+                <p className="text-gray-600">Drawing from agile, lean, and beyond</p>
+              </motion.div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Value-focused outcomes</h4>
-                  <p className="text-gray-600 text-sm">Measurable business impact</p>
-                </div>
-              </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Value-focused outcomes</h4>
+                <p className="text-gray-600">Measurable business impact</p>
+              </motion.div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Contextually relevant approaches</h4>
-                  <p className="text-gray-600 text-sm">Tailored to your organizational maturity</p>
-                </div>
-              </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Contextually relevant approaches</h4>
+                <p className="text-gray-600">Tailored to your organizational maturity</p>
+              </motion.div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Years of proven experience</h4>
-                  <p className="text-gray-600 text-sm">Battle-tested insights and solutions</p>
-                </div>
-              </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Years of proven experience</h4>
+                <p className="text-gray-600">Battle-tested insights and solutions</p>
+              </motion.div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+              >
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Lasting transformational change</h4>
-                  <p className="text-gray-600 text-sm">Sustainable improvements that stick</p>
-                </div>
-              </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Lasting transformational change</h4>
+                <p className="text-gray-600">Sustainable improvements that stick</p>
+              </motion.div>
             </div>
 
-            {/* CTA Button */}
-            <div>
-              <button className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-lg font-medium transition-colors shadow-lg flex items-center space-x-2">
-                <span>Discover Our Process</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+            {/* Service Mapping Pills */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-medium">
+                Flowency → Capability
+              </div>
+              <div className="bg-gradient-to-r from-electric to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium">
+                IntentOps → Alignment
+              </div>
+              <div className="bg-gradient-to-r from-accent to-orange-600 text-white px-6 py-3 rounded-full text-sm font-medium">
+                Actuate → Activation
+              </div>
             </div>
           </motion.div>
         </div>
@@ -382,19 +414,8 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              {/* Actuate in Action Badge */}
-              <Link 
-                to="/actuate"
-                className="absolute top-4 right-4 w-24 h-24 transform rotate-12 cursor-pointer animate-pulse"
-              >
-                <img 
-                  src="/assets/images/ActuateinActionPill.png" 
-                  alt="Actuate in Action"
-                  className="w-full h-full object-contain"
-                />
-              </Link>
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -413,20 +434,8 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              {/* IntentOps Stamp */}
-              <Link 
-                to="/intentops"
-                className="absolute top-2 right-4 w-28 h-28 transform rotate-12 cursor-pointer"
-              >
-                <img 
-                  src="/assets/images/PoewredByIntentOpsBadge.png" 
-                  alt="Powered by IntentOps"
-                  className="w-full h-full object-contain"
-                />
-              </Link>
-              
               <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -444,19 +453,8 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow relative"
+              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
-              {/* Actuate in Action Badge */}
-              <Link 
-                to="/actuate"
-                className="absolute top-4 right-4 w-24 h-24 transform rotate-12 cursor-pointer animate-pulse"
-              >
-                <img 
-                  src="/assets/images/ActuateinActionPill.png" 
-                  alt="Actuate in Action"
-                  className="w-full h-full object-contain"
-                />
-              </Link>
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -487,6 +485,107 @@ export default function LandingPage() {
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Problem Diagnostic Carousel */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              Problem Diagnostic: Can you relate?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              Recognise these friction patterns in your delivery systems?
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-red-100"
+              >
+                <div className="text-red-500 text-2xl mb-4">⚠️</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Initiative Overload</h3>
+                <p className="text-gray-600 text-sm">Too many competing priorities, unclear strategic focus, decision paralysis</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-yellow-100"
+              >
+                <div className="text-yellow-500 text-2xl mb-4">🔄</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Context Switching</h3>
+                <p className="text-gray-600 text-sm">Teams constantly switching between tasks, losing momentum and focus</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-orange-100"
+              >
+                <div className="text-orange-500 text-2xl mb-4">📊</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Visibility Gaps</h3>
+                <p className="text-gray-600 text-sm">No clear view of progress, blockers surface late, surprises at delivery time</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-blue-100"
+              >
+                <div className="text-blue-500 text-2xl mb-4">🤝</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Alignment Drift</h3>
+                <p className="text-gray-600 text-sm">Strategy and execution disconnect, teams working at cross-purposes</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-purple-100"
+              >
+                <div className="text-purple-500 text-2xl mb-4">⏰</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Delivery Delays</h3>
+                <p className="text-gray-600 text-sm">Projects consistently late, scope creep, quality compromises</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-green-100"
+              >
+                <div className="text-green-500 text-2xl mb-4">🎯</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3">Value Confusion</h3>
+                <p className="text-gray-600 text-sm">Unclear what delivers real business value, effort goes to wrong places</p>
+              </motion.div>
+            </div>
+
+            <div className="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-xl">
+              <h3 className="text-2xl font-bold mb-4">Sound familiar?</h3>
+              <p className="text-lg">
+                These patterns signal systemic flow problems. We help you diagnose the root causes and implement sustainable solutions.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

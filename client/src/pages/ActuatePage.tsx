@@ -202,52 +202,69 @@ function ServiceTiles() {
   );
 }
 
-// New simplified how we help component
-function HowWeHelp() {
+// Level 0: Problem-first recognition cards
+function ProblemRecognitionCards() {
+  const problems = [
+    {
+      icon: "🔄",
+      title: "Intelligent Workflow Automation",
+      pain: "Manual handoffs, copy-paste steps, and approval drag are slowing you down.",
+      solution: "Actuate applies GenAI and RPA to redesign and automate key workflows."
+    },
+    {
+      icon: "🧠",
+      title: "Hallucination & Drift Control",
+      pain: "Your GenAI tools say the wrong thing — or say it too confidently.",
+      solution: "Add governance, fallback logic, and performance tracing to keep models on track."
+    },
+    {
+      icon: "⚡",
+      title: "Outcome-First AI Delivery",
+      pain: "You've got ideas, but nothing working yet.",
+      solution: "Build real features with traceable value, testable logic, and production readiness."
+    },
+    {
+      icon: "🧩",
+      title: "Prompt Systems, Not Just Prompts",
+      pain: "LLMs give good answers... when someone writes the perfect prompt.",
+      solution: "We design prompt libraries that are safe, repeatable, and aligned to your goals."
+    },
+    {
+      icon: "🕸️",
+      title: "Fragmented Tooling",
+      pain: "You're testing 10 APIs and models, but none of them talk to each other.",
+      solution: "We unify your LLM stack, orchestrate flows, and remove duplication."
+    },
+    {
+      icon: "🪵",
+      title: "Legacy Layering",
+      pain: "Old process on old process. Nobody remembers why it's done that way.",
+      solution: "We identify automation points and eliminate nested complexity."
+    }
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto text-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
-        >
-          <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span className="text-2xl">🎯</span>
-          </div>
-          <h3 className="font-bold text-lg text-gray-900 mb-2">Outcome-first GenAI delivery</h3>
-          <p className="text-sm text-gray-600">Rapidly build usable features tied to business value</p>
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
-        >
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span className="text-2xl">⚙️</span>
-          </div>
-          <h3 className="font-bold text-lg text-gray-900 mb-2">Enterprise-safe prompt engineering</h3>
-          <p className="text-sm text-gray-600">Production-ready AI with governance and reliability built-in</p>
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
-        >
-          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span className="text-2xl">🔄</span>
-          </div>
-          <h3 className="font-bold text-lg text-gray-900 mb-2">Modular AI services</h3>
-          <p className="text-sm text-gray-600">Independent engagements or integrated transformation programmes</p>
-        </motion.div>
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {problems.map((problem, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="bg-white rounded-lg p-5 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-lg">{problem.icon}</span>
+              </div>
+              <h3 className="font-bold text-sm text-gray-900 leading-tight">{problem.title}</h3>
+            </div>
+            <p className="text-xs text-gray-600 mb-3 leading-relaxed">"{problem.pain}"</p>
+            <p className="text-xs text-emerald-700 font-medium leading-relaxed">→ {problem.solution}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
@@ -465,26 +482,38 @@ export default function ActuatePage() {
         </div>
       </section>
 
-      {/* How Can Actuate Help You - Refined */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Level 0: Problem Recognition - Bridge to Service Lines */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               🔍 How Can Actuate Help You?
             </h2>
             
-            <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Actuate offers practical, outcome-led AI services that help you accelerate value, reduce friction, and embed intelligence where it matters. Every service is available as a discrete engagement or can be combined under a broader capability uplift programme with IntentOps.
+            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Recognize yourself in these common AI challenges? We've built specific solutions for each.
             </p>
           </motion.div>
           
-          <HowWeHelp />
+          <ProblemRecognitionCards />
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-sm text-gray-500">
+              ↓ Explore our complete service lines below for detailed solutions ↓
+            </p>
+          </motion.div>
         </div>
       </section>
 

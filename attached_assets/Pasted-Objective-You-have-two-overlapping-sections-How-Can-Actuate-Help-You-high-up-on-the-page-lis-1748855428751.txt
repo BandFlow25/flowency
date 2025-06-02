@@ -1,0 +1,89 @@
+Objective
+You have two overlapping sections:
+
+“How Can Actuate Help You?” (high up on the page — list format)
+
+Three tiles near the bottom (web component from an earlier dev build)
+
+You want to:
+
+Consolidate these into one strong headline section
+
+Preserve clarity, brevity, and brand voice
+
+Avoid duplicating what’s already captured in detail within the Service Tiles
+
+✅ Strategic Recommendation (From Me as Strategic Brand Director)
+✅ Keep the top “How Can Actuate Help You?” section
+But restructure it into six clean cards/tiles — this becomes Level 0: a fast-scanning problem-first layout, immediately above or beside the five full service lines.
+
+Why?
+
+It's fast to consume
+
+It primes the user with relatable pain
+
+It avoids UX clutter with modals or hover reveals
+
+It gives a "Yes, that’s me" moment for each line
+
+You already have this raw material. Let me refine it.
+
+🔧 Updated Format: “How Can Actuate Help You?” (Level 0)
+Use these six headline cards (not expanding modals):
+
+🔄 Intelligent Workflow Automation
+“Manual handoffs, copy-paste steps, and approval drag are slowing you down.”
+→ Actuate applies GenAI and RPA to redesign and automate key workflows.
+
+🧠 Hallucination & Drift Control
+“Your GenAI tools say the wrong thing — or say it too confidently.”
+→ Add governance, fallback logic, and performance tracing to keep models on track.
+
+⚡ Outcome-First AI Delivery
+“You’ve got ideas, but nothing working yet.”
+→ Build real features with traceable value, testable logic, and production readiness.
+
+🧩 Prompt Systems, Not Just Prompts
+“LLMs give good answers... when someone writes the perfect prompt.”
+→ We design prompt libraries that are safe, repeatable, and aligned to your goals.
+
+🕸️ Fragmented Tooling
+“You’re testing 10 APIs and models, but none of them talk to each other.”
+→ We unify your LLM stack, orchestrate flows, and remove duplication.
+
+🪵 Legacy Layering
+“Old process on old process. Nobody remembers why it’s done that way.”
+→ We identify automation points and eliminate nested complexity.
+
+📦 Optional Structure
+Each tile can just include:
+
+Icon
+
+Headline
+
+One-liner pain
+
+One-sentence solution
+
+💡 Where to Place This
+Either:
+
+Immediately before the service tiles — as a bridge between hero section and the detail
+
+Or use as sticky tabs across the top of the service tiles, with anchor links
+
+🧠 Bonus:
+You could align each tile loosely to a service line — but not one-to-one. That keeps the structure intuitive but not constrained.
+
+🔚 Outcome
+This delivers:
+
+Fast user scanning ✅
+
+Strong headline engagement ✅
+
+Zero content duplication ✅
+
+No waste — we reuse work you’ve already refined ✅

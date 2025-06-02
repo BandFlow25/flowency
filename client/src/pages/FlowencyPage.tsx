@@ -275,8 +275,111 @@ export default function FlowencyPage() {
         </div>
       </section>
 
-      {/* How We Deliver Results */}
+      {/* Problem Diagnostic Carousel */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              Problem Diagnostic: Can you relate?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              Recognise these friction patterns in your delivery systems?
+            </p>
+
+            <div className="relative max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-red-100"
+                >
+                  <div className="text-red-500 text-2xl mb-4">⚠️</div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">Initiative Overload</h3>
+                  <p className="text-gray-600 text-sm">Too many competing priorities, unclear strategic focus, decision paralysis</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-yellow-100"
+                >
+                  <div className="text-yellow-500 text-2xl mb-4">🔄</div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">Context Switching</h3>
+                  <p className="text-gray-600 text-sm">Teams constantly switching between tasks, losing momentum and focus</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-orange-100"
+                >
+                  <div className="text-orange-500 text-2xl mb-4">📊</div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">Visibility Gaps</h3>
+                  <p className="text-gray-600 text-sm">No clear view of progress, blockers surface late, surprises at delivery time</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-blue-100"
+                >
+                  <div className="text-blue-500 text-2xl mb-4">🤝</div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">Alignment Drift</h3>
+                  <p className="text-gray-600 text-sm">Strategy and execution disconnect, teams working at cross-purposes</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-purple-100"
+                >
+                  <div className="text-purple-500 text-2xl mb-4">⏰</div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">Delivery Delays</h3>
+                  <p className="text-gray-600 text-sm">Projects consistently late, scope creep, quality compromises</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-green-100"
+                >
+                  <div className="text-green-500 text-2xl mb-4">🎯</div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">Value Confusion</h3>
+                  <p className="text-gray-600 text-sm">Unclear what delivers real business value, effort goes to wrong places</p>
+                </motion.div>
+              </div>
+
+              <div className="mt-12 bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-xl">
+                <h3 className="text-2xl font-bold mb-4">Sound familiar?</h3>
+                <p className="text-lg">
+                  These patterns signal systemic flow problems. We help you diagnose the root causes and implement sustainable solutions.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How We Deliver Results */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -295,7 +398,7 @@ export default function FlowencyPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm"
+                className="bg-white p-8 rounded-xl shadow-sm border"
               >
                 <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">1</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Visualise</h3>
@@ -307,7 +410,7 @@ export default function FlowencyPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-sm"
+                className="bg-white p-8 rounded-xl shadow-sm border"
               >
                 <div className="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">2</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Optimise</h3>
@@ -319,7 +422,7 @@ export default function FlowencyPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white p-8 rounded-xl shadow-sm"
+                className="bg-white p-8 rounded-xl shadow-sm border"
               >
                 <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">3</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Sustain</h3>

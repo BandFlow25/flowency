@@ -1,0 +1,88 @@
+🔷 HERO SECTION (Safety + Strategic Control Message)
+Headline:
+AI adoption is consensus. Intent alignment is competitive advantage.
+Subheading:
+IntentOps is your strategic control layer - an adaptive system that aligns AI-driven execution with human intent, business outcomes, and enterprise governance.
+CTA Button:
+[ Explore IntentOps ]
+________________________________________
+🔶 THE PROBLEM
+Headline:
+AI is moving fast. Your organisation isn’t.
+Paragraph:
+Enterprises are racing to adopt AI tools, models, and platforms. But the way work is managed hasn’t caught up. Initiatives are disconnected. Value is unclear. Cognitive debt is rising. And AI is being layered onto legacy systems without any oversight.
+You don’t need another framework.
+You need a way to govern AI in the real world - across people, platforms, and priorities.
+________________________________________
+🟨 WHAT IS INTENTOPS?
+Headline:
+A meta-layer for governing intelligent systems.
+Paragraph:
+IntentOps is not a product or platform. It’s a strategic orchestration layer that sits above your delivery stack. It ensures that every AI-driven initiative - whether automated or human-executed - remains aligned with enterprise goals.
+It’s where governance meets velocity.
+And where signal replaces assumption.
+3 Key Principles:
+•	Flow over form – govern activity as it happens, not after
+•	Signals over status – measure alignment, not milestones
+•	Accountability over bureaucracy – make governance lightweight but meaningful
+________________________________________
+🔷 HOW IT WORKS
+Headline:
+The IntentOps Loop: Govern by Signal, Align by Design
+Visual placeholder: “Layered System Map”
+(Include visual with four stacked layers: AI Execution, Human Execution, Intent Overlay, Measurement & Drift Signals)
+Copy supporting each layer:
+1.	Inject Strategic Intent
+Map goals, hypotheses, and delivery expectations into traceable workstreams.
+2.	Orchestrate Execution
+Monitor how AI tools, people, and teams interact - across systems and silos.
+3.	Detect Misalignment
+Use telemetry, blockers, flow metrics, and value signals to surface drift.
+4.	Enable Responsive Governance
+Trigger interventions, reframe work, or re-prioritise when needed - without slowing delivery.
+________________________________________
+🧠 WHAT DOES IT ACTUALLY DO?
+Headline:
+What IntentOps Enables
+3x3 Grid of Strategic Capabilities
+Capability	Description
+Real-time Intent Traceability	See how enterprise goals map to in-flight execution, across AI and human activity.
+Cognitive Debt Detection	Identify overload, duplicate efforts, or signal decay in complex systems.
+Outcome Governance	Surface when outcomes are drifting from objectives - before value is lost.
+Flow Accountability	Visualise where work is stuck or blocked, and who owns unblocking it.
+Drift Monitoring	Get early warnings when initiatives are veering off-track or misaligned.
+Human-AI Coordination	Track how agents, automations, and humans are interacting in delivery.
+Enterprise Safety Layer	Wrap compliance, ethics, and governance around fast-moving initiatives.
+Decision Feedback Loop	Measure cost of delay, effort vs. impact, and effectiveness of interventions.
+Strategic Signal Overlay	Inject prioritisation signals dynamically based on updated goals.
+________________________________________
+🟩 WHEN TO USE INTENTOPS
+Headline:
+Start using IntentOps when…
+List format:
+•	You’re launching AI pilots and need alignment with real business outcomes
+•	You’re scaling AI use across the enterprise but lack a way to govern it
+•	You’re noticing more effort in tracking than in delivering
+•	You’re struggling to explain what your AI spend is actually achieving
+•	You’re tired of firefighting and want proactive value control
+________________________________________
+🔶 GET STARTED WITH INTENTOPS
+Headline:
+You don’t need to rip and replace.
+You need to see what’s really happening.
+Paragraph:
+IntentOps can wrap around your existing delivery systems, AI platforms, or transformation programmes. It works alongside frameworks like SAFe or OKRs - but replaces rigid plans with live signals.
+Start with strategic workshops.
+Layer in telemetry and measurement.
+And align your execution engine (like Actuate) to what matters.
+CTA Button:
+[ Talk to us about IntentOps ]
+________________________________________
+🔄 ACTUATE × INTENTOPS PANEL
+
+Leave unchanged
+________________________________________
+⚫ FOOTER STRAPLINE
+Part of the Flowency Operating Stack
+IntentOps provides the strategy layer. Actuate delivers the execution. Together, they bring AI into real-world operations - accountably.
+

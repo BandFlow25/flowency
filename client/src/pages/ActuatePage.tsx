@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 
 // 3-Level Model Service Lines Data
@@ -106,6 +106,7 @@ function ServiceTiles() {
       {serviceLines.map((service) => (
         <motion.div
           key={service.id}
+          data-service-index={service.id}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -199,70 +200,158 @@ function ServiceTiles() {
   );
 }
 
-// Level 0: Problem-first recognition cards
-function ProblemRecognitionCards() {
+// Level 0: High-Impact Problem Diagnostic Carousel
+function ProblemDiagnosticCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
   const problems = [
     {
       icon: "🔄",
-      title: "Intelligent Workflow Automation",
-      pain: "Manual handoffs, copy-paste steps, and approval drag are slowing you down.",
-      solution: "Actuate applies GenAI and RPA to redesign and automate key workflows."
+      title: "Manual drag everywhere?",
+      pain: "Copy-paste steps, approval chains, and workflow spaghetti eating your day?",
+      solution: "Let us redesign and automate those time-burning workflows.",
+      serviceIndex: 2 // Links to Process Transformation
     },
     {
       icon: "🧠",
-      title: "Hallucination & Drift Control",
-      pain: "Your GenAI tools say the wrong thing — or say it too confidently.",
-      solution: "Add governance, fallback logic, and performance tracing to keep models on track."
+      title: "Your GenAI hallucinates?",
+      pain: "AI tools confidently telling you the wrong thing at the worst moment?",
+      solution: "We put guardrails, fallback logic, and monitoring in place.",
+      serviceIndex: 3 // Links to Prompt Engineering
     },
     {
       icon: "⚡",
-      title: "Outcome-First AI Delivery",
-      pain: "You've got ideas, but nothing working yet.",
-      solution: "Build real features with traceable value, testable logic, and production readiness."
+      title: "AI ideas, no working features?",
+      pain: "Endless demos and prototypes but nothing your customers can actually touch?",
+      solution: "We deliver testable, production-ready tools, fast.",
+      serviceIndex: 1 // Links to AI Product Development
     },
     {
-      icon: "🧩",
-      title: "Prompt Systems, Not Just Prompts",
-      pain: "LLMs give good answers... when someone writes the perfect prompt.",
-      solution: "We design prompt libraries that are safe, repeatable, and aligned to your goals."
+      icon: "🤖",
+      title: "Prompt chaos across teams?",
+      pain: "Everyone writing their own prompts, getting wildly different results?",
+      solution: "We build prompt libraries you can trust and scale.",
+      serviceIndex: 3 // Links to Prompt Engineering
     },
     {
-      icon: "🕸️",
-      title: "Fragmented Tooling",
-      pain: "You're testing 10 APIs and models, but none of them talk to each other.",
-      solution: "We unify your LLM stack, orchestrate flows, and remove duplication."
+      icon: "🔌",
+      title: "Ten tools, no flow?",
+      pain: "Testing every AI API under the sun but they don't talk to each other?",
+      solution: "We unify your AI stack and remove duplicated effort.",
+      serviceIndex: 4 // Links to Decision Support
     },
     {
       icon: "🪵",
-      title: "Legacy Layering",
-      pain: "Old process on old process. Nobody remembers why it's done that way.",
-      solution: "We identify automation points and eliminate nested complexity."
+      title: "Process-on-process layering?",
+      pain: "Legacy workflows stacked like archaeological layers. Nobody knows why anymore.",
+      solution: "We cut through legacy with AI-enhanced simplification.",
+      serviceIndex: 2 // Links to Process Transformation
     }
   ];
 
+  // Auto-advance carousel
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % problems.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, problems.length]);
+
+  const handleCardClick = (serviceIndex: number) => {
+    // Scroll to corresponding service tile
+    const serviceSection = document.querySelector('[data-service-index="' + serviceIndex + '"]');
+    if (serviceSection) {
+      serviceSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {problems.map((problem, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="bg-white rounded-lg p-5 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-          >
-            <div className="flex items-start gap-3 mb-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-lg">{problem.icon}</span>
+    <div className="relative max-w-6xl mx-auto">
+      {/* Carousel Container */}
+      <div 
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border border-orange-200"
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
+      >
+        <div 
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {problems.map((problem, index) => (
+            <div
+              key={index}
+              className="w-full flex-shrink-0 p-8 cursor-pointer group"
+              onClick={() => handleCardClick(problem.serviceIndex)}
+            >
+              <div className="text-center max-w-2xl mx-auto">
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ 
+                    scale: index === currentIndex ? 1 : 0.95, 
+                    opacity: index === currentIndex ? 1 : 0.7 
+                  }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-6"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white text-2xl">{problem.icon}</span>
+                  </div>
+                  
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+                    {problem.title}
+                  </h3>
+                  
+                  <p className="text-lg text-gray-700 mb-4 leading-relaxed italic">
+                    "{problem.pain}"
+                  </p>
+                  
+                  <p className="text-base text-orange-700 font-semibold group-hover:text-orange-800 transition-colors">
+                    → {problem.solution}
+                  </p>
+                  
+                  <div className="mt-6 opacity-75 group-hover:opacity-100 transition-opacity">
+                    <p className="text-sm text-gray-500">Click to see our solution ↓</p>
+                  </div>
+                </motion.div>
               </div>
-              <h3 className="font-bold text-sm text-gray-900 leading-tight">{problem.title}</h3>
             </div>
-            <p className="text-xs text-gray-600 mb-3 leading-relaxed">"{problem.pain}"</p>
-            <p className="text-xs text-emerald-700 font-medium leading-relaxed">→ {problem.solution}</p>
-          </motion.div>
-        ))}
+          ))}
+        </div>
+        
+        {/* Progress Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {problems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-orange-500 w-8' 
+                  : 'bg-orange-300 hover:bg-orange-400'
+              }`}
+            />
+          ))}
+        </div>
       </div>
+      
+      {/* Navigation Arrows */}
+      <button
+        onClick={() => setCurrentIndex((prev) => (prev - 1 + problems.length) % problems.length)}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg border border-orange-200 flex items-center justify-center hover:bg-orange-50 transition-colors group"
+      >
+        <span className="text-orange-600 group-hover:text-orange-700">←</span>
+      </button>
+      
+      <button
+        onClick={() => setCurrentIndex((prev) => (prev + 1) % problems.length)}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg border border-orange-200 flex items-center justify-center hover:bg-orange-50 transition-colors group"
+      >
+        <span className="text-orange-600 group-hover:text-orange-700">→</span>
+      </button>
     </div>
   );
 }
@@ -398,7 +487,7 @@ export default function ActuatePage() {
             
           </motion.div>
           
-          <ProblemRecognitionCards />
+          <ProblemDiagnosticCarousel />
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}

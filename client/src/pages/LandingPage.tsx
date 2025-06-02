@@ -52,6 +52,9 @@ export default function LandingPage() {
               <Link to="/intentops" className="text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
               </Link>
+              <Link to="/intentops2" className="text-red-500 hover:text-red-600 transition-colors font-medium">
+                IntentOps v2
+              </Link>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
                 Actuate
               </Link>
@@ -92,6 +95,9 @@ export default function LandingPage() {
               <a href="#flow" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Flow</a>
               <Link to="/intentops" className="block px-3 py-2 text-electric hover:text-accent transition-colors font-medium">
                 IntentOps
+              </Link>
+              <Link to="/intentops2" className="block px-3 py-2 text-red-500 hover:text-red-600 transition-colors font-medium">
+                IntentOps v2
               </Link>
               <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">
                 Actuate

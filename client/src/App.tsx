@@ -6,7 +6,6 @@ import { Route, Switch } from "wouter";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import LandingPage from "@/pages/LandingPage";
 import IntentOpsPage from "@/pages/IntentOpsPage";
-import IntentOpsContext from "@/pages/IntentOpsContext";
 import ActuatePage from "@/pages/ActuatePage";
 import TermsOfUsePage from "@/pages/TermsOfUsePage";
 import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
@@ -21,7 +20,6 @@ function Router() {
     <Switch>
       <Route path="/" component={LandingPage} />
       <Route path="/intentops" component={IntentOpsPage} />
-      <Route path="/intentops-context" component={IntentOpsContext} />
       <Route path="/actuate" component={ActuatePage} />
       <Route path="/terms-of-use" component={TermsOfUsePage} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />

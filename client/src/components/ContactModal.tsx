@@ -31,20 +31,27 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     setError("");
     
     try {
-      // Call Firebase Cloud Function to handle the form submission
+      // Use Formspree for reliable form handling
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 15000); // 15-second timeout
       
-      // Use a CORS proxy to bypass CORS restrictions
-      const corsProxyUrl = 'https://corsproxy.io/?';
-      const targetUrl = 'https://us-central1-flowencycontact.cloudfunctions.net/sendContactForm';
+      // Formspree endpoint for the Flowency contact form
+      const formspreeEndpoint = 'https://formspree.io/f/mvgrodwj';
       
-      const response = await fetch(corsProxyUrl + encodeURIComponent(targetUrl), {
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || 'Not provided',
+          service: formData.service,
+          message: formData.message,
+          _subject: `New Contact Form Submission from ${formData.name}`
+        }),
         signal: controller.signal
       });
       
@@ -53,7 +60,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       const data = await response.json();
       
       if (!response.ok) {
-        throw new Error(data.error?.message || 'Failed to submit form');
+        throw new Error(data.error || 'Failed to submit form');
       }
       
       // Show success state

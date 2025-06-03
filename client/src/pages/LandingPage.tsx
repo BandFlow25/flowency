@@ -65,19 +65,21 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-                alt="Flowency"
-                className="h-8 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
+                  alt="Flowency"
+                  className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-900 hover:text-accent transition-colors">Home</a>
-              <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">
-                IntentOps
-              </Link>
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">
                 Actuate
+              </Link>
+              <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">
+                IntentOps
               </Link>
             </div>
             
@@ -112,11 +114,11 @@ export default function LandingPage() {
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-1">
               <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</a>
-              <Link to="/intentops" className="block px-3 py-2 text-electric hover:text-accent transition-colors font-medium">
-                IntentOps
-              </Link>
               <Link to="/actuate" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">
                 Actuate
+              </Link>
+              <Link to="/intentops" className="block px-3 py-2 text-electric hover:text-accent transition-colors font-medium">
+                IntentOps
               </Link>
             </div>
           </div>
@@ -135,7 +137,7 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section id="home" className="pt-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <motion.div 
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -143,22 +145,22 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             {/* Pill graphic */}
-            <div className="inline-block bg-slate-700 text-white px-6 py-3 rounded-full text-sm font-medium mb-8">
+            <div className="inline-block bg-slate-700 text-white px-6 md:px-7 py-3 md:py-3.5 rounded-full text-base md:text-base font-medium mb-6 md:mb-8">
               <span className="text-accent">Adaptive</span> <span className="text-slate-200">Delivery</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 text-black leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-light mb-4 md:mb-6 text-black leading-tight">
               <span className="block md:inline">We help your</span>
               <span className="hidden md:inline"> </span>
               <span className="text-electric">Delivery Systems Flow</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700">
+            <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-700">
               Flowency is a Delivery Improvement and Business Change consultancy specialising in 
               optimising delivery for value flow and driving lasting, transformational change.{" "}
               <strong className="text-primary font-bold">Enhancing efficiency, maximising value</strong>.
             </p>
             <a 
               href="#more" 
-              className="inline-block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors shadow-lg"
+              className="inline-block bg-accent hover:bg-[hsl(16,100%,45%)] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-medium transition-colors shadow-lg"
             >
               LEARN MORE
             </a>
@@ -176,7 +178,7 @@ export default function LandingPage() {
           className="relative"
         >
           {/* Desktop: Full width continuous carousel */}
-          <div className="hidden md:block relative overflow-hidden h-96 bg-gray-100">
+          <div className="hidden md:block relative overflow-hidden h-80 lg:h-96 bg-gray-100">
             {/* Continuous scrolling carousel */}
             <div 
               className="flex transition-transform duration-500 ease-in-out h-full"
@@ -226,7 +228,7 @@ export default function LandingPage() {
           </div>
 
           {/* Mobile: Full width carousel */}
-          <div className="md:hidden px-0 relative overflow-hidden h-64">
+          <div className="md:hidden px-0 relative overflow-hidden h-48 sm:h-56">
             <div 
               className="flex transition-transform duration-500 ease-in-out h-full"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -276,7 +278,7 @@ export default function LandingPage() {
       </section>
 
       {/* Our Approach Section - Clean Design */}
-      <section id="approach" className="py-20 bg-white">
+      <section id="approach" className="py-12 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -286,37 +288,37 @@ export default function LandingPage() {
             className="text-center"
           >
             {/* Header */}
-            <div className="mb-12">
-              <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="mb-8 md:mb-12">
+              <div className="inline-block bg-primary text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6">
                 Our Approach
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-primary mb-4 md:mb-6 leading-tight">
                 <span className="text-electric">Adaptive Delivery</span>
               </h2>
-              <p className="text-xl text-gray-600 font-medium mb-6">
+              <p className="text-lg md:text-xl text-gray-600 font-medium mb-4 md:mb-6">
                 Framework agnostic, method diverse, value focused.
               </p>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your organisational context and maturity.
               </p>
             </div>
 
-            {/* Key Points Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Key Points Grid - Mobile Optimized */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 mb-8 md:mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Framework agnostic solutions</h4>
-                <p className="text-gray-600">Adapt to your existing methodologies</p>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Framework agnostic solutions</h4>
+                <p className="text-gray-600 text-sm sm:text-base text-center">Adapt to your existing methodologies</p>
               </motion.div>
 
               <motion.div
@@ -324,15 +326,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Method diverse expertise</h4>
-                <p className="text-gray-600">Drawing from agile, lean, and beyond</p>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Method diverse expertise</h4>
+                <p className="text-gray-600 text-sm sm:text-base text-center">Drawing from agile, lean, and beyond</p>
               </motion.div>
 
               <motion.div
@@ -340,15 +342,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Value-focused outcomes</h4>
-                <p className="text-gray-600">Measurable business impact</p>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Value-focused outcomes</h4>
+                <p className="text-gray-600 text-sm sm:text-base text-center">Measurable business impact</p>
               </motion.div>
 
               <motion.div
@@ -356,15 +358,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Contextually relevant approaches</h4>
-                <p className="text-gray-600">Tailored to your organizational maturity</p>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Contextually relevant approaches</h4>
+                <p className="text-gray-600 text-sm sm:text-base text-center">Tailored to your organizational maturity</p>
               </motion.div>
 
               <motion.div
@@ -372,15 +374,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Years of proven experience</h4>
-                <p className="text-gray-600">Battle-tested insights and solutions</p>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Years of proven experience</h4>
+                <p className="text-gray-600 text-sm sm:text-base text-center">Battle-tested insights and solutions</p>
               </motion.div>
 
               <motion.div
@@ -388,15 +390,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100 sm:col-span-2 lg:col-span-1"
               >
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4 mx-auto">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Lasting transformational change</h4>
-                <p className="text-gray-600">Sustainable improvements that stick</p>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Lasting transformational change</h4>
+                <p className="text-gray-600 text-sm sm:text-base text-center">Sustainable improvements that stick</p>
               </motion.div>
             </div>
 

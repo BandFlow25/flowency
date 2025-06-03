@@ -26,11 +26,13 @@ export default function Footer({
           {/* Logo and Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-4 mb-4">
-              <img 
-                src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-                alt="Flowency"
-                className="h-6 w-auto filter brightness-0 invert"
-              />
+              <Link to="/">
+                <img 
+                  src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
+                  alt="Flowency"
+                  className="h-6 w-auto filter brightness-0 invert hover:opacity-80 transition-opacity"
+                />
+              </Link>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
               Flowency delivers capability-building consultancy and training for high-performing delivery organisations.

@@ -1,18 +1,22 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, createElement } from "react";
 import ContactModal from "@/components/ContactModal";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+
+import { Target, Zap, RefreshCw, Bot, Settings, AlertTriangle, Cog, CheckCircle } from "lucide-react";
 
 // 3-Level Model Service Lines Data
 const serviceLines = [
   {
     id: 1,
     title: "AI Value Alignment",
-    icon: "🎯",
+    icon: Target,
+    iconColor: "text-blue-600",
+    iconBg: "bg-blue-100",
     // Level 1: Quick View Tile
     pain: "Disconnected initiatives, unclear value, and delivery misalignment",
     service: "Structure and prioritise your AI efforts to match business outcomes",
@@ -29,7 +33,9 @@ const serviceLines = [
   {
     id: 2,
     title: "AI-Native Product & Prototyping",
-    icon: "⚡",
+    icon: Zap,
+    iconColor: "text-purple-600",
+    iconBg: "bg-purple-100",
     // Level 1: Quick View Tile
     pain: "You've got ideas or use cases but nothing testable or live",
     service: "Build prototypes or full features using the right models, guardrails, and telemetry",
@@ -46,7 +52,9 @@ const serviceLines = [
   {
     id: 3,
     title: "Intelligent Process Transformation",
-    icon: "🔄",
+    icon: RefreshCw,
+    iconColor: "text-green-600",
+    iconBg: "bg-green-100",
     // Level 1: Quick View Tile
     pain: "Your workflows are bloated and slow due to legacy manual layers",
     service: "Redesign and automate key operational processes using GenAI, RPA, and orchestration",
@@ -63,7 +71,9 @@ const serviceLines = [
   {
     id: 4,
     title: "Prompt Engineering as a Service",
-    icon: "🤖",
+    icon: Bot,
+    iconColor: "text-orange-600",
+    iconBg: "bg-orange-100",
     // Level 1: Quick View Tile
     pain: "LLM results are inconsistent, off-brand, or not production-safe",
     service: "Craft prompt libraries tied to business intent, with controls, tuning, and versioning",
@@ -80,7 +90,9 @@ const serviceLines = [
   {
     id: 5,
     title: "Operational Decision Support",
-    icon: "⚙️",
+    icon: Settings,
+    iconColor: "text-teal-600",
+    iconBg: "bg-teal-100",
     // Level 1: Quick View Tile
     pain: "You cannot see where delivery is blocked or value is lost",
     service: "Visualise flow, identify friction, and highlight cost-of-delay across the system",
@@ -116,7 +128,7 @@ function ServiceTiles() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
       {serviceLines.map((service) => (
         <motion.div
           key={service.id}
@@ -125,18 +137,26 @@ function ServiceTiles() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: service.id * 0.1 }}
-          className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+          className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group"
           onClick={() => toggleExpanded(service.id)}
         >
           {/* Level 1: Quick Scan Tile */}
-          <div className="p-6">
-            <div className="flex items-center justify-between mb-4">
+          <div className="p-4 md:p-6">
+            <div className="flex items-center justify-between mb-3 md:mb-4">
+              <div className="flex items-center gap-3">
+                <div className={`w-10 h-10 rounded-lg ${service.iconBg} flex items-center justify-center`}>
+                  {createElement(service.icon, { className: `w-5 h-5 ${service.iconColor}` })}
+                </div>
+                <div className="md:hidden text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+                  Tap to expand
+                </div>
+              </div>
               <motion.div
                 animate={{ rotate: expandedId === service.id ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
-                className="text-gray-400 ml-auto"
+                className="text-2xl text-blue-500 group-hover:text-blue-600 font-bold"
               >
-                ↓
+                {expandedId === service.id ? '−' : '+'}
               </motion.div>
             </div>
             
@@ -145,27 +165,32 @@ function ServiceTiles() {
             </h3>
             
             {/* Pain Point */}
-            <div className="mb-3">
+            <div className="mb-2 md:mb-3">
               <div className="flex items-start gap-2">
-                <span className="text-red-500 text-sm mt-0.5">🔥</span>
-                <p className="text-sm text-gray-700 font-medium">{service.pain}</p>
+                <AlertTriangle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                <p className="text-xs md:text-sm text-gray-700 font-medium">{service.pain}</p>
               </div>
             </div>
             
             {/* Service */}
-            <div className="mb-3">
+            <div className="mb-2 md:mb-3">
               <div className="flex items-start gap-2">
-                <span className="text-blue-500 text-sm mt-0.5">⚙️</span>
-                <p className="text-sm text-gray-600">{service.service}</p>
+                <Cog className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                <p className="text-xs md:text-sm text-gray-600">{service.service}</p>
               </div>
             </div>
             
             {/* Result */}
-            <div className="mb-4">
+            <div className="mb-3 md:mb-4">
               <div className="flex items-start gap-2">
-                <span className="text-green-500 text-sm mt-0.5">✅</span>
-                <p className="text-sm text-emerald-700 font-medium">{service.result}</p>
+                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                <p className="text-xs md:text-sm text-emerald-700 font-medium">{service.result}</p>
               </div>
+            </div>
+            
+            {/* Expand hint for desktop */}
+            <div className="hidden md:block text-center pt-2 border-t border-gray-100">
+              <span className="text-xs text-gray-400">Click to expand details</span>
             </div>
           </div>
           
@@ -179,26 +204,26 @@ function ServiceTiles() {
                 transition={{ duration: 0.3 }}
                 className="border-t border-gray-100"
               >
-                <div className="p-6 bg-gray-50 space-y-4">
+                <div className="p-3 md:p-6 bg-gray-50 space-y-3 md:space-y-4">
                   {/* Problem Detail */}
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r">
-                    <h4 className="font-semibold text-red-800 mb-2 text-sm">Problem</h4>
-                    <p className="text-sm text-red-700">{service.problemDetail}</p>
+                  <div className="bg-red-50 border-l-4 border-red-400 p-3 md:p-4 rounded-r">
+                    <h4 className="font-semibold text-red-800 mb-1 md:mb-2 text-xs md:text-sm">Problem</h4>
+                    <p className="text-xs md:text-sm text-red-700">{service.problemDetail}</p>
                   </div>
                   
                   {/* What We Do */}
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r">
-                    <h4 className="font-semibold text-blue-800 mb-2 text-sm">What We Do</h4>
-                    <p className="text-sm text-blue-700">{service.whatWeDo}</p>
+                  <div className="bg-blue-50 border-l-4 border-blue-400 p-3 md:p-4 rounded-r">
+                    <h4 className="font-semibold text-blue-800 mb-1 md:mb-2 text-xs md:text-sm">What We Do</h4>
+                    <p className="text-xs md:text-sm text-blue-700">{service.whatWeDo}</p>
                   </div>
                   
                   {/* What You Get */}
-                  <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r">
-                    <h4 className="font-semibold text-green-800 mb-2 text-sm">What You Get</h4>
-                    <ul className="space-y-2">
+                  <div className="bg-green-50 border-l-4 border-green-400 p-3 md:p-4 rounded-r">
+                    <h4 className="font-semibold text-green-800 mb-1 md:mb-2 text-xs md:text-sm">What You Get</h4>
+                    <ul className="space-y-1 md:space-y-2">
                       {service.whatYouGet.map((item, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm text-green-700">
-                          <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <li key={index} className="flex items-start gap-2 text-xs md:text-sm text-green-700">
+                          <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
                           {item}
                         </li>
                       ))}
@@ -436,16 +461,18 @@ export default function ActuatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
-                alt="Flowency"
-                className="h-8 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="https://cdn.prod.website-files.com/668bbc8f0f25bb8294a73f2f/6695430306a42b90cd8bf9be_Flowency-logo-meso.svg" 
+                  alt="Flowency"
+                  className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-accent transition-colors">Home</Link>
-              <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
               <Link to="/actuate" className="text-teal-500 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
+              <Link to="/intentops" className="text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
             </div>
             
             {/* Mobile menu button */}
@@ -479,8 +506,8 @@ export default function ActuatePage() {
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-1">
               <Link to="/" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">Home</Link>
-              <Link to="/intentops" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
               <Link to="/actuate" className="block px-3 py-2 text-cyan-400 hover:text-yellow-400 transition-colors font-bold">Actuate</Link>
+              <Link to="/intentops" className="block px-3 py-2 text-gray-900 hover:text-accent transition-colors">IntentOps</Link>
             </div>
           </div>
         )}
@@ -581,16 +608,16 @@ export default function ActuatePage() {
       </section>
 
       {/* Actuate Service Lines */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
               🚀 Actuate Service Lines
             </h2>
           </motion.div>

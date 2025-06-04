@@ -2,7 +2,7 @@ import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, Menu, X } from "lucide-react";
+import { ArrowLeft, Menu, X, Eye } from "lucide-react";
 import ActuateIntentOpsCollaboration from "@/components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -252,7 +252,67 @@ export default function IntentOpsPage() {
         </div>
       </section>
 
+      {/* IntentOps Pillars */}
+      <section id="pillars" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">The Pillars of IntentOps</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              IntentOps is built on proven principles to govern intelligent systems and maximize value creation.
+            </p>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center text-white mb-4">
+                <Eye className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Signal Monitoring</h3>
+              <p className="text-gray-600">
+                Continuously monitors signals across systems to maintain alignment with strategic intent, ensuring no initiative drifts off course.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="bg-accent w-12 h-12 rounded-full flex items-center justify-center text-white mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Value Feedback</h3>
+              <p className="text-gray-600">
+                Measures and optimizes value creation throughout the AI adoption process, providing clear metrics for success.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="bg-[hsl(var(--flow-blue-light))] w-12 h-12 rounded-full flex items-center justify-center text-white mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Drift Detection</h3>
+              <p className="text-gray-600">
+                Detects early signs of divergence from intended outcomes, allowing for proactive correction and sustained delivery momentum.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* What It Enables Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950 text-white">

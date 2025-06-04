@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ScrollProgress from "@/components/ScrollProgress";
 
-import { Target, Zap, RefreshCw, Bot, Settings, AlertTriangle, Cog, CheckCircle } from "lucide-react";
+import { Target, Zap, RefreshCw, Bot, Settings, AlertTriangle, Cog, CheckCircle, RotateCcw, Brain, Bolt, Puzzle, Layers, Package } from "lucide-react";
 
 // 3-Level Model Service Lines Data
 const serviceLines = [
@@ -248,42 +248,54 @@ function ProblemDiagnosticCarousel() {
 
   const problems = [
     {
-      icon: "🔄",
+      icon: RotateCcw,
+      iconColor: "text-blue-600",
+      iconBg: "bg-blue-100",
       title: "Manual drag everywhere?",
       pain: "Copy-paste steps, approval chains, and workflow spaghetti eating your day?",
       solution: "Let us redesign and automate those time-burning workflows.",
       serviceIndex: 2 // Links to Process Transformation
     },
     {
-      icon: "🧠",
+      icon: Brain,
+      iconColor: "text-purple-600",
+      iconBg: "bg-purple-100",
       title: "Your GenAI hallucinates?",
       pain: "AI tools confidently telling you the wrong thing at the worst moment?",
       solution: "We put guardrails, fallback logic, and monitoring in place.",
       serviceIndex: 3 // Links to Prompt Engineering
     },
     {
-      icon: "⚡",
+      icon: Bolt,
+      iconColor: "text-orange-600",
+      iconBg: "bg-orange-100",
       title: "AI ideas, no working features?",
       pain: "Endless demos and prototypes but nothing your customers can actually touch?",
       solution: "We deliver testable, production-ready tools, fast.",
       serviceIndex: 1 // Links to AI Product Development
     },
     {
-      icon: "🤖",
+      icon: Bot,
+      iconColor: "text-green-600",
+      iconBg: "bg-green-100",
       title: "Prompt chaos across teams?",
       pain: "Everyone writing their own prompts, getting wildly different results?",
       solution: "We build prompt libraries you can trust and scale.",
       serviceIndex: 3 // Links to Prompt Engineering
     },
     {
-      icon: "🔌",
+      icon: Puzzle,
+      iconColor: "text-teal-600",
+      iconBg: "bg-teal-100",
       title: "Ten tools, no flow?",
       pain: "Testing every AI API under the sun but they don't talk to each other?",
       solution: "We unify your AI stack and remove duplicated effort.",
       serviceIndex: 4 // Links to Decision Support
     },
     {
-      icon: "🪵",
+      icon: Layers,
+      iconColor: "text-red-600",
+      iconBg: "bg-red-100",
       title: "Process-on-process layering?",
       pain: "Legacy workflows stacked like archaeological layers. Nobody knows why anymore.",
       solution: "We cut through legacy with AI-enhanced simplification.",
@@ -344,8 +356,8 @@ function ProblemDiagnosticCarousel() {
                   transition={{ duration: 0.5 }}
                   className="mb-6"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-2xl">{problem.icon}</span>
+                  <div className={`w-16 h-16 ${problem.iconBg} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    {createElement(problem.icon, { className: `w-8 h-8 ${problem.iconColor}` })}
                   </div>
                   
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
@@ -586,7 +598,7 @@ export default function ActuatePage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              🔍 What Problems Do We Solve?
+              What Problems Do We Solve?
             </h2>
             
             <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -606,7 +618,7 @@ export default function ActuatePage() {
           >
             
             <div className="mt-12 bg-emerald-500/10 border-l-4 border-emerald-500 p-8 rounded-r-lg text-left max-w-4xl mx-auto">
-              <h3 className="text-xl font-bold text-primary mb-4">💡 Core Insight</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Core Insight</h3>
               <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-4">
                 "Actuate combines the cognition of your people with the execution power of AI. It's not about replacing work - it's about delivering the future faster, with the people who know what matters."
               </blockquote>
@@ -629,7 +641,7 @@ export default function ActuatePage() {
             className="text-center mb-8 md:mb-16"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
-              🚀 Actuate Service Lines
+              Actuate Service Lines
             </h2>
           </motion.div>
           

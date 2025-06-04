@@ -410,6 +410,36 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Actuate Teaser Ribbon */}
+      <div className="relative h-12 bg-gradient-to-r from-emerald-600 via-teal-700 to-green-800 overflow-hidden border-t-2 border-b-2 border-yellow-400">
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-emerald-500/30 via-teal-600/30 to-green-700/30"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
+        <div className="relative flex items-center justify-center h-full">
+          <motion.a 
+            href="#actuate-section"
+            className="text-white font-semibold text-center px-4 hover:text-yellow-200 transition-colors duration-300 cursor-pointer"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            onClick={(e) => {
+              e.preventDefault();
+              const actuateSection = document.getElementById('actuate-section');
+              if (actuateSection) {
+                actuateSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+          >
+            <span className="font-bold">Actuate</span> - Delivery Meets Intelligence - AI enablement, Intelligent Automation
+          </motion.a>
+        </div>
+      </div>
+
       {/* Our Services Section */}
       <section className="py-12 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -658,6 +688,8 @@ export default function LandingPage() {
           </motion.div>
         </div>
       </section>
+
+
 
       {/* Visualise, Optimise, Sustain */}
       <section className="py-12 bg-gradient-to-b from-white to-gray-50">
@@ -936,7 +968,7 @@ export default function LandingPage() {
       </div>
 
       {/* What's New with Actuate Section */}
-      <section className="py-12 bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800">
+      <section id="actuate-section" className="py-12 bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

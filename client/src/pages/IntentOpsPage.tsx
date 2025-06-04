@@ -2,25 +2,15 @@ import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
 import ActuateIntentOpsCollaboration from "@/components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ScrollProgress from "@/components/ScrollProgress";
-import { stages } from "@/data/stagesData";
 
 export default function IntentOpsPage() {
-  const [selectedStage, setSelectedStage] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-
-  const handleStageClick = (stageId: number) => {
-    setSelectedStage(stageId);
-  };
-
-  const handleCloseDetails = () => {
-    setSelectedStage(null);
-  };
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -35,7 +25,7 @@ export default function IntentOpsPage() {
     "areaServed": "GB"
   };
 
-  const selectedStageData = selectedStage ? stages.find(stage => stage.id === selectedStage) : null;
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -49,7 +39,7 @@ export default function IntentOpsPage() {
         canonicalUrl="https://flowency.co.uk/intentops"
         structuredData={structuredData}
       />
-      
+
       {/* Navigation - Consistent with Landing Page */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +58,7 @@ export default function IntentOpsPage() {
               <Link to="/actuate" className="text-gray-900 hover:text-accent transition-colors">Actuate</Link>
               <Link to="/intentops" className="text-amber-500 hover:text-amber-600 transition-colors font-bold">IntentOps</Link>
             </div>
-            
+
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
               <button 
@@ -84,7 +74,7 @@ export default function IntentOpsPage() {
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
-            
+
             {/* Desktop contact button */}
             <button 
               onClick={() => setIsContactModalOpen(true)}
@@ -94,7 +84,7 @@ export default function IntentOpsPage() {
             </button>
           </div>
         </div>
-        
+
         {/* Mobile menu dropdown */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
@@ -175,12 +165,12 @@ export default function IntentOpsPage() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 md:mb-6">
               The AI revolution is landing inside delivery systems still caught in agile framework theatre.
             </h2>
-            
+
             <div className="max-w-4xl mx-auto text-base md:text-lg text-slate-700 leading-relaxed space-y-4 md:space-y-6">
               <p className="text-lg md:text-xl">
                 Most orgs don't know where their AI is drifting. That's not safe governance. That's cognitive debt.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 my-6 md:my-8">
                 <motion.div 
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -193,7 +183,7 @@ export default function IntentOpsPage() {
                   <h3 className="font-bold text-red-800 mb-2 md:mb-3 text-sm md:text-base">Ungoverned AI Deployments</h3>
                   <p className="text-slate-700 text-xs md:text-sm">LLM agents and automation spreading without oversight</p>
                 </motion.div>
-                
+
                 <motion.div 
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -205,7 +195,7 @@ export default function IntentOpsPage() {
                   <h3 className="font-bold text-red-800 mb-2 md:mb-3 text-sm md:text-base">Cognitive Fragmentation</h3>
                   <p className="text-slate-700 text-xs md:text-sm">Teams, tools, and AI operating in disconnected silos</p>
                 </motion.div>
-                
+
                 <motion.div 
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -218,7 +208,7 @@ export default function IntentOpsPage() {
                   <p className="text-slate-700 text-xs md:text-sm">No telemetry layer to see where value is leaking</p>
                 </motion.div>
               </div>
-              
+
               <div className="bg-red-500/10 backdrop-blur-sm p-4 md:p-8 rounded-xl border border-red-300 mt-6 md:mt-8">
                 <p className="font-bold text-slate-900 text-lg md:text-xl">
                   If you're chasing AI use cases without a telemetry layer, you're stacking cognitive debt.
@@ -242,16 +232,16 @@ export default function IntentOpsPage() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
               Cognitive debt is the new enterprise liability. IntentOps is how you contain it.
             </h2>
-            
+
             <div className="max-w-4xl mx-auto text-base md:text-lg leading-relaxed space-y-4 md:space-y-6 mb-8 md:mb-12">
               <p className="text-blue-100 text-lg md:text-xl">
                 A strategic control layer for aligning AI, people, and processes in real time.
               </p>
-              
+
               <p className="text-blue-200">
                 IntentOps wraps your existing workflows - turning scattered execution into orchestrated action that reflects your intent.
               </p>
-              
+
               <div className="bg-amber-500/20 backdrop-blur-sm p-4 md:p-8 rounded-xl border border-amber-400/30 mt-6 md:mt-8">
                 <p className="font-semibold text-amber-200 text-lg md:text-xl text-center">
                   Think: telemetry for intent. Guardrails for AI. Coordination without chaos.
@@ -277,7 +267,7 @@ export default function IntentOpsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               What gets better when you eliminate Cognitive Debt
             </h2>
-            
+
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 gap-6">
                 <motion.div
@@ -292,9 +282,9 @@ export default function IntentOpsPage() {
                     <span className="text-blue-100 md:col-span-2">Strategy mapped to delivery, continuously and visibly</span>
                   </div>
                 </motion.div>
-                
 
-                
+
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -307,7 +297,7 @@ export default function IntentOpsPage() {
                     <span className="text-blue-100 md:col-span-2">Reduce latency between strategic signal and operational action</span>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -320,7 +310,7 @@ export default function IntentOpsPage() {
                     <span className="text-blue-100 md:col-span-2">Guide AI, human, and hybrid workflows without slowing down delivery</span>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -352,7 +342,7 @@ export default function IntentOpsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               How IntentOps lands in your organisation
             </h2>
-            
+
             <div className="max-w-4xl mx-auto">
               <ol className="space-y-6 text-left">
                 <motion.li 
@@ -367,7 +357,7 @@ export default function IntentOpsPage() {
                     <strong className="text-slate-900 text-lg">Discovery:</strong> <span className="text-slate-700">We trace intent across your delivery spine</span>
                   </div>
                 </motion.li>
-                
+
                 <motion.li 
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -380,7 +370,7 @@ export default function IntentOpsPage() {
                     <strong className="text-slate-900 text-lg">Integration:</strong> <span className="text-slate-700">Signals are layered into your systems, not replaced</span>
                   </div>
                 </motion.li>
-                
+
                 <motion.li 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -412,11 +402,11 @@ export default function IntentOpsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Cognitive debt compounds faster than technical debt ever did.
             </h2>
-            
+
             <p className="text-xl font-semibold text-gray-800 mb-4">
               AI is already in your organisation. The question is, who's steering?
             </p>
-            
+
             <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-12 space-y-4">
               <p>
                 Your transformation is happening with or without governance.

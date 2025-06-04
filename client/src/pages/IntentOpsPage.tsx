@@ -2,14 +2,11 @@ import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, Menu, X } from "lucide-react";
-import CognitiveDebtFlow from "@/components/CognitiveDebtFlow";
-import FlowencyLayersGraphic from "@/components/FlowencyLayersGraphic";
-import StageDetails from "@/components/StageDetails";
-import ComparisonSection from "@/components/ComparisonSection";
+import { Menu, X } from "lucide-react";
 import ActuateIntentOpsCollaboration from "@/components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import ScrollProgress from "@/components/ScrollProgress";
 import { stages } from "@/data/stagesData";
 
 export default function IntentOpsPage() {
@@ -42,6 +39,7 @@ export default function IntentOpsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollProgress />
       <SEOHead
         title="IntentOps - AI Strategy Alignment Framework | Flowency"
         description="Transform your AI strategy with IntentOps governance framework. Align intent, manage cognitive debt, and orchestrate enterprise AI adoption for measurable business outcomes."
@@ -114,16 +112,17 @@ export default function IntentOpsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             {/* Cognitive Debt Pill */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-block bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-full px-4 md:px-6 py-2 md:py-3 mb-6 md:mb-8"
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              whileHover={{ scale: 1.05 }}
+              className="inline-block bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-full px-4 md:px-6 py-2 md:py-3 mb-6 md:mb-8 cursor-pointer"
             >
               <p className="text-red-200 font-semibold text-sm md:text-base">
                 Cognitive Debt is the new Tech Debt - and it's building faster than you think
@@ -138,14 +137,18 @@ export default function IntentOpsPage() {
               IntentOps is your real-time control layer for AI-era delivery. See where you're drifting. Act before it's too late.
             </p>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <button className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg">
+              <motion.button 
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-amber-500 hover:bg-amber-600 text-blue-950 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Explore IntentOps
-              </button>
+              </motion.button>
               <span className="text-gray-300 hidden sm:inline">–</span>
               <span className="text-gray-300 sm:hidden">or</span>
               <button 
@@ -180,33 +183,36 @@ export default function IntentOpsPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 my-6 md:my-8">
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-red-200 shadow-sm"
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-red-200 shadow-sm hover:shadow-lg hover:border-red-300 transition-all duration-300 cursor-pointer"
                 >
                   <h3 className="font-bold text-red-800 mb-2 md:mb-3 text-sm md:text-base">Ungoverned AI Deployments</h3>
                   <p className="text-slate-700 text-xs md:text-sm">LLM agents and automation spreading without oversight</p>
                 </motion.div>
                 
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-red-200 shadow-sm"
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-red-200 shadow-sm hover:shadow-lg hover:border-red-300 transition-all duration-300 cursor-pointer"
                 >
                   <h3 className="font-bold text-red-800 mb-2 md:mb-3 text-sm md:text-base">Cognitive Fragmentation</h3>
                   <p className="text-slate-700 text-xs md:text-sm">Teams, tools, and AI operating in disconnected silos</p>
                 </motion.div>
                 
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-red-200 shadow-sm"
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-lg border border-red-200 shadow-sm hover:shadow-lg hover:border-red-300 transition-all duration-300 cursor-pointer"
                 >
                   <h3 className="font-bold text-red-800 mb-2 md:mb-3 text-sm md:text-base">Strategic Blindness</h3>
                   <p className="text-slate-700 text-xs md:text-sm">No telemetry layer to see where value is leaking</p>
@@ -441,8 +447,8 @@ export default function IntentOpsPage() {
         ctaTextColor="text-white"
       />
 
-      {/* Persistent Need Help Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* Persistent Need Help Button - COMMENTED OUT FOR FUTURE CHATBOT IMPLEMENTATION */}
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <motion.button
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -463,7 +469,7 @@ export default function IntentOpsPage() {
           <span>Need Help?</span>
           <div className="w-2 h-2 bg-blue-950 rounded-full animate-pulse"></div>
         </motion.button>
-      </div>
+      </div> */}
 
       {/* Contact Modal */}
       <ContactModal 

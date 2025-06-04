@@ -6,6 +6,7 @@ import ContactModal from "@/components/ContactModal";
 import PBIImage from "@assets/PBI.png";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,6 +126,7 @@ export default function LandingPage() {
         )}
       </nav>
 
+      <ScrollProgress />
       <SEOHead
         title="Flowency - AI-Native Execution Engine | From Strategy to Intelligence"
         description="Transform your organisation's AI adoption with Flowency's cognitive debt management solutions. Expert consultancy bridging strategy and execution for enterprise AI implementation."
@@ -154,8 +156,8 @@ export default function LandingPage() {
               <span className="text-electric">Delivery Systems Flow</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-700">
-              Flowency is a Delivery Improvement and Business Change consultancy specialising in 
-              optimising delivery for value flow and driving lasting, transformational change.{" "}
+              Flowency is a Delivery Improvement and Business Change consultancy. We specialise in 
+              optimising value flow, embedding intelligence into operations, and driving transformational change that lasts.{" "}
               <strong className="text-primary font-bold">Enhancing efficiency, maximising value</strong>.
             </p>
             <a 
@@ -299,7 +301,7 @@ export default function LandingPage() {
                 Framework agnostic, method diverse, value focused.
               </p>
               <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your organisational context and maturity.
+                Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your <span className="whitespace-nowrap">organisational context</span> and maturity.
               </p>
             </div>
 
@@ -390,14 +392,14 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100 sm:col-span-2 lg:col-span-1"
+                className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg sm:rounded-xl shadow-sm border border-gray-100"
               >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center mb-2 sm:mb-4 mx-auto">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white sm:w-5 sm:h-5">
                     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Lasting transformational change</h4>
+                <h4 className="font-bold text-base sm:text-lg text-gray-900 mb-1 sm:mb-3 text-center">Lasting <span className="whitespace-nowrap">transformational change</span></h4>
                 <p className="text-gray-600 text-sm sm:text-base text-center">Sustainable improvements that stick</p>
               </motion.div>
             </div>
@@ -409,7 +411,7 @@ export default function LandingPage() {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -421,10 +423,13 @@ export default function LandingPage() {
             <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               Our Services
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               How We Help You Achieve <span className="text-electric">Flow</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 font-medium mb-6 max-w-3xl mx-auto">
+              We start with friction. Then apply method, intelligence, and capability to turn flow into value.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Four core service areas designed to transform your delivery capabilities and drive lasting organizational change.
             </p>
           </motion.div>
@@ -446,7 +451,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Work System Optimisation</h3>
               <p className="text-gray-600 leading-relaxed">
-                Streamline your delivery systems and processes. Includes our revolutionary IntentOps framework for managing cognitive debt in AI adoption and maintaining strategic alignment.
+                Streamline your delivery systems, processes, and operational workflows. Includes our IntentOps framework for managing cognitive debt. Draws on Actuate to embed AI, automation, and augmentation where it delivers measurable results.
               </p>
             </motion.div>
 
@@ -512,93 +517,135 @@ export default function LandingPage() {
       </section>
 
       {/* Problem Diagnostic Carousel */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               Problem Diagnostic: Can you relate?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Recognise these friction patterns in your delivery systems?
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-red-100"
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-red-100 hover:shadow-lg hover:border-red-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-red-500 text-2xl mb-4">⚠️</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Initiative Overload</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900">Initiative Overload</h3>
+                </div>
                 <p className="text-gray-600 text-sm">Too many competing priorities, unclear strategic focus, decision paralysis</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-yellow-100"
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-yellow-100 hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-yellow-500 text-2xl mb-4">🔄</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Context Switching</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900">Context Switching</h3>
+                </div>
                 <p className="text-gray-600 text-sm">Teams constantly switching between tasks, losing momentum and focus</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-orange-100"
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-orange-100 hover:shadow-lg hover:border-orange-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-orange-500 text-2xl mb-4">📊</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Visibility Gaps</h3>
-                <p className="text-gray-600 text-sm">No clear view of progress, blockers surface late, surprises at delivery time</p>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900">Visibility & Alignment Gaps</h3>
+                </div>
+                <p className="text-gray-600 text-sm">No clear view of progress, blockers surface late, strategy and execution disconnect</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-blue-100"
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-purple-100 hover:shadow-lg hover:border-purple-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-blue-500 text-2xl mb-4">🤝</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Alignment Drift</h3>
-                <p className="text-gray-600 text-sm">Strategy and execution disconnect, teams working at cross-purposes</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-purple-100"
-              >
-                <div className="text-purple-500 text-2xl mb-4">⏰</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Delivery Delays</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900">Delivery Delays</h3>
+                </div>
                 <p className="text-gray-600 text-sm">Projects consistently late, scope creep, quality compromises</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-green-100"
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-green-100 hover:shadow-lg hover:border-green-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-green-500 text-2xl mb-4">🎯</div>
-                <h3 className="font-bold text-lg text-gray-900 mb-3">Value Confusion</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-4 h-4 text-green-600 font-bold flex items-center justify-center text-xs">
+                      £
+                    </div>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900">Value Confusion</h3>
+                </div>
                 <p className="text-gray-600 text-sm">Unclear what delivers real business value, effort goes to wrong places</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow-sm border border-indigo-100 hover:shadow-lg hover:border-indigo-200 transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900">AI Initiatives That Don't Land</h3>
+                </div>
+                <p className="text-gray-600 text-sm">You've run pilots. Built proofs of concept. Real value only comes when intelligence is embedded into how your business runs. That is where we come in.</p>
               </motion.div>
             </div>
 
@@ -613,9 +660,9 @@ export default function LandingPage() {
       </section>
 
       {/* Visualise, Optimise, Sustain */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">How We Deliver Results</h2>
             <p className="text-xl text-gray-600">Our proven three-step methodology</p>
           </div>
@@ -674,8 +721,22 @@ export default function LandingPage() {
               </p>
             </motion.div>
           </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+              We start where you are, bring clarity and stability, and optimise from there. When you're ready, we activate the tools, automation, and intelligence to take you further.
+            </p>
+          </motion.div>
         </div>
       </section>
+
+
 
       {/* Banner Section */}
       <section className="py-8 bg-slate-700">
@@ -695,7 +756,7 @@ export default function LandingPage() {
       </section>
 
       {/* Flow Domains */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-blue-50">
+      <section className="py-12 bg-gradient-to-b from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -709,60 +770,108 @@ export default function LandingPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200 transition-colors">
-                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+              <Link to="/actuate">
+                <motion.div
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  whileHover={{ y: -8, scale: 1.03 }}
+                  className="relative group cursor-pointer block"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white rounded-2xl p-6 border border-blue-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-blue-300 overflow-hidden h-40 md:h-48">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full -mr-12 -mt-12 opacity-50"></div>
+                    <div className="relative h-full flex flex-col">
+                      <div className="flex items-start space-x-4 mb-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-bold text-gray-900 mb-2">Delivery Flow</h3>
+                          <div className="w-10 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed text-sm flex-1">
+                        Focused execution, faster throughput, reduced WIP
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-blue-900">Delivery Flow</h3>
-                </div>
-                <p className="text-gray-700 leading-relaxed">Focused execution, faster throughput, reduced WIP</p>
-              </motion.div>
+                </motion.div>
+              </Link>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-xl border border-amber-200 hover:border-amber-300 hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-amber-200 transition-colors">
-                    <span className="text-lg font-bold text-amber-600">£</span>
+              <Link to="/actuate">
+                <motion.div
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  whileHover={{ y: -8, scale: 1.03 }}
+                  className="relative group cursor-pointer block"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white rounded-2xl p-6 border border-amber-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-amber-300 overflow-hidden h-40 md:h-48">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-amber-50 to-amber-100 rounded-full -mr-12 -mt-12 opacity-50"></div>
+                    <div className="relative h-full flex flex-col">
+                      <div className="flex items-start space-x-4 mb-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span className="text-white font-bold text-xl">£</span>
+                          </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-bold text-gray-900 mb-2">Flow Economics</h3>
+                          <div className="w-10 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full"></div>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed text-sm flex-1">
+                        Value-centred prioritisation and cost-of-delay insight
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-amber-900">Flow Economics</h3>
-                </div>
-                <p className="text-gray-700 leading-relaxed">Value-centred prioritisation and cost-of-delay insight</p>
-              </motion.div>
+                </motion.div>
+              </Link>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200 hover:border-green-300 hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200 transition-colors">
-                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
+              <Link to="/actuate">
+                <motion.div
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  whileHover={{ y: -8, scale: 1.03 }}
+                  className="relative group cursor-pointer block"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-green-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white rounded-2xl p-6 border border-emerald-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-emerald-300 overflow-hidden h-40 md:h-48">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-full -mr-12 -mt-12 opacity-50"></div>
+                    <div className="relative h-full flex flex-col">
+                      <div className="flex items-start space-x-4 mb-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-bold text-gray-900 mb-2">Team Flow</h3>
+                          <div className="w-10 h-1 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full"></div>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed text-sm flex-1">
+                        Adaptive collaboration across complex systems
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-green-900">Team Flow</h3>
-                </div>
-                <p className="text-gray-700 leading-relaxed">Adaptive collaboration across complex systems</p>
-              </motion.div>
+                </motion.div>
+              </Link>
             </div>
 
-            <div className="mt-16 max-w-4xl mx-auto">
+            <div className="mt-10 max-w-4xl mx-auto">
               <p className="text-xl font-semibold text-gray-900 mb-4">Immediate impact and sticky change.</p>
               <p className="text-lg text-gray-700 mb-6">
                 We deliver sustainable improvements that reduce lead times, increase value throughput, and align delivery to what matters.
@@ -815,8 +924,111 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Animated Section Divider */}
+      <div className="relative h-8 bg-gradient-to-r from-transparent via-gray-200 to-transparent">
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-emerald-500/20"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
+      </div>
+
+      {/* What's New with Actuate Section */}
+      <section className="py-12 bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block bg-yellow-400/20 text-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-yellow-400/30">
+              What's New with Actuate
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+              Delivery Meets Intelligence
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Our Actuate capability brings together everything we know about improving delivery. Combined with intelligent automation, AI enablement, and scalable execution.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Applied AI Use Cases */}
+            <Link to="/actuate">
+              <motion.div
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 cursor-pointer block h-48 md:h-64"
+              >
+                <div className="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mb-4 md:mb-6 shadow-md">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">Applied AI Use Cases</h3>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  Real outcomes from LLMs, agents, and AI copilots. Embedded where work happens.
+                </p>
+              </motion.div>
+            </Link>
+
+            {/* Automation & Augmentation */}
+            <Link to="/actuate">
+              <motion.div
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-teal-200 transition-all duration-300 cursor-pointer block h-48 md:h-64"
+              >
+                <div className="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-4 md:mb-6 shadow-md">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">Automation & Augmentation</h3>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  Human-in-the-loop delivery that streamlines operations while keeping you in control.
+                </p>
+              </motion.div>
+            </Link>
+
+            {/* AI-Ready Processes */}
+            <Link to="/actuate">
+              <motion.div
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-yellow-200 transition-all duration-300 cursor-pointer block h-48 md:h-64"
+              >
+                <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4 md:mb-6 shadow-md">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">AI-Ready Processes</h3>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  From RPA and ML audits to clean data and workflow design. We prepare your systems for intelligence.
+                </p>
+              </motion.div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Bridge to Actuate & IntentOps */}
-      <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+      <section className="py-12 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -894,10 +1106,18 @@ export default function LandingPage() {
               </Link>
             </div>
 
-            <div className="mt-8 bg-white/20 backdrop-blur-sm p-8 rounded-xl border-l-4 border-accent shadow-lg">
-              <p className="text-xl font-bold text-center">
-                Together, <span className="text-electric">Flowency</span> + <Link to="/intentops" className="text-amber-300 hover:text-amber-200 transition-colors underline decoration-amber-300/50 hover:decoration-amber-200">IntentOps</Link> + <Link to="/actuate" className="text-yellow-300 hover:text-yellow-200 transition-colors underline decoration-yellow-300/50 hover:decoration-yellow-200">Actuate</Link> form an adaptive operating stack - built to govern, deliver and evolve.
-              </p>
+            <div className="mt-8">
+              <div className="relative bg-gradient-to-br from-slate-50 to-white p-10 rounded-3xl border-2 border-slate-100 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-500/5 to-emerald-500/5 rounded-3xl"></div>
+                <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-primary via-purple-500 to-emerald-500 rounded-full"></div>
+                <div className="relative">
+                  <div className="text-center">
+                    <p className="text-2xl font-semibold text-slate-800 leading-relaxed max-w-4xl mx-auto">
+                      Together, <span className="text-primary font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Flowency</span> + <Link to="/intentops" className="text-purple-600 hover:text-purple-700 transition-all duration-300 font-bold relative group">IntentOps<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span></Link> + <Link to="/actuate" className="text-emerald-600 hover:text-emerald-700 transition-all duration-300 font-bold relative group">Actuate<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span></Link> form an adaptive operating stack - built to govern, deliver and evolve.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

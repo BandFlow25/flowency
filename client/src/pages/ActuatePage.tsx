@@ -6,6 +6,7 @@ import ContactModal from "@/components/ContactModal";
 import ActuateIntentOpsCollaboration from "../components/ActuateIntentOpsCollaboration";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import ScrollProgress from "@/components/ScrollProgress";
 
 import { Target, Zap, RefreshCw, Bot, Settings, AlertTriangle, Cog, CheckCircle } from "lucide-react";
 
@@ -133,18 +134,19 @@ function ServiceTiles() {
         <motion.div
           key={service.id}
           data-service-index={service.id}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: service.id * 0.1 }}
-          className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group"
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.7, delay: service.id * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          whileHover={{ y: -5, scale: 1.02 }}
+          className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl hover:border-gray-300 transition-all duration-300 cursor-pointer group"
           onClick={() => toggleExpanded(service.id)}
         >
           {/* Level 1: Quick Scan Tile */}
           <div className="p-4 md:p-6">
             <div className="flex items-center justify-between mb-3 md:mb-4">
               <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-lg ${service.iconBg} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-lg ${service.iconBg} flex items-center justify-center shadow-md`}>
                   {createElement(service.icon, { className: `w-5 h-5 ${service.iconColor}` })}
                 </div>
                 <div className="md:hidden text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
@@ -401,33 +403,33 @@ function ProblemDiagnosticCarousel() {
   );
 }
 
-// Persistent Need Help Button
-function NeedHelpButton() {
-  const handleClick = () => {
-    const footer = document.querySelector('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
+// Persistent Need Help Button - COMMENTED OUT FOR FUTURE CHATBOT IMPLEMENTATION
+// function NeedHelpButton() {
+//   const handleClick = () => {
+//     const footer = document.querySelector('footer');
+//     if (footer) {
+//       footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//     }
+//   };
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 2, duration: 0.5 }}
-      className="fixed bottom-6 right-6 z-50"
-    >
-      <button
-        onClick={handleClick}
-        className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
-      >
-        <span className="text-lg">💬</span>
-        <span className="font-medium text-sm hidden sm:block group-hover:block">Got a use case in mind?</span>
-        <span className="font-medium text-sm sm:hidden">Need Help?</span>
-      </button>
-    </motion.div>
-  );
-}
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0, x: 100 }}
+//       animate={{ opacity: 1, x: 0 }}
+//       transition={{ delay: 2, duration: 0.5 }}
+//       className="fixed bottom-6 right-6 z-50"
+//     >
+//       <button
+//         onClick={handleClick}
+//         className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
+//       >
+//         <span className="text-lg">💬</span>
+//         <span className="font-medium text-sm hidden sm:block group-hover:block">Got a use case in mind?</span>
+//         <span className="font-medium text-sm sm:hidden">Need Help?</span>
+//       </button>
+//     </motion.div>
+//   );
+// }
 
 export default function ActuatePage() {
   const structuredData = {
@@ -447,6 +449,7 @@ export default function ActuatePage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgress />
       <SEOHead
         title="Actuate - AI Delivery Engine | Applied AI Services | Flowency"
         description="Get AI working in your business with Actuate's practical implementation services. From proof of concept to production deployment, we deliver real AI solutions that work."
@@ -518,9 +521,9 @@ export default function ActuatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <div className="inline-block bg-yellow-400/20 text-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-yellow-400/30">
               🔩 Applied AI Delivery & Optimisation
@@ -546,17 +549,25 @@ export default function ActuatePage() {
             </p>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+              <motion.button 
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-yellow-400 hover:bg-yellow-500 text-green-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl"
+              >
                 Show me what you can build →
-              </button>
-              <button className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300">
+              </motion.button>
+              <motion.button 
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300"
+              >
                 Book a real delivery call
-              </button>
+              </motion.button>
             </motion.div>
             
 
@@ -565,14 +576,14 @@ export default function ActuatePage() {
       </section>
 
       {/* How Can Actuate Help You */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            viewport={{ once: true, margin: "-10%" }}
+            className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               🔍 What Problems Do We Solve?
@@ -641,7 +652,7 @@ export default function ActuatePage() {
         ctaTextColor="text-white"
       />
       
-      <NeedHelpButton />
+      {/* <NeedHelpButton /> */}
       
       {/* Contact Modal */}
       <ContactModal 

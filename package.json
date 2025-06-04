@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "start": "serve dist/public",
+    "start": "serve --single dist/public",
     "check": "tsc"
   },
   "dependencies": {

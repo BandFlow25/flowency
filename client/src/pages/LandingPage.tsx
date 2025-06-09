@@ -18,7 +18,7 @@ export default function LandingPage() {
     "@type": "Organization",
     "name": "Flowency",
     "url": "https://flowency.co.uk",
-    "description": "AI-native execution engine delivering capability-building consultancy and training for high-performing delivery organisations",
+    "description": "We help build intent-driven enterprises that sense, align, and deliver in real-time",
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "hello@flowency.co.uk",
@@ -298,11 +298,16 @@ export default function LandingPage() {
                 <span className="text-electric">Adaptive Delivery</span>
               </h2>
               <p className="text-lg md:text-xl text-gray-600 font-medium mb-4 md:mb-6">
-                Framework agnostic, method diverse, value focused.
+                Framework agnostic, method diverse, <span className="whitespace-nowrap">AI-aware,</span> value focused.
               </p>
-              <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best practices of agile, lean, waterfall and JFDI approaches, combined with our years of experience and hard earned insights, to apply the most contextually relevant solutions for your <span className="whitespace-nowrap">organisational context</span> and maturity.
+              <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6">
+                Our adaptive delivery approach is framework agnostic and method diverse, drawing from the best bits of agile, lean, waterfall and JFDI - combined with years of experience and hard earned insights. What makes us different? We apply the most contextually relevant solutions for your specific organisational context and maturity, whether that's optimising product delivery or transforming workflows across HR, customer service, and financial processes. As AI reshapes how work flows through organisations, this contextual adaptation expertise becomes your competitive advantage.
               </p>
+              <div className="bg-slate-700 p-6 md:p-8 rounded-lg max-w-4xl mx-auto mb-8">
+                <p className="text-lg md:text-xl font-bold text-white text-center">
+                  We won't tell you the way <span className="block md:inline">- we help you find <span className="text-orange-500">YOUR</span> way.</span>
+                </p>
+              </div>
             </div>
 
             {/* Key Points Grid - Mobile Optimized */}
@@ -460,7 +465,7 @@ export default function LandingPage() {
               We start with friction. Then apply method, intelligence, and capability to turn flow into value.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Four core service areas designed to transform your delivery capabilities and drive lasting organizational change.
+              Four core service areas designed to transform your delivery capabilities and drive lasting organisational change across all departments.
             </p>
           </motion.div>
 
@@ -481,7 +486,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Work System Optimisation</h3>
               <p className="text-gray-600 leading-relaxed">
-                Streamline your delivery systems, processes, and operational workflows. Includes our IntentOps framework for managing cognitive debt. Draws on Actuate to embed AI, automation, and augmentation where it delivers measurable results.
+                Streamline delivery systems, operational workflows, and cross-departmental processes. Includes our IntentOps framework for managing cognitive debt as AI adoption accelerates. Draws on Actuate to embed automation where it delivers measurable results - whether in product delivery, HR, finance, or customer operations.
               </p>
             </motion.div>
 
@@ -500,7 +505,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Value Outcome Leadership</h3>
               <p className="text-gray-600 leading-relaxed">
-                Focus on measurable business outcomes and value creation throughout the delivery process. Drive strategic alignment and demonstrate tangible ROI.
+                Focus on measurable business outcomes across all departments, not just product delivery. Drive strategic alignment and demonstrate tangible ROI whether optimising development pipelines or automating customer support workflows.
               </p>
             </motion.div>
 
@@ -518,9 +523,9 @@ export default function LandingPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">Tooling & Transparency</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">AI-Enabled Process Design</h3>
               <p className="text-gray-600 leading-relaxed">
-                Implement systems and processes that provide clear visibility into work flow and delivery metrics. Make the invisible visible across your organization.
+                Apply proven delivery optimisation principles to any workflow being transformed by AI. From customer service automation to financial reporting, we help you redesign processes that combine human judgement with intelligent automation.
               </p>
             </motion.div>
 
@@ -537,9 +542,9 @@ export default function LandingPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">Team Coaching & Dynamics</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Organisational Flow Intelligence</h3>
               <p className="text-gray-600 leading-relaxed">
-                Build high-performing teams through coaching, skill development, and improved collaboration patterns. Foster a culture of continuous improvement.
+                Implement systems that provide visibility into work flow across your entire organisation. As AI creates new bottlenecks and opportunities, make the invisible visible across every department and workflow.
               </p>
             </motion.div>
           </div>
@@ -572,8 +577,8 @@ export default function LandingPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-red-100 hover:shadow-lg hover:border-red-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="text-center mb-4">
+                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg className="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
                     </svg>
@@ -591,8 +596,8 @@ export default function LandingPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-yellow-100 hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="text-center mb-4">
+                  <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg className="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
@@ -610,8 +615,8 @@ export default function LandingPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-orange-100 hover:shadow-lg hover:border-orange-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="text-center mb-4">
+                  <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg className="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
@@ -629,8 +634,8 @@ export default function LandingPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-purple-100 hover:shadow-lg hover:border-purple-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="text-center mb-4">
+                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -648,8 +653,8 @@ export default function LandingPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-green-100 hover:shadow-lg hover:border-green-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="text-center mb-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <div className="w-4 h-4 text-green-600 font-bold flex items-center justify-center text-xs">
                       £
                     </div>
@@ -667,15 +672,15 @@ export default function LandingPage() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-indigo-100 hover:shadow-lg hover:border-indigo-200 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="text-center mb-4">
+                  <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold text-lg text-gray-900">AI Initiatives That Don't Land</h3>
+                  <h3 className="font-bold text-lg text-gray-900">AI Adoption Without Flow Thinking</h3>
                 </div>
-                <p className="text-gray-600 text-sm">You've run pilots. Built proofs of concept. Real value only comes when intelligence is embedded into how your business runs. That is where we come in.</p>
+                <p className="text-gray-600 text-sm">You're implementing AI tools across departments without understanding how they impact organisational flow, creating new friction points and coordination challenges.</p>
               </motion.div>
             </div>
 
@@ -770,22 +775,7 @@ export default function LandingPage() {
 
 
 
-      {/* Banner Section */}
-      <section className="py-8 bg-slate-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-xl md:text-2xl font-bold text-white">
-              We won't tell you the way; <span className="text-orange-500">we help you find your way.</span>
-            </h2>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Flow Domains */}
       <section className="py-12 bg-gradient-to-b from-gray-50 to-blue-50">
@@ -1004,9 +994,9 @@ export default function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">Applied AI Use Cases</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">Applied AI Across Workflows</h3>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                  Real outcomes from LLMs, agents, and AI copilots. Embedded where work happens.
+                  Real outcomes from LLMs, agents, and copilots - embedded in product delivery, HR, finance, and customer operations
                 </p>
               </motion.div>
             </Link>
@@ -1027,9 +1017,9 @@ export default function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">Automation & Augmentation</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">Intelligent Automation & Augmentation</h3>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                  Human-in-the-loop delivery that streamlines operations while keeping you in control.
+                  Human-in-the-loop workflows that streamline operations across every department while keeping you in control
                 </p>
               </motion.div>
             </Link>
@@ -1049,9 +1039,9 @@ export default function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">AI-Ready Processes</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 md:mb-4">AI-Ready Process Design</h3>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                  From RPA and ML audits to clean data and workflow design. We prepare your systems for intelligence.
+                  From delivery pipelines to customer onboarding - we prepare any workflow for intelligent automation
                 </p>
               </motion.div>
             </Link>

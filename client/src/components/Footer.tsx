@@ -35,7 +35,7 @@ export default function Footer({
               </Link>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
-              Flowency delivers capability-building consultancy and training for high-performing delivery organisations.
+              Flowency helps build intent-driven enterprises that sense, align, and deliver in real-time.
             </p>
             <p className="text-gray-500 text-xs mb-4">© 2025 Flowency. All rights reserved.</p>
           </div>
